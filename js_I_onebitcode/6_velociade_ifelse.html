@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DETANG</title>
+  </head>
+  <body>
+    <script>
+      let vehicle_1 = prompt("Nome do primeiro veículo: ");
+      let vehicle_2 = prompt("Nome do segundo veículo: ");
+      let speed_vehicle_1 = prompt(
+        "Qual era a velocidade do veículo " + vehicle_1 + " (em km)?"
+      );
+      let speed_vehicle_2 = prompt(
+        "Qual era a velocidade do veículo " + vehicle_2 + " (em km)?"
+      );
+
+      if (speed_vehicle_1 > speed_vehicle_2) {
+        alert(
+          "O veículo " +
+            vehicle_1 +
+            " estava mais rápido que o veículo " +
+            vehicle_2 +
+            " !"
+        );
+      } else if (speed_vehicle_2 > speed_vehicle_1) {
+        alert(
+          "O veículo " +
+            vehicle_2 +
+            " estava mais rápido que o veículo " +
+            vehicle_1 +
+            " !"
+        );
+      } else {
+        alert("Os dois veículos estavam na mesma velocidade");
+      }
+    </script>
+  </body>
+</html>

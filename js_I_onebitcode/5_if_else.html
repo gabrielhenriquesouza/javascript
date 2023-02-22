@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>if e else</title>
+  </head>
+  <body>
+    <h1>IF E ELSE</h1>
+    <script>
+      let prohibited_1 = prompt("Digite um número: ");
+      let prohibited_2 = prompt("Digite outro número:");
+
+      let number_1 = parseFloat(prohibited_1);
+      let number_2 = parseFloat(prohibited_2);
+
+      if (number_1 > number_2) {
+        alert(number_1 + " maior que " + number_2);
+      } else if (number_1 < number_2) {
+        alert(number_1 + " menor que " + number_2);
+      }
+
+      let resultado =
+        number_1 === number_2 ? "Números iguais" : "Números diferentes";
+      alert(resultado);
+    </script>
+  </body>
+</html>
