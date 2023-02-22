@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Alistamento</title>
+  </head>
+  <body>
+    <script>
+      let primeiro_nome = window.prompt("Seu primeiro nome:");
+      let segundo_nome = window.prompt("Seu segundo nome:");
+      let campo_estudo = window.prompt("Campo de estudo:");
+      let ano_nascimento = window.prompt("O ano em que você nasceu:");
+      let ano_atual = 2023;
+      let idade = ano_atual - parseFloat(ano_nascimento);
+      window.alert(
+        "Seu nome completo é " +
+          primeiro_nome +
+          " " +
+          segundo_nome +
+          ", Campo de estudo: " +
+          campo_estudo +
+          " e você tem " +
+          idade +
+          " anos"
+      );
+    </script>
+  </body>
+</html>
