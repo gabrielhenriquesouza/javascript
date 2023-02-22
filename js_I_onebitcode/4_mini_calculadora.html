@@ -8,21 +8,25 @@
   </head>
   <body>
     <script>
-      let numero_1 = window.prompt("Digite o primeiro número : ");
-      let numero_2 = window.prompt("Digite o segundo número : ");
-      let soma = parseFloat(numero_1) + parseFloat(numero_2);
-      let subtracao = parseFloat(numero_1) - parseFloat(numero_2);
-      let multiplicacao = parseFloat(numero_1) * parseFloat(numero_2);
-      let divisao = parseFloat(numero_1) / parseFloat(numero_2);
+      let prohibited_1 = window.prompt("Digite o primeiro número : ");
+      let prohibited_2 = window.prompt("Digite o segundo número : ");
+      let number_1 = parseFloat(prohibited_1);
+      let number_2 = parseFloat(prohibited_2);
+
+      let sum = number_1 + number_2;
+      let subtraction = number_1 - number_2;
+      let multiplication = number_1 * number_2;
+      let division = number_1 / number_2;
       window.alert(
-        "Somando: " +
-          soma +
-          ", subtraindo: " +
-          subtracao +
-          ", multiplicando: " +
-          multiplicacao +
-          ", dividindo: " +
-          divisao
+        "Resultados:\n" +
+          "Soma: " +
+          sum +
+          "\nSubtração: " +
+          subtraction +
+          "\nMultiplicação: " +
+          multiplication +
+          "\nDivisão: " +
+          division
       );
     </script>
   </body>
