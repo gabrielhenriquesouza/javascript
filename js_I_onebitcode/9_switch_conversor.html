@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CONVERSOR DE MEDIDAS</title>
+  </head>
+  <body>
+    <script>
+      let value_in_meters = prompt("Digite o valor em metros (m):");
+      let conversion = prompt(
+        "Para qual unidade de medida você deseja converter?\nMilímetro (mn)\nCentímetro (cm)\nDecímetro (dm)\nDecâmetro (dam)\nHectômetro (hm)\nQuilômetro (km)"
+      );
+      let meters = parseFloat(value_in_meters);
+
+      switch (conversion) {
+        case "mn":
+          break;
+        case "cm":
+          alert(meters * 100 + " cm");
+          break;
+        case "dm":
+          break;
+        case "dam":
+          break;
+        case "hm":
+          break;
+        case "km":
+          break;
+        default:
+          alert("Opção inválida!");
+      }
+    </script>
+  </body>
+</html>
