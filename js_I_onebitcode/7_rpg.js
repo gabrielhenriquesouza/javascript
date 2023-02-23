@@ -8,8 +8,9 @@ let name_character_opponent = prompt(
 );
 let life_opponent = prompt("Digite quantos pontos de vida tem seu adversário:");
 let defense_opponent = prompt("Digite o poder de defesa do seu adversário:");
-let shield_opponent = prompt("O seu adversário possui escudo? (n/s)");
+let shield_opponent = prompt("O seu adversário possui escudo? (s/n)");
 
-if (attack_power_character > defense_opponent) and(shield_opponent == "n"){
-  
+if (attack_power_character > defense_opponent && shield_opponent === "n") {
+  damage = attack_power_character - defense_opponent;
 }
+alert(damage);
