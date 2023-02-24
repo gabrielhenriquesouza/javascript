@@ -9,24 +9,29 @@
   <body>
     <script>
       let value_in_meters = prompt("Digite o valor em metros (m):");
-      let conversion = prompt(
-        "Para qual unidade de medida você deseja converter?\nMilímetro (mn)\nCentímetro (cm)\nDecímetro (dm)\nDecâmetro (dam)\nHectômetro (hm)\nQuilômetro (km)"
+      let unit = prompt(
+        "Para qual unidade de medida você deseja converter?\n1. Milímetro (mn)\n2. Centímetro (cm)\n3. Decímetro (dm)\n4. Decâmetro (dam)\n5. Hectômetro (hm)\n6. Quilômetro (km)"
       );
       let meters = parseFloat(value_in_meters);
 
-      switch (conversion) {
-        case "mn":
+      switch (unit) {
+        case "1":
+          alert("Resultado: " + meters + "m = " + meters * 1000 + " mn");
           break;
-        case "cm":
-          alert(meters * 100 + " cm");
+        case "2":
+          alert("Resultado: " + meters + "m = " + meters * 100 + " cm");
           break;
-        case "dm":
+        case "3":
+          alert("Resultado: " + meters + "m = " + meters * 10 + " dm");
           break;
-        case "dam":
+        case "4":
+          alert("Resultado: " + meters + "m = " + meters / 10 + " dam");
           break;
-        case "hm":
+        case "5":
+          alert("Resultado: " + meters + "m = " + meters / 100 + " hm");
           break;
-        case "km":
+        case "6":
+          alert("Resultado: " + meters + "m = " + meters / 1000 + " km");
           break;
         default:
           alert("Opção inválida!");

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ex While</title>
+    <style>
+      body {
+        background-color: #171717;
+      }
+    </style>
+  </head>
+  <body>
+    <script>
+      let name = prompt("Qual seu nome?");
+      let result = prompt("Você já visitou alguma outra cidade? (Sim/Não)");
+      let counter_cities = 0;
+      let cities = prompt("Qual cidade foi essa?");
+
+      while (result == "Sim") {
+        result = prompt("Você já visitou alguma outra cidade? (Sim/Não)");
+        if (result == "Sim") {
+          cities += ", ";
+          cities += prompt("Qual cidade foi essa?");
+          counter_cities += 1;
+        }
+      }
+
+      alert(
+        "Olá " +
+          name +
+          ", vejo que você já visitou " +
+          counter_cities +
+          " cidades, tem vontade de voltar para " +
+          cities +
+          " algum dia?"
+      );
+    </script>
+  </body>
+</html>
