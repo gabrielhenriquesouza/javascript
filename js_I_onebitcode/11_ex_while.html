@@ -14,26 +14,30 @@
   <body>
     <script>
       let name = prompt("Qual seu nome?");
-      let result = prompt("Você já visitou alguma outra cidade? (Sim/Não)");
+      let cities = "";
       let counter_cities = 0;
-      let cities = prompt("Qual cidade foi essa?");
+      let result = prompt("Você já visitou alguma cidade? (Sim/Não)");
 
-      while (result == "Sim") {
-        cities += ", ";
+      while (result === "Sim") {
         cities += prompt("Qual cidade foi essa?");
-        counter_cities += 1;
-        result = prompt("Você já visitou alguma outra cidade? (Sim/Não)");
+        cities += ", ";
+        counter_cities++;
+        result = prompt("Você já visitou uma outra cidade? (Sim/Não)");
       }
 
-      alert(
-        "Olá " +
-          name +
-          ", vejo que você já visitou " +
-          counter_cities +
-          " cidades, tem vontade de voltar para " +
-          cities +
-          " algum dia?"
-      );
+      if (counter_cities === 0) {
+        alert("Com a nossa agência você pode viajar pela primeira vez!");
+      } else {
+        alert(
+          "Olá " +
+            name +
+            ", vejo que você já visitou " +
+            counter_cities +
+            " cidades, tem vontade de voltar para " +
+            cities +
+            "algum dia?"
+        );
+      }
     </script>
   </body>
 </html>
