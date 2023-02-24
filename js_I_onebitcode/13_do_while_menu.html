@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        background-color: #171717;
+        color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Menu com Do While</h1>
+    <script>
+      let opcao = "";
+      do {
+        opcao = prompt(
+          "1. Opção 1\n2. Opção 2\n3. Opção 3\n4. Opção 4\n5. Encerrar"
+        );
+        if (opcao == "1" || opcao == "2" || opcao == "3" || opcao == "4") {
+          alert("Você escolheu a opção " + opcao);
+        } else if (opcao == "5") {
+          alert("Programa finalizado!");
+          break;
+        } else {
+          alert("Opção Inválida, tente novamente!");
+        }
+      } while (opcao != "5");
+    </script>
+  </body>
+</html>
