@@ -19,24 +19,24 @@
       let added_value = "";
       let subtract_value = "";
       let money_available = prompt("Quantidade inicial de dinheiro em R$:");
+      money_available = parseFloat(money_available);
       do {
         option = prompt(
           "Dinheiro atual: R$" +
             money_available +
             "\n1. Depositar dinheiro\n2. Sacar dinheiro\n3. Finalizar"
         );
-        if (option == "1") {
-          added_value = prompt("Quanto de dinheiro deseja depositar? R$");
-          money_available =
-            parseFloat(money_available) + parseFloat(added_value);
-        } else if (option == "2") {
-          subtract_value = prompt("Quanto de dinheiro deseja sacar? R$");
-          money_available =
-            parseFloat(money_available) - parseFloat(subtract_value);
-        } else if (option == "3") {
-          alert("Programa encerrado!");
-        } else {
-          alert("Opção inválida, tente novamente!");
+        switch (option) {
+          case "1":
+            money_available += parseFloat(
+              prompt("Quanto de dinheiro deseja depositar? R$")
+            );
+            break;
+          case "2":
+            money_available -= prompt("Quanto de dinheiro deseja sacar? R$");
+            break;
+          case "3":
+            alert("Programa encerrado!");
         }
       } while (option != "3");
     </script>
