@@ -18,10 +18,10 @@
     <script>
       let result = "";
       let number = prompt("Digite o número que você deseja mostrar a tabuada:");
-      for (indice = 0; indice <= 20; indice++) {
+      for (let indice = 0; indice <= 20; indice++) {
         result += number + " x " + indice + " = " + number * indice + "\n";
       }
-      alert(result);
+      alert("Resultado da tabuada de " + number + ": \n\n" + result);
     </script>
   </body>
 </html>
