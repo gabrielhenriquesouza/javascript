@@ -15,20 +15,20 @@
   <body>
     <h1>Menu com Do While</h1>
     <script>
-      let opcao = "";
+      let option = "";
       do {
-        opcao = prompt(
+        option = prompt(
           "1. Opção 1\n2. Opção 2\n3. Opção 3\n4. Opção 4\n5. Encerrar"
         );
-        if (opcao == "1" || opcao == "2" || opcao == "3" || opcao == "4") {
-          alert("Você escolheu a opção " + opcao);
-        } else if (opcao == "5") {
+        if (option == "1" || option == "2" || option == "3" || option == "4") {
+          alert("Você escolheu a opção " + option);
+        } else if (option == "5") {
           alert("Programa finalizado!");
           break;
         } else {
           alert("Opção Inválida, tente novamente!");
         }
-      } while (opcao != "5");
+      } while (option != "5");
     </script>
   </body>
 </html>
