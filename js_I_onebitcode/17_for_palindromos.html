@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Palíndromos</title>
+    <style>
+      body {
+        background-color: #171717;
+        color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Palíndromos</h1>
+    <script>
+      let back = "";
+      let word = prompt("Digite uma palavra:");
+      for (let i = word.length; i >= 0; i--) {
+        back += word[i];
+      }
+      if (back == word) {
+        alert("Esta palavra é um palíndromo");
+      } else {
+        alert("Esta palavra não é um palíndromo");
+      }
+      alert(back);
+    </script>
+  </body>
+</html>
