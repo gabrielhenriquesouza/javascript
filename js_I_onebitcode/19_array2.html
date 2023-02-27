@@ -38,6 +38,31 @@
       // includes
       const inclui = arr.includes("Legolas");
       console.log(inclui);
+      //indexOf
+      let indice = arr.indexOf("Pippin");
+      console.log(indice);
+
+      // cortar e concatenar
+      //slice
+      const hobbits = arr.slice(0, 4);
+      const outros = arr.slice(-3);
+      console.log(arr);
+      console.log(hobbits);
+      console.log(outros);
+      // concat
+      const sociedade = hobbits.concat(outros, "Gabriel");
+      console.log(sociedade);
+
+      // substituir elementos
+      //splice
+      const elementos_removidos = sociedade.splice(indice, 1, "O gostoso");
+      console.log(sociedade);
+      console.log(elementos_removidos);
+
+      // iterar sobre os elementos
+      for (let i = 0; i < arr.length; i++) {
+        alert(arr[i]);
+      }
     </script>
   </body>
 </html>
