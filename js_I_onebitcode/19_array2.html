@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Arrays</title>
+  </head>
+  <body>
+    <script>
+      let arr = [
+        "Frodo",
+        "Sam",
+        "Merry",
+        "Pippin",
+        "Gandalf",
+        "Aragorn",
+        "Legolas",
+        "Gimli",
+      ];
+      // Adicionando elementos
+      // push
+      arr.push = "Boromir";
+      //unshift
+      arr.unshift = "Gabriel";
+      console.log(arr);
+
+      // Remover elementos
+      // pop
+      const ultimo_elemento = arr.pop();
+      console.log(arr);
+      console.log(ultimo_elemento);
+      //shift
+      arr.shift();
+      console.log(arr);
+
+      // pesquisar por um elemento
+      // includes
+      const inclui = arr.includes("Legolas");
+      console.log(inclui);
+    </script>
+  </body>
+</html>
