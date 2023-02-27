@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Consulta</title>
+    <style>
+      body {
+        background-color: #171717;
+        color: white;
+        font-family: Arial, Helvetica, sans-serif;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>CONSULTÓRIO DO DR. FRED NICÁCIO</h1>
+    <script>
+      let opcao = "";
+      let pacientes = ["Guime", "Amanda", "Key", "Gustavo", "Bruna"];
+      let fila = "";
+      let novo_paciente = "";
+      let paciente_consultado = "";
+      do {
+        for (i = 0; i < pacientes.length; i++) {}
+        alert(
+          "Bem vindo ao consultório do Dr. Fred Nicácio!\n" +
+            "\nFila de espera:\n"
+        );
+        opcao = prompt(
+          "Opções:" +
+            "\n1. Novo paciente" +
+            "\n2. Consultar paciente" +
+            "\n3. Sair "
+        );
+        if (opcao == "1") {
+          novo_paciente = prompt("Qual seu nome?");
+        } else if (opcao == "2") {
+          paciente_consultado = pacientes.shift();
+          alert(paciente_consultado + " foi consultado!");
+        } else if (opcao == "3") break;
+        else {
+          alert("Opção inválidade, tente novamente!");
+        }
+      } while (opcao != "3");
+    </script>
+  </body>
+</html>
