@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Array</title>
+    <style>
+      body {
+        background-color: #171717;
+        color: white;
+        font-family: Arial, Helvetica, sans-serif;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Pilha de cartas</h1>
+    <script>
+      let opcao = "";
+      let cartas = ["7 de paus", "4 de espadas", "3 de ouro", "8 de copas"];
+      let cartas_na_mesa = "";
+      do {
+        cartas_na_mesa = "";
+        for (let i = 0; i < cartas.length; i++) {
+          cartas_na_mesa += i + 1 + " - " + cartas[i] + "\n";
+        }
+        opcao = prompt("Baralhos na mesa: \n" + cartas_na_mesa);
+      } while (opcao != "3");
+    </script>
+  </body>
+</html>

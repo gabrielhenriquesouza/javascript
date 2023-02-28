@@ -37,6 +37,7 @@
         );
         if (opcao == "1") {
           novo_paciente = prompt("Qual seu nome?");
+          novo_pacientes = pacientes.push(novo_paciente);
         } else if (opcao == "2") {
           paciente_consultado = pacientes.shift();
           alert(paciente_consultado + " foi consultado(a)!");
