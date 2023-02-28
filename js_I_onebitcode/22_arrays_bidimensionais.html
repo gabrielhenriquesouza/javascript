@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Arrays bidimensionais</title>
+    <style>
+      body {
+        background-color: #171717;
+        color: white;
+        font-family: Arial, Helvetica, sans-serif;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Arrays bidimensionais</h1>
+    <script>
+      const arr = [
+        "1º Nível",
+        ["2º nível", 42, true],
+        [
+          ["3º nível", "1º item", "Olá, mundo!"],
+          ["3º nível", "2º item", "Oi, mundo!"],
+        ],
+        [],
+      ];
+      console.log(arr);
+      console.log(arr[1]);
+      console.log(arr[1][0]);
+      console.log("---------------------------");
+      console.log(arr[2]);
+      console.log(arr[2][0]);
+      console.log(arr[2][0][2]);
+
+      const matriz = [
+        ["l1, c1", "l1, c2", "l1, c3", "l1, c4"],
+        ["l2, c1", "l2, c2", "l2, c3", "l2, c4"],
+        ["l3, c1", "l3, c2", "l3, c3", "l3, c4"],
+      ];
+      console.table(matriz);
+    </script>
+  </body>
+</html>
