@@ -40,7 +40,11 @@
           pacientes.push(novo_paciente);
         } else if (opcao == "2") {
           paciente_consultado = pacientes.shift();
-          alert(paciente_consultado + " foi consultado(a)!");
+          if (paciente_consultado) {
+            alert(paciente_consultado + " foi consultado(a)!");
+          } else {
+            alert("Nenhum paciente para ser consultado");
+          }
         } else if (opcao == "3") break;
         else {
           alert("Opção inválidade, tente novamente!");

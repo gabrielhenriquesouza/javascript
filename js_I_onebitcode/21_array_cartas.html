@@ -28,15 +28,26 @@
         }
         opcao = prompt(
           "Opções:\nDigite [ 1 ] para adicionar uma carta\nDigite [ 2 ] para puxar uma carta\nDigite [ 3 ] para encerrar o programa\n" +
-            "\nBaralhos na mesa: \n" +
-            cartas_na_mesa
+            "\nQuantidade de cartas na mesa: \n" +
+            cartas.length
         );
-        if (opcao == "1") {
-          carta_adicionada = prompt("Qual carta quer adicionar?");
-          cartas.unshift(carta_adicionada);
-        } else if (opcao == "2") {
-          carta_retirada = cartas.shift();
-          alert(carta_retirada + " foi puxado");
+        switch (opcao) {
+          case "1":
+            carta_adicionada = prompt("Qual carta quer adicionar?");
+            cartas.unshift(carta_adicionada);
+            break;
+          case "2":
+            carta_retirada = cartas.shift();
+            if (!carta_retirada) {
+              alert("Não há nehuma carta no baralho");
+            } else {
+              alert(carta_retirada + " foi puxado");
+            }
+            break;
+          case "3":
+            break;
+          default:
+            alert("Opção inválida, tente novamente!");
         }
       } while (opcao != "3");
     </script>
