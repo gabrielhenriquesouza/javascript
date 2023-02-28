@@ -19,12 +19,25 @@
       let opcao = "";
       let cartas = ["7 de paus", "4 de espadas", "3 de ouro", "8 de copas"];
       let cartas_na_mesa = "";
+      let carta_adicionada = "";
+      let carta_retirada = "";
       do {
         cartas_na_mesa = "";
         for (let i = 0; i < cartas.length; i++) {
           cartas_na_mesa += i + 1 + " - " + cartas[i] + "\n";
         }
-        opcao = prompt("Baralhos na mesa: \n" + cartas_na_mesa);
+        opcao = prompt(
+          "Opções:\nDigite [ 1 ] para adicionar uma carta\nDigite [ 2 ] para puxar uma carta\nDigite [ 3 ] para encerrar o programa\n" +
+            "\nBaralhos na mesa: \n" +
+            cartas_na_mesa
+        );
+        if (opcao == "1") {
+          carta_adicionada = prompt("Qual carta quer adicionar?");
+          cartas.unshift(carta_adicionada);
+        } else if (opcao == "2") {
+          carta_retirada = cartas.shift();
+          alert(carta_retirada + " foi puxado");
+        }
       } while (opcao != "3");
     </script>
   </body>
