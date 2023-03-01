@@ -17,6 +17,7 @@
     <script>
       let opcao = "";
       let imoveis = [];
+
       do {
         opcao = prompt(
           "Quantidade de imóveis cadastrados: " +
@@ -51,6 +52,9 @@
 
             if (confirmacao) {
               imoveis.push(imovel);
+              alert("Imóvel salvo com sucesso !");
+            } else {
+              alert("Voltando para o menu");
             }
             break;
           case "2":
