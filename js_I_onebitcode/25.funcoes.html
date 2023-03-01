@@ -31,19 +31,55 @@
       //soma(10, 10, 10, 10, 10);
       //soma(10, 10);
 
-      function criar_usuario(nome, email, senha, tipo) {
-        alert(
-          "Nome do usuário: " +
-            nome +
-            "\nEmail do usuário: " +
-            email +
-            "\nSenha:" +
-            senha +
-            "\nTipo: " +
-            tipo
-        );
+      function criar_usuario(nome, email, senha, tipo = "admin") {
+        const usuario = {
+          nome: nome,
+          email: email,
+          senha: senha,
+          tipo: tipo,
+        };
+        console.log(usuario);
       }
-      criar_usuario("Gabriel");
+      /*criar_usuario(
+        "Gabriel",
+        "gabrielgostoso73@gmail.com",
+        "324346t3",
+        "Aluno"
+      );*/
+
+      // Ao criarmos uma função com muitos parâmetros,
+      // uma boa prática é substituí-los por um objeto
+      function parametrosDoJeitoErrado(
+        nome,
+        telefone,
+        endereco,
+        aniversario,
+        email,
+        senha
+      ) {
+        // ...
+      }
+      function parametrosDoJeitoCerto(usuario) {
+        // ...
+      }
+      // Além de facilitar na chamada da função, a ordem dos parâmetros se torna irrelevante
+      parametrosDoJeitoErrado(
+        "nome",
+        "telefone",
+        "endereco",
+        "aniversario",
+        "email",
+        "senha"
+      );
+      const dadosDoUsuario = {
+        nome: "",
+        telefone: "",
+        email: "",
+        senha: "",
+        aniversario: "",
+        endereco: "",
+      };
+      parametrosDoJeitoCerto(dadosDoUsuario);
     </script>
   </body>
 </html>
