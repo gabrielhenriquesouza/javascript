@@ -16,13 +16,11 @@
   <body>
     <script>
       let opcao = "";
-      let imovel = [];
-      let imoveis_salvos = "";
-      let quantidade_imoveis = 0;
+      let imoveis = [];
       do {
         opcao = prompt(
           "Quantidade de imóveis cadastrados: " +
-            quantidade_imoveis +
+            imoveis.length +
             "\nOpções:" +
             "\n1. Salvar um imóvel" +
             "\n2. Mostrar imóveis salvos" +
@@ -31,24 +29,45 @@
 
         switch (opcao) {
           case "1":
+            const imovel = {};
+
             imovel.proprietario = prompt("Nome do proprietário:");
             imovel.quartos = prompt("Quantos quartos?");
             imovel.banheiros = prompt("Quantos banheiros?");
-            imovel.possui_garagem = prompt("Possui garagem?");
-            imoveis_salvos +=
-              "Proprietário " +
-              imovel.proprietario +
-              "\nQuartos: " +
-              imovel.quartos +
-              "\nBanheiros: " +
-              imovel.banheiros +
-              "\nPossui garagem? " +
-              imovel.possui_garagem +
-              "\n\n";
-            quantidade_imoveis += 1;
+            imovel.possui_garagem = prompt("Possui garagem? (Sim/Não)");
+
+            const confirmacao = confirm(
+              "Você deseja salvar este imóvel?\n" +
+                "proprietário: " +
+                imovel.proprietario +
+                "\nQuartos: " +
+                imovel.quartos +
+                "\nBanheiros: " +
+                imovel.banheiros +
+                "\nPossui garagem? " +
+                imovel.possui_garagem +
+                "\n\n"
+            );
+
+            if (confirmacao) {
+              imoveis.push(imovel);
+            }
             break;
           case "2":
-            alert(imoveis_salvos);
+            for (let i = 0; i < imoveis.length; i++) {
+              alert(
+                "Imóvel " +
+                  (i + 1) +
+                  "\nProprietário: " +
+                  imoveis[i].proprietario +
+                  "\nQuartos: " +
+                  imoveis[i].quartos +
+                  "\nBanheiros: " +
+                  imoveis[i].banheiros +
+                  "\nPossui garagem? " +
+                  imoveis[i].possui_garagem
+              );
+            }
             break;
           case "3":
             break;
