@@ -16,21 +16,44 @@
   <body>
     <script>
       let opcao = "";
+      let imovel = [];
+      let imoveis_salvos = "";
+      let quantidade_imoveis = 0;
       do {
         opcao = prompt(
           "Quantidade de imóveis cadastrados: " +
+            quantidade_imoveis +
             "\nOpções:" +
             "\n1. Salvar um imóvel" +
             "\n2. Mostrar imóveis salvos" +
             "\n3. Sair"
         );
+
         switch (opcao) {
           case "1":
+            imovel.proprietario = prompt("Nome do proprietário:");
+            imovel.quartos = prompt("Quantos quartos?");
+            imovel.banheiros = prompt("Quantos banheiros?");
+            imovel.possui_garagem = prompt("Possui garagem?");
+            imoveis_salvos +=
+              "Proprietário " +
+              imovel.proprietario +
+              "\nQuartos: " +
+              imovel.quartos +
+              "\nBanheiros: " +
+              imovel.banheiros +
+              "\nPossui garagem? " +
+              imovel.possui_garagem +
+              "\n\n";
+            quantidade_imoveis += 1;
             break;
           case "2":
+            alert(imoveis_salvos);
             break;
           case "3":
             break;
+          default:
+            alert("Opção inválida, tente novamente!");
         }
       } while (opcao != "3");
     </script>
