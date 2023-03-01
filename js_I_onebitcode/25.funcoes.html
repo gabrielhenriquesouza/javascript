@@ -13,10 +13,37 @@
   </head>
   <body>
     <script>
-      alert(ola() + " amigos");
-      function ola() {
-        return "Olá";
+      function dobro(x) {
+        alert("O dobro de " + x + " é igual a " + x * 2);
       }
+      //dobro(10)
+
+      function dizer_ola(nome = "mundo") {
+        alert("Olá, " + nome + "!");
+      }
+      //name = prompt("Qual seu nome?");
+      //dizer_ola(name);
+      //dizer_ola();
+
+      function soma(a = 0, b = 0, c = 0, d = 0, e = 0) {
+        alert("A soma desses número é igual a " + (a + b + c + d + e));
+      }
+      //soma(10, 10, 10, 10, 10);
+      //soma(10, 10);
+
+      function criar_usuario(nome, email, senha, tipo) {
+        alert(
+          "Nome do usuário: " +
+            nome +
+            "\nEmail do usuário: " +
+            email +
+            "\nSenha:" +
+            senha +
+            "\nTipo: " +
+            tipo
+        );
+      }
+      criar_usuario("Gabriel");
     </script>
   </body>
 </html>
