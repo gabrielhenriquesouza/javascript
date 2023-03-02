@@ -15,39 +15,56 @@
   </head>
   <body>
     <script>
-      let opcao = "";
-      let triangle_base = "";
-      let triangle_height = "";
-      let rectangle_base = "";
-      let rectangle_height = "";
-      let square_side = "";
-      let trapeze_bigger_base = "";
-      let trapeze_minor_base = "";
-      let trapeze_height = "";
-      let circle_radius = "";
-
-      function triangle_area(b, a) {
-        return (b * a) / 2;
+      function triangle_area() {
+        const triangle_base = parseFloat(prompt("Qual a base do triângulo?"));
+        const triangle_height = parseFloat(
+          prompt("Qual a altura do triângulo?")
+        );
+        return alert(
+          "A área do triângulo é de " + (triangle_base * triangle_height) / 2
+        );
       }
 
-      function rectangle_area(b, a) {
-        return b * a;
+      function rectangle_area() {
+        const rectangle_base = parseFloat(prompt("Qual a base do retângulo?"));
+        const rectangle_height = parseFloat(
+          prompt("Qual a altura do retângulo")
+        );
+        return alert(
+          "Á área do retângulo é de " + rectangle_base * rectangle_height
+        );
       }
 
-      function square_area(l) {
-        return l * l;
+      function square_area() {
+        const square_side = parseFloat(
+          prompt("Qual o tamanho do lado do quadrado?")
+        );
+        return alert("Á área do quadrado é de " + square_side * square_side);
       }
 
-      function trapeze_area(bigger, smaller, height) {
-        return ((bigger + smaller) * height) / 2;
+      function trapeze_area() {
+        const trapeze_bigger_base = parseFloat(
+          prompt("Qual a base maior do trapézio?")
+        );
+        const trapeze_minor_base = parseFloat(
+          prompt("Qual a base menor do trapézio?")
+        );
+        const trapeze_height = parseFloat(prompt("Qual a altura do trapézio?"));
+        return alert(
+          "A área do trapézio é de " +
+            ((trapeze_bigger_base + trapeze_minor_base) * trapeze_height) / 2
+        );
       }
 
       function circle_area(radius) {
-        return 3.14 * (radius * radius);
+        const circle_radius = parseFloat(prompt("Qual o raio do círculo?"));
+        return alert(
+          "Á área do círculo é de " + 3.14 * (circle_radius * circle_radius)
+        );
       }
 
-      do {
-        opcao = prompt(
+      function display_menu() {
+        return prompt(
           "O que deseja calcular? " +
             "\n1. Área do triângulo." +
             "\n2. Área do retângulo." +
@@ -56,62 +73,36 @@
             "\n5. Área do círculo." +
             "\n6. Sair"
         );
-        switch (opcao) {
-          case "1":
-            triangle_base = parseFloat(prompt("Qual a base do triângulo?"));
-            triangle_height = parseFloat(prompt("Qual a altura do triângulo?"));
-            alert(
-              "A área do triângulo é de " +
-                triangle_area(triangle_base, triangle_height)
-            );
-            break;
+      }
 
-          case "2":
-            rectangle_base = parseFloat(prompt("Qual a base do retângulo?"));
-            rectangle_height = parseFloat(prompt("Qual a altura do retângulo"));
-            alert(
-              "Á área do retângulo é de " +
-                rectangle_area(rectangle_base, rectangle_height)
-            );
-            break;
-
-          case "3":
-            square_side = parseFloat(
-              prompt("Qual o tamanho do lado do quadrado?")
-            );
-            alert("Á área do quadrado é de " + square_area(square_side));
-            break;
-
-          case "4":
-            trapeze_bigger_base = parseFloat(
-              prompt("Qual a base maior do trapézio?")
-            );
-            trapeze_minor_base = parseFloat(
-              prompt("Qual a base menor do trapézio?")
-            );
-            trapeze_height = parseFloat(prompt("Qual a altura do trapézio?"));
-            alert(
-              "A área do trapézio é de " +
-                trapeze_area(
-                  trapeze_bigger_base,
-                  trapeze_minor_base,
-                  trapeze_height
-                )
-            );
-            break;
-
-          case "5":
-            circle_radius = parseFloat(prompt("Qual o raio do círculo?"));
-            alert("Á área do círculo é de " + circle_area(circle_radius));
-            break;
-
-          case "6":
-            break;
-
-          default:
-            alert("Opção inválida, tente novamente");
-        }
-      } while (opcao !== "6");
+      function run_program() {
+        let opcao = "";
+        do {
+          opcao = display_menu();
+          switch (opcao) {
+            case "1":
+              triangle_area();
+              break;
+            case "2":
+              rectangle_area();
+              break;
+            case "3":
+              square_area();
+              break;
+            case "4":
+              trapeze_area();
+              break;
+            case "5":
+              circle_area();
+              break;
+            case "6":
+              break;
+            default:
+              alert("Opção inválida, tente novamente");
+          }
+        } while (opcao !== "6");
+      }
+      run_program();
     </script>
   </body>
 </html>
