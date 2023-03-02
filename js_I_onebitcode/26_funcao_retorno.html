@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Retorno de função</title>
+  </head>
+  <body>
+    <script>
+      function calculate_average(a, b) {
+        const average = (a + b) / 2;
+        return average;
+      }
+      //alert(calculate_average(9, 8));
+
+      function create_product(nome, preco) {
+        const product = {
+          nome,
+          preco,
+          estoque: 1,
+        };
+        return product;
+      }
+      //console.log(criar_produto("Celular", 2400));
+
+      function rectangular_area(a, b) {
+        return a * b;
+      }
+      function square_area(lado) {
+        return rectangular_area(lado, lado);
+      }
+      //alert(square_area(10));
+
+      function majority(idade) {
+        if (idade >= 18 && idade <= 64) {
+          return "Esta pessoa é de maior";
+        } else if (idade >= 65) {
+          return "Esta pessoa é idosa";
+        } else {
+          return "Esta pessoa é de menor";
+        }
+      }
+      alert(majority(65));
+    </script>
+  </body>
+</html>
