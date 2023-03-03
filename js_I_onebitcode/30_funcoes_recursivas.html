@@ -22,7 +22,21 @@
         dobrar(n * 2);
       }
 
-      dobrar(1);
+      //dobrar(1);
+
+      function fatorial(n) {
+        console.log("número: " + n);
+        if (n === 0) {
+          return 1;
+        } else if (n === 1) {
+          return 1;
+        } else {
+          console.log(n + " x!  " + (n - 1));
+          return n * fatorial(n - 1);
+        }
+      }
+
+      fatorial(10);
     </script>
   </body>
 </html>
