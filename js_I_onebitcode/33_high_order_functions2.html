@@ -43,6 +43,22 @@
       },
       0);
       console.log(nivel_total);
+      const racas = personagens.reduce(function (valor_acumulado, personagem) {
+        if (valor_acumulado[personagem.raca]) {
+          valor_acumulado[personagem.raca].push(personagem);
+        } else {
+          valor_acumulado[personagem.raca] = [personagem];
+        }
+        return valor_acumulado;
+      }, {});
+      console.log(racas);
+
+      //sort
+      const niveis_ordenados = personagens.slice().sort(function (a, b) {
+        return a.nivel - b.nivel;
+      });
+      console.log(personagens);
+      console.log(niveis_ordenados);
     </script>
   </body>
 </html>
