@@ -14,9 +14,12 @@
   </head>
   <body>
     <script>
-      opcao = "";
-      vagas = [];
-      criar_vaga = [];
+      let opcao = "";
+      let vagas = [];
+      let criar_vaga = [];
+      let confirmacao = "";
+      let indice = "";
+      let d = 0;
       do {
         opcao = prompt(
           "Opções\n" +
@@ -31,13 +34,13 @@
         switch (opcao) {
           case "1":
             break;
+
           case "2":
-            vaga = "";
+            criar_vaga = "";
             nome_da_vaga = prompt("Nome da vaga:");
             descricao_vaga = prompt("Descrição da vaga:");
             data_limite = prompt("Data limite:");
-            criar_vaga = [nome_da_vaga, descricao_vaga, data_limite];
-            confirm(
+            confirmacao = confirm(
               "Deseja salvar esta vaga?" +
                 "\n" +
                 nome_da_vaga +
@@ -46,16 +49,32 @@
                 ", " +
                 data_limite
             );
+            console.log(vagas);
+            if (confirmacao) {
+              criar_vaga = [nome_da_vaga, descricao_vaga, data_limite];
+              vagas.push(criar_vaga);
+              console.log(vagas);
+            } else {
+              alert("Informações deletadas");
+            }
+            break;
 
-            break;
           case "3":
+            indice = prompt("Digite o indice da vaga:");
+            if (indice >= vagas.length) {
+              alert(vagas[parseFloat(indice) - 1]);
+            }
             break;
+
           case "4":
             break;
+
           case "5":
             break;
+
           case "6":
             break;
+
           default:
             alert("Opção inválida, tente novamente!");
         }
