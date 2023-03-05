@@ -16,10 +16,74 @@
     <script>
       let opcao = "";
       let vagas = [];
-      let criar_vaga = [];
+      let criar_v = [];
       let confirmacao = "";
       let indice = "";
       let lista_vagas = "";
+      let excluir = "";
+      let d = 0;
+
+      function mostrar_vagas() {
+        lista_vagas = "";
+        for (let i = 0; i < vagas.length; i++) {
+          lista_vagas +=
+            i +
+            1 +
+            "° vaga: " +
+            vagas[i][0] +
+            ". Candidatos para vaga: " +
+            "\n";
+        }
+        alert(lista_vagas);
+      }
+
+      function criar_vaga() {
+        criar_v = "";
+        nome_da_vaga = prompt("Nome da vaga:");
+        descricao_vaga = prompt("Descrição da vaga:");
+        data_limite = prompt("Data limite:");
+        confirmacao = confirm(
+          "Deseja salvar esta vaga?" +
+            "\n" +
+            nome_da_vaga +
+            ", " +
+            descricao_vaga +
+            ", " +
+            data_limite
+        );
+        if (confirmacao) {
+          criar_v = [nome_da_vaga, descricao_vaga, data_limite];
+          vagas.push(criar_v);
+        } else {
+          alert("Informações deletadas");
+        }
+      }
+
+      function visualizar_vaga() {
+        indice = prompt("Digite o indice da vaga:");
+        if (indice <= vagas.length) {
+          alert(indice + "° vaga: " + vagas[parseFloat(indice) - 1]);
+        } else {
+          alert("Vaga inexistente!");
+        }
+      }
+
+      function increver_candidato() {}
+
+      function excluir_vaga() {
+        excluir = prompt("Digite o índice da vaga que queira excluir:");
+        if (excluir <= vagas.length) {
+          alert(
+            "Tem certeza que deseja excluir esta vaga? \n" +
+              vagas[parseFloat(excluir - 1)]
+          );
+          d = parseFloat(excluir) - 1;
+          vagas.splice(d, 1);
+        } else {
+          alert("Vaga inexistente!");
+        }
+      }
+
       do {
         opcao = prompt(
           "Opções\n" +
@@ -33,57 +97,27 @@
 
         switch (opcao) {
           case "1":
-            lista_vagas = "";
-            for (let i = 0; i < vagas.length; i++) {
-              lista_vagas +=
-                i +
-                1 +
-                "° vaga: " +
-                vagas[i][0] +
-                ". Candidatos para vaga: " +
-                "\n";
-            }
-            alert(lista_vagas);
+            mostrar_vagas();
             break;
 
           case "2":
-            criar_vaga = "";
-            nome_da_vaga = prompt("Nome da vaga:");
-            descricao_vaga = prompt("Descrição da vaga:");
-            data_limite = prompt("Data limite:");
-            confirmacao = confirm(
-              "Deseja salvar esta vaga?" +
-                "\n" +
-                nome_da_vaga +
-                ", " +
-                descricao_vaga +
-                ", " +
-                data_limite
-            );
-            if (confirmacao) {
-              criar_vaga = [nome_da_vaga, descricao_vaga, data_limite];
-              vagas.push(criar_vaga);
-            } else {
-              alert("Informações deletadas");
-            }
+            criar_vaga();
             break;
 
           case "3":
-            indice = prompt("Digite o indice da vaga:");
-            if (indice <= vagas.length) {
-              alert(indice + "° vaga: " + vagas[parseFloat(indice) - 1]);
-            } else {
-              alert("Vaga inexistente!");
-            }
+            visualizar_vaga();
             break;
 
           case "4":
+            increver_candidato();
             break;
 
           case "5":
+            excluir_vaga();
             break;
 
           case "6":
+            alert("Encerrando...");
             break;
 
           default:
