@@ -19,7 +19,7 @@
       let criar_vaga = [];
       let confirmacao = "";
       let indice = "";
-      let d = 0;
+      let lista_vagas = "";
       do {
         opcao = prompt(
           "Opções\n" +
@@ -33,6 +33,17 @@
 
         switch (opcao) {
           case "1":
+            lista_vagas = "";
+            for (let i = 0; i < vagas.length; i++) {
+              lista_vagas +=
+                i +
+                1 +
+                "° vaga: " +
+                vagas[i][0] +
+                ". Candidatos para vaga: " +
+                "\n";
+            }
+            alert(lista_vagas);
             break;
 
           case "2":
@@ -49,11 +60,9 @@
                 ", " +
                 data_limite
             );
-            console.log(vagas);
             if (confirmacao) {
               criar_vaga = [nome_da_vaga, descricao_vaga, data_limite];
               vagas.push(criar_vaga);
-              console.log(vagas);
             } else {
               alert("Informações deletadas");
             }
@@ -61,8 +70,10 @@
 
           case "3":
             indice = prompt("Digite o indice da vaga:");
-            if (indice >= vagas.length) {
-              alert(vagas[parseFloat(indice) - 1]);
+            if (indice <= vagas.length) {
+              alert(indice + "° vaga: " + vagas[parseFloat(indice) - 1]);
+            } else {
+              alert("Vaga inexistente!");
             }
             break;
 
