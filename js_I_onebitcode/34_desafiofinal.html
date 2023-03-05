@@ -15,6 +15,8 @@
   <body>
     <script>
       opcao = "";
+      vagas = [];
+      criar_vaga = [];
       do {
         opcao = prompt(
           "Opções\n" +
@@ -25,6 +27,38 @@
             "\n5. Excluir uma vaga" +
             "\n6. Sair"
         );
+
+        switch (opcao) {
+          case "1":
+            break;
+          case "2":
+            vaga = "";
+            nome_da_vaga = prompt("Nome da vaga:");
+            descricao_vaga = prompt("Descrição da vaga:");
+            data_limite = prompt("Data limite:");
+            criar_vaga = [nome_da_vaga, descricao_vaga, data_limite];
+            confirm(
+              "Deseja salvar esta vaga?" +
+                "\n" +
+                nome_da_vaga +
+                ", " +
+                descricao_vaga +
+                ", " +
+                data_limite
+            );
+
+            break;
+          case "3":
+            break;
+          case "4":
+            break;
+          case "5":
+            break;
+          case "6":
+            break;
+          default:
+            alert("Opção inválida, tente novamente!");
+        }
       } while (opcao !== "6");
     </script>
   </body>
