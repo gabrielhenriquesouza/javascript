@@ -16,12 +16,17 @@
     <script>
       let opcao = "";
       let vagas = [];
+      let nome_da_vaga = "";
+      let descricao_vaga = "";
+      let data_limite = "";
       let criar_v = [];
       let confirmacao = "";
       let indice = "";
       let lista_vagas = "";
       let excluir = "";
       let d = 0;
+      let nome_candidato = "";
+      let indice_vaga = "";
 
       function mostrar_vagas() {
         lista_vagas = "";
@@ -61,18 +66,21 @@
 
       function visualizar_vaga() {
         indice = prompt("Digite o indice da vaga:");
-        if (indice <= vagas.length) {
+        if (indice <= vagas.length && indice > 0) {
           alert(indice + "° vaga: " + vagas[parseFloat(indice) - 1]);
         } else {
           alert("Vaga inexistente!");
         }
       }
 
-      function increver_candidato() {}
+      function increver_candidato() {
+        nome_candidato = prompt("Nome do candidato:");
+        indice_vaga = prompt("Digite o índice da vaga:");
+      }
 
       function excluir_vaga() {
         excluir = prompt("Digite o índice da vaga que queira excluir:");
-        if (excluir <= vagas.length) {
+        if (excluir <= vagas.length && excluir > 0) {
           alert(
             "Tem certeza que deseja excluir esta vaga? \n" +
               vagas[parseFloat(excluir - 1)]
