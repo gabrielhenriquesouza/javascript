@@ -27,6 +27,7 @@
       let d = 0;
       let nome_candidato = "";
       let indice_vaga = "";
+      let confirmacao_inc = "";
 
       function mostrar_vagas() {
         lista_vagas = "";
@@ -75,7 +76,19 @@
 
       function increver_candidato() {
         nome_candidato = prompt("Nome do candidato:");
-        indice_vaga = prompt("Digite o índice da vaga:");
+        indice_vaga = parseFloat(prompt("Digite o índice da vaga:"));
+        if (indice_vaga <= vagas.length && indice_vaga > 0) {
+          confirmacao_inc = confirm(
+            "Você deseja salvar estas informações?\n\n" + vagas[indice_vaga - 1]
+          );
+          if (confirmacao_inc) {
+            vagas[indice_vaga - 1].push(nome_candidato);
+          } else {
+            alert("Informações deletadas!");
+          }
+        } else {
+          alert("Vaga inexistente!");
+        }
       }
 
       function excluir_vaga() {
