@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -12,6 +12,20 @@
       let oldest_persons_age = prompt("Idade da pessoa mais velha:");
       let youngest_person_name = prompt("Nome da pessoa mais nova:");
       let younger_person_age = prompt("Idade da pessoa mais nova:");
+      let age_difference = oldest_persons_age - younger_person_age;
+      alert(
+        "Nome da pessoa mais velha: " +
+          oldest_name +
+          "\nIdade da pessoa mais velha: " +
+          oldest_persons_age +
+          "\n\nNome da pessoa mais nova: " +
+          youngest_person_name +
+          "\nIdade da pessoa mais nova: " +
+          younger_person_age +
+          "\n\nDiferença de idade entre eles: " +
+          age_difference +
+          " anos"
+      );
     </script>
   </body>
 </html>
