@@ -9,21 +9,21 @@
   <body>
     <script>
       let spaceship = prompt("Nome da espaçonave:");
-      alert(spaceship[2].length);
+      let new_spaceship = "";
       let replace_caractere = parseFloat(
-        prompt(
-          "Qual caractere você quer substituir?\nExemplo: (1 para substituir o primeiro caractere).\n" +
-            spaceship
-        )
+        prompt("Qual caractere você quer substituir?\n" + spaceship)
       );
       let replace_with = prompt("Por qual caractere deseja substituir:");
 
       for (let i = 0; i < spaceship.length; i++) {
-        if (spaceship[i].length == replace_caractere) {
-          alert(spaceship[i]);
+        if (i == replace_caractere) {
+          new_spaceship += replace_with;
+        } else {
+          new_spaceship += spaceship[i];
         }
       }
-      alert(spaceship);
+
+      alert("Nome da espaçonave alterado para: " + new_spaceship);
     </script>
   </body>
 </html>
