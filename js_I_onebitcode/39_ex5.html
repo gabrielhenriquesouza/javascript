@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let spaceship_name = prompt("Qual o nome da nave?");
+      let option = prompt("Deseja entrar em dobra espacial?\n1. Sim\n2. Não");
+      let score = 0;
+
+      while (option == "1") {
+        score += 1;
+        option = prompt("Deseja realizar a próxima dobra?\n1. Sim\n2. Não");
+      }
+
+      alert(
+        "Nome da nave: " +
+          spaceship_name +
+          "\nQuantas vezes a dobra espacial foi realizada: " +
+          score +
+          " vezes"
+      );
+    </script>
+  </body>
+</html>
