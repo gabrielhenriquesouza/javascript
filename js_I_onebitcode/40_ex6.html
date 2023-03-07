@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let spaceship = prompt("Nome da espaçonave:");
+      alert(spaceship[2].length);
+      let replace_caractere = parseFloat(
+        prompt(
+          "Qual caractere você quer substituir?\nExemplo: (1 para substituir o primeiro caractere).\n" +
+            spaceship
+        )
+      );
+      let replace_with = prompt("Por qual caractere deseja substituir:");
+
+      for (let i = 0; i < spaceship.length; i++) {
+        if (spaceship[i].length == replace_caractere) {
+          alert(spaceship[i]);
+        }
+      }
+      alert(spaceship);
+    </script>
+  </body>
+</html>
