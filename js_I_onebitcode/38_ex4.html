@@ -8,53 +8,43 @@
   </head>
   <body>
     <script>
-      let option = "";
-      let lightYears = "";
-      let pc = 0;
-      let au = 0;
-      let km = 0;
-      lightYears = parseFloat(prompt("Qual a distância em anos-luz"));
-      option = prompt(
+      let converted_value = 0;
+      let converted = "";
+
+      let lightYears = parseFloat(prompt("Qual a distância em anos-luz"));
+      let option = prompt(
         "Você quer converter para: \n\n" +
           "1. Parsec (pc)\n" +
           "2. Unidade astronômica (au)\n" +
-          "3. Quilômetros (km)"
+          "3. Quilômetros (km)" +
+          "\n\nDigite o número da opção desejada"
       );
 
       switch (option) {
         case "1":
-          pc = lightYears * 0.306601;
-          alert(
-            "Distância em anos-luz: " +
-              lightYears +
-              "\nUnidade de conversão: Parsec" +
-              "\nDistância convertida: " +
-              pc
-          );
+          converted_value = lightYears * 0.306601;
+          converted = "Parsec";
           break;
         case "2":
-          au = lightYears * 63241.1;
-          alert(
-            "Distância em anos-luz: " +
-              lightYears +
-              "\nUnidade de conversão: Unidade astronômica" +
-              "\nDistância convertida: " +
-              au
-          );
+          converted_value = lightYears * 63241.1;
+          converted = "Unidade astronômica";
           break;
         case "3":
-          km = lightYears * (9.5 * Math.pow(10, 12));
-          alert(
-            "Distância em anos-luz: " +
-              lightYears +
-              "\nUnidade de conversão: Quilômetro" +
-              "\nDistância convertida: " +
-              km
-          );
+          converted_value = lightYears * (9.5 * Math.pow(10, 12));
+          converted = "Quilômetro";
           break;
         default:
           alert("Opção inválida, tente novamente!");
       }
+
+      alert(
+        "Distância em anos-luz: " +
+          lightYears +
+          "\nUnidade de conversão: " +
+          converted +
+          "\nDistância convertida: " +
+          converted_value
+      );
     </script>
   </body>
 </html>
