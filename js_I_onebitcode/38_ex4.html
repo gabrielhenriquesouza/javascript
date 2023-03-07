@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let option = "";
+      let lightYears = "";
+      let pc = 0;
+      let au = 0;
+      let km = 0;
+      lightYears = parseFloat(prompt("Qual a distância em anos-luz"));
+      option = prompt(
+        "Você quer converter para: \n\n" +
+          "1. Parsec (pc)\n" +
+          "2. Unidade astronômica (au)\n" +
+          "3. Quilômetros (km)"
+      );
+
+      switch (option) {
+        case "1":
+          pc = lightYears * 0.306601;
+          alert(
+            "Distância em anos-luz: " +
+              lightYears +
+              "\nUnidade de conversão: Parsec" +
+              "\nDistância convertida: " +
+              pc
+          );
+          break;
+        case "2":
+          au = lightYears * 63241.1;
+          alert(
+            "Distância em anos-luz: " +
+              lightYears +
+              "\nUnidade de conversão: Unidade astronômica" +
+              "\nDistância convertida: " +
+              au
+          );
+          break;
+        case "3":
+          km = lightYears * (9.5 * Math.pow(10, 12));
+          alert(
+            "Distância em anos-luz: " +
+              lightYears +
+              "\nUnidade de conversão: Quilômetro" +
+              "\nDistância convertida: " +
+              km
+          );
+          break;
+        default:
+          alert("Opção inválida, tente novamente!");
+      }
+    </script>
+  </body>
+</html>

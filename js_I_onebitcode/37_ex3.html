@@ -10,28 +10,40 @@
     <script>
       let pilots_name = prompt("Qual o nome do piloto?");
       let ship_speed = 0;
+
       let new_ship_speed = prompt(
         "Em qual velocidade gostaria de acelerar a nave?"
       );
-      if (new_ship_speed <= 0) {
-        alert("Nave está parada. Considere partir e aumentar a velocidade!");
-      } else if (new_ship_speed < 40) {
-        alert("Você está devagar, podemos aumentar mais!");
-      } else if (new_ship_speed >= 40 && new_ship_speed < 80) {
-        alert("Parece uma boa velocidade para manter!");
-      } else if (new_ship_speed >= 80 && new_ship_speed < 100) {
-        alert("Velocidade alta. Considere diminuir!");
-      } else {
-        alert("Velocidade perigosa. Controle automático forçado!");
-      }
 
-      alert(
-        "Nome do piloto: " +
-          pilots_name +
-          "\nVelocidade atual: " +
+      let confirmation = confirm(
+        "Confirma que deseja acelerar nessa velocidade? " +
           new_ship_speed +
-          "km/h"
+          "km/s"
       );
+
+      if (confirmation) {
+        if (new_ship_speed <= 0) {
+          alert("Nave está parada. Considere partir e aumentar a velocidade!");
+        } else if (new_ship_speed < 40) {
+          alert("Você está devagar, podemos aumentar mais!");
+        } else if (new_ship_speed >= 40 && new_ship_speed < 80) {
+          alert("Parece uma boa velocidade para manter!");
+        } else if (new_ship_speed >= 80 && new_ship_speed < 100) {
+          alert("Velocidade alta. Considere diminuir!");
+        } else {
+          alert("Velocidade perigosa. Controle automático forçado!");
+        }
+
+        alert(
+          "Nome do piloto: " +
+            pilots_name +
+            "\nVelocidade atual: " +
+            new_ship_speed +
+            "km/s"
+        );
+      } else {
+        alert("Reinicie o sistema!");
+      }
     </script>
   </body>
 </html>
