@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let spaceship_name = prompt("Nome da espaçonave:");
+      let velocity = 0;
+      let option = "";
+
+      function speed_up() {
+        velocity += 5;
+        alert("Velocidade atual: " + velocity);
+      }
+      function display_menu() {
+        do {
+          option = prompt(
+            "Opções:\n1. Acelerar a nave em 5km/s\n2. Desacelerar em 5km/s\n3. Imprimir dados de bordo\n4. Sair do programa"
+          );
+        } while (option != "4");
+        switch (option) {
+          case "1":
+            speed_up();
+            break;
+          case "2":
+            break;
+          case "3":
+            break;
+          case "4":
+            break;
+          default:
+            alert("Opção inválida, tente novamente!");
+        }
+      }
+
+      display_menu();
+    </script>
+  </body>
+</html>
