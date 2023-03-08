@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      arr = [20, 10, 15];
+
+      alert(
+        "Sem ordem crescente: \nArray 0: " +
+          arr[0] +
+          "\n" +
+          "Array 1: " +
+          arr[1] +
+          "\n" +
+          "Array 2: " +
+          arr[2]
+      );
+
+      let x = 0;
+      for (let i = 0; i <= 2; i++) {
+        if (arr[i] > arr[i + 1]) {
+          x = arr[i];
+          arr[i] = arr[i + 1];
+          arr[i + 1] = x;
+        }
+      }
+
+      alert(
+        "Com ordem crescente: \nArray 0: " +
+          arr[0] +
+          "\n" +
+          "Array 1: " +
+          arr[1] +
+          "\n" +
+          "Array 2: " +
+          arr[2]
+      );
+    </script>
+  </body>
+</html>

@@ -9,12 +9,14 @@
   <body>
     <script>
       arrys = [28, 21];
-      alert("Array sem estar na ordem crescente " + arrys);
+      let c = 0;
+      alert("Array sem estar na ordem crescente " + arrys[0] + " " + arrys[1]);
       if (arrys[0] > arrys[1]) {
+        c = arrys[0];
         arrys[0] = arrys[1];
-        arrys[1] = arrys[0];
+        arrys[1] = c;
       }
-      alert("Array em ordem crescente: " +)
+      alert("Array em ordem crescente: " + arrys[0] + " " + arrys[1]);
 
       let numero_1 = parseFloat(prompt("Digite o primeiro número: "));
       let numero_2 = parseFloat(prompt("Digite o segundo número: "));
