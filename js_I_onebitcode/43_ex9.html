@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      spaceship_speed = 150;
+      slow_down(spaceship_speed);
+
+      function slow_down(speed) {
+        if (speed < 0) {
+          speed = 0;
+        } else {
+          for (let i = spaceship_speed; i >= 0; i -= 20) {
+            alert("Diminuindo velocidade: " + i + "km/s");
+          }
+        }
+      }
+      alert(
+        "Nave está parada, e as comportas foram abertas. Por favor senhores passageiros entrarem na espaçonave!"
+      );
+    </script>
+  </body>
+</html>
