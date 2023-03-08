@@ -8,21 +8,20 @@
   </head>
   <body>
     <script>
-      spaceship_speed = 150;
-      slow_down(spaceship_speed);
-
-      function slow_down(speed) {
-        if (speed < 0) {
-          speed = 0;
-        } else {
-          for (let i = spaceship_speed; i >= 0; i -= 20) {
-            alert("Diminuindo velocidade: " + i + "km/s");
-          }
+      function slowDown(velocity, printer) {
+        let deceleration = 20;
+        while (velocity > 0) {
+          printer(velocity);
+          velocity -= deceleration;
         }
+        alert(
+          "Nave está parada, e as comportas foram abertas. Por favor senhores passageiros entrarem na espaçonave!"
+        );
       }
-      alert(
-        "Nave está parada, e as comportas foram abertas. Por favor senhores passageiros entrarem na espaçonave!"
-      );
+      let spaceshipVelocity = 150;
+      slowDown(spaceshipVelocity, function (velocity) {
+        console.log("Velocidade atual: " + velocity);
+      });
     </script>
   </body>
 </html>
