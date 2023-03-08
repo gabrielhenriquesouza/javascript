@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      arrys = [28, 21];
+      alert("Array sem estar na ordem crescente " + arrys);
+      if (arrys[0] > arrys[1]) {
+        arrys[0] = arrys[1];
+        arrys[1] = arrys[0];
+      }
+      alert("Array em ordem crescente: " +)
+
+      let numero_1 = parseFloat(prompt("Digite o primeiro número: "));
+      let numero_2 = parseFloat(prompt("Digite o segundo número: "));
+
+      arr = [];
+
+      if (numero_1 < numero_2) {
+        arr[0] = numero_1;
+        arr[1] = numero_2;
+      } else if (numero_2 < numero_1) {
+        arr[0] = numero_2;
+        arr[1] = numero_1;
+      } else {
+        arr[0] = "Números iguais";
+        arr[1] = "Números iguais";
+      }
+      alert("array 0: " + arr[0] + "\narray 1: " + arr[1]);
+    </script>
+  </body>
+</html>
