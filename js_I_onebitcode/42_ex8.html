@@ -14,27 +14,49 @@
 
       function speed_up() {
         velocity += 5;
-        alert("Velocidade atual: " + velocity);
+        alert("Acelerando...\nVelocidade atual: " + velocity + "km/s");
       }
+
+      function slow_down() {
+        if (velocity > 0) {
+          velocity -= 5;
+          alert("Desacelerando...\nVelocidade atual: " + velocity + "km/s");
+        } else {
+          alert("A espaçonave já está parada!");
+        }
+      }
+
+      function print_data() {
+        alert(
+          "Nome da espaçonave: " +
+            spaceship_name +
+            "\nVelocidade atual: " +
+            velocity +
+            "km/s"
+        );
+      }
+
       function display_menu() {
         do {
           option = prompt(
             "Opções:\n1. Acelerar a nave em 5km/s\n2. Desacelerar em 5km/s\n3. Imprimir dados de bordo\n4. Sair do programa"
           );
-        } while (option != "4");
-        switch (option) {
-          case "1":
-            speed_up();
-            break;
-          case "2":
-            break;
-          case "3":
-            break;
-          case "4":
-            break;
-          default:
-            alert("Opção inválida, tente novamente!");
-        }
+          switch (option) {
+            case "1":
+              speed_up();
+              break;
+            case "2":
+              slow_down();
+              break;
+            case "3":
+              print_data();
+              break;
+            case "4":
+              break;
+            default:
+              alert("Opção inválida, tente novamente!");
+          }
+        } while (option !== "4");
       }
 
       display_menu();
