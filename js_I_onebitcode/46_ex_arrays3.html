@@ -9,13 +9,27 @@
   <body>
     <script>
       arr = [];
+      let x = 0;
 
       arr[0] = parseFloat(prompt("Digite o primeiro número:"));
       arr[1] = parseFloat(prompt("Digite o segundo número:"));
       arr[2] = parseFloat(prompt("Digite o terceiro número:"));
 
       alert(
-        "\nArray 0 = " +
+        "Array normal:\nArray 0 = " +
+          arr[0] +
+          "\nArray 1 = " +
+          arr[1] +
+          "\nArray 2 = " +
+          arr[2]
+      );
+
+      x = arr[0];
+      arr[0] = arr[2];
+      arr[2] = x;
+
+      alert(
+        "Array de trás pra frente:\nArray 0 = " +
           arr[0] +
           "\nArray 1 = " +
           arr[1] +
