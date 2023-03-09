@@ -23,7 +23,7 @@
       for (let indice = 0; indice < quantidade; indice++) {
         x = arr[indice];
         arr[indice] = arr[quantidade - 1 - indice];
-        arr[quantidade - 1 - indice] = x;
+        arr[indice - 1 - indice] = x;
       }
 
       alert("Array ao contrário:\n" + arr);
