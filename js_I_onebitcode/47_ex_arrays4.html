@@ -20,10 +20,10 @@
       }
       alert("Array normal:\n" + arr);
 
-      for (let indice = 0; indice < quantidade; indice++) {
+      for (let indice = 0; indice < quantidade / 2; indice++) {
         x = arr[indice];
         arr[indice] = arr[quantidade - 1 - indice];
-        arr[indice - 1 - indice] = x;
+        arr[quantidade - 1 - indice] = x;
       }
 
       alert("Array ao contrário:\n" + arr);
