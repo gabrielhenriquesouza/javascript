@@ -9,18 +9,19 @@
   <body>
     <script>
       arr = [];
+      let x = 0;
+
       let quantidade = parseFloat(
         prompt("Quantos números deseja inserir no array?")
       );
 
       for (let y = 0; y <= quantidade - 1; y++) {
-        arr[y] = prompt("Digite o " + (y + 1) + "° número:");
+        arr[y] = parseFloat(prompt("Digite o " + (y + 1) + "° número:"));
       }
       alert("Array sem ordem: " + arr);
 
-      let x = 0;
-      for (let c = 0; c < 10; c++) {
-        for (let i = 0; i < 10; i++) {
+      for (let c = 0; c < quantidade - 1; c++) {
+        for (let i = 0; i < quantidade - 1; i++) {
           if (arr[i] > arr[i + 1]) {
             x = arr[i];
             arr[i] = arr[i + 1];
