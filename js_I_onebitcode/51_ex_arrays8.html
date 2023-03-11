@@ -8,13 +8,17 @@
   </head>
   <body>
     <script>
-      arr = [1, 1];
+      arr = [1, 2];
       numero = parseFloat(prompt("Digite um número para saber seu fatorial:"));
-
-      for (let i = 2; i < numero; i++) {
-        arr[i] = arr[i - 1] * arr[i - 2];
+      let fatorial = "";
+      for (let i = numero; i > 0; i--) {
+        fatorial += i + " x ";
       }
-      alert(arr);
+
+      for (let c = 1; c < numero; c++) {
+        arr[i] = arr[i] * arr[i - 1];
+      }
+      alert(fatorial + "\n" + arr);
     </script>
   </body>
 </html>
