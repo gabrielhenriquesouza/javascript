@@ -8,21 +8,26 @@
   </head>
   <body>
     <script>
-      arr = [1, 2];
+      arr = [];
       x = 0;
       let resultado = 0;
 
       numero = parseFloat(prompt("Digite um número para saber seu fatorial:"));
       let fatorial = "";
       for (let i = numero; i > 0; i--) {
-        fatorial += i + " x ";
+        if (i != 1) {
+          fatorial += i + " x ";
+        } else {
+          fatorial += i + " = ";
+        }
       }
 
-      for (c = numero; c > 0; c--) {
-        x = c * (c - 1);
-        alert(x);
+      x = numero * (numero - 1);
+      for (c = numero - 1; c > 1; c--) {
+        x = x * (c - 1);
       }
-      alert(fatorial + "\n");
+      arr[numero] = x;
+      alert(fatorial + "\n" + arr[numero]);
     </script>
   </body>
 </html>
