@@ -9,16 +9,20 @@
   <body>
     <script>
       arr = [1, 2];
+      x = 0;
+      let resultado = 0;
+
       numero = parseFloat(prompt("Digite um número para saber seu fatorial:"));
       let fatorial = "";
       for (let i = numero; i > 0; i--) {
         fatorial += i + " x ";
       }
 
-      for (let c = 1; c < numero; c++) {
-        arr[i] = arr[i] * arr[i - 1];
+      for (c = numero; c > 0; c--) {
+        x = c * (c - 1);
+        alert(x);
       }
-      alert(fatorial + "\n" + arr);
+      alert(fatorial + "\n");
     </script>
   </body>
 </html>
