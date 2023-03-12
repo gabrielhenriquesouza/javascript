@@ -12,24 +12,27 @@
         linha = parseFloat(
           prompt(
             "\nVEZ DO JOGADOR 1\n\n" +
+              "1° " +
               arr[0][0] +
               " | " +
               arr[0][1] +
               " | " +
               arr[0][2] +
               "\n" +
+              "2° " +
               arr[1][0] +
               " | " +
               arr[1][1] +
               " | " +
               arr[1][2] +
               "\n" +
+              "3° " +
               arr[2][0] +
               " | " +
               arr[2][1] +
               " | " +
               arr[2][2] +
-              "\n\nQual a linha que você quer jogar? [1,2,3]\n"
+              "\n\nIndique a linha que você quer jogar? [1,2,3]\n"
           )
         );
       }
@@ -38,24 +41,27 @@
         coluna = parseFloat(
           prompt(
             "\nVEZ DO JOGADOR 1\n\n" +
+              "1° " +
               arr[0][0] +
               " | " +
               arr[0][1] +
               " | " +
               arr[0][2] +
               "\n" +
+              "2° " +
               arr[1][0] +
               " | " +
               arr[1][1] +
               " | " +
               arr[1][2] +
               "\n" +
+              "3° " +
               arr[2][0] +
               " | " +
               arr[2][1] +
               " | " +
               arr[2][2] +
-              "\n\nQual a coluna que você quer jogar? [1,2,3]\n"
+              "\n\nIndique a coluna que você quer jogar? [1,2,3]\n"
           )
         );
       }
@@ -130,24 +136,27 @@
         linha = parseFloat(
           prompt(
             "\nVEZ DO JOGADOR 2\n\n" +
+              "1° " +
               arr[0][0] +
               " | " +
               arr[0][1] +
               " | " +
               arr[0][2] +
               "\n" +
+              "2° " +
               arr[1][0] +
               " | " +
               arr[1][1] +
               " | " +
               arr[1][2] +
               "\n" +
+              "3° " +
               arr[2][0] +
               " | " +
               arr[2][1] +
               " | " +
               arr[2][2] +
-              "\n\nQual a linha que você quer jogar? [1,2,3]\n"
+              "\n\nIndique a linha que você quer jogar? [1,2,3]\n"
           )
         );
       }
@@ -156,24 +165,27 @@
         coluna = parseFloat(
           prompt(
             "\nVEZ DO JOGADOR 2\n\n" +
+              "1° " +
               arr[0][0] +
               " | " +
               arr[0][1] +
               " | " +
               arr[0][2] +
               "\n" +
+              "2° " +
               arr[1][0] +
               " | " +
               arr[1][1] +
               " | " +
               arr[1][2] +
               "\n" +
+              "3° " +
               arr[2][0] +
               " | " +
               arr[2][1] +
               " | " +
               arr[2][2] +
-              "\n\nQual a coluna que você quer jogar? [1,2,3]\n"
+              "\n\nIndique a coluna que você quer jogar? [1,2,3]\n"
           )
         );
       }
@@ -250,10 +262,10 @@
         ["-", "-", "-"],
       ];
       let confirmacao = "";
+      let opcao = "";
 
       do {
         //JOGADOR 1
-
         do {
           mostrar_linha_jogador1();
           mostrar_coluna_jogador1();
@@ -268,7 +280,8 @@
           verificar_posicao_jogador2();
           verificar_vitoria_jogador2();
         } while (confirmacao == false);
-      } while (linha != 4 || coluna != 4);
+        opcao = prompt("Deseja continuar?\n1. Sim\n2. Não");
+      } while (opcao != "2");
     </script>
   </body>
 </html>
