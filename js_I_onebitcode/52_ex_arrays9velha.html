@@ -112,12 +112,103 @@
         );
       }
 
+      function winner_jogador1() {
+        if (
+          arr[0][0] == arr[0][1] &&
+          arr[0][0] == arr[0][2] &&
+          arr[0][0] == "x"
+        ) {
+          alert("JOGADOR 1 GANHOU, PARABÉNS!");
+        } else if (
+          arr[1][0] == arr[1][1] &&
+          arr[1][1] == arr[1][2] &&
+          arr[1][2] == "x"
+        ) {
+          alert("JOGADOR 1 GANHOU, PARABÉNS!");
+        } else if (
+          arr[2][0] == arr[2][1] &&
+          arr[2][1] == arr[2][2] &&
+          arr[2][2] == "x"
+        ) {
+          alert("JOGADOR 1 GANHOU, PARABÉNS!");
+        } else if (
+          arr[0][0] == arr3[1][0] &&
+          arr[1][0] == arr[2][0] &&
+          arr[2][0] == "x"
+        ) {
+          alert("JOGADOR 1 GANHOU, PARABÉNS!");
+        } else if (
+          arr[0][1] == arr[1][1] &&
+          arr[1][1] == arr[2][1] &&
+          arr[2][1] == "x"
+        ) {
+          alert("JOGADOR 1 GANHOU, PARABÉNS!");
+        } else if (
+          arr[0][2] == arr[1][2] &&
+          arr[1][2] == arr[2][2] &&
+          arr[2][2] == "x"
+        ) {
+          alert("JOGADOR 1 GANHOU, PARABÉNS!");
+        }
+      }
+
+      function winner_jogador2() {
+        if (
+          arr[0][0] == arr[0][1] &&
+          arr[0][0] == arr[0][2] &&
+          arr[0][0] == "o"
+        ) {
+          alert("JOGADOR 2 GANHOU, PARABÉNS!");
+        } else if (
+          arr[1][0] == arr[1][1] &&
+          arr[1][1] == arr[1][2] &&
+          arr[1][2] == "o"
+        ) {
+          alert("JOGADOR 2 GANHOU, PARABÉNS!");
+        } else if (
+          arr[2][0] == arr[2][1] &&
+          arr[2][1] == arr[2][2] &&
+          arr[2][2] == "o"
+        ) {
+          alert("JOGADOR 2 GANHOU, PARABÉNS!");
+        } else if (
+          arr[0][0] == arr3[1][0] &&
+          arr[1][0] == arr[2][0] &&
+          arr[2][0] == "o"
+        ) {
+          alert("JOGADOR 2 GANHOU, PARABÉNS!");
+        } else if (
+          arr[0][1] == arr[1][1] &&
+          arr[1][1] == arr[2][1] &&
+          arr[2][1] == "o"
+        ) {
+          alert("JOGADOR 2 GANHOU, PARABÉNS!");
+        } else if (
+          arr[0][2] == arr[1][2] &&
+          arr[1][2] == arr[2][2] &&
+          arr[2][2] == "o"
+        ) {
+          alert("JOGADOR 2 GANHOU, PARABÉNS!");
+        } else if (
+          arr[0][0] == arr[1][1] &&
+          arr[1][1] == arr[2][2] &&
+          arr[2][2] == "o"
+        ) {
+          alert("JOGADOR 2 GANHOU, PARABÉNS!");
+        } else if (
+          arr[0][2] == arr[1][1] &&
+          arr[1][1] == arr[2][0] &&
+          arr[2][0] == "o"
+        ) {
+          alert("JOGADOR 2 GANHOU, PARABÉNS!");
+        }
+      }
+
       arr = [
         ["-", "-", "-"],
         ["-", "-", "-"],
         ["-", "-", "-"],
       ];
-      let jogada = "";
       let confirmacao = "";
 
       do {
@@ -138,6 +229,7 @@
               confirmacao = false;
             }
           }
+          winner_jogador1();
         } while (confirmacao == false);
 
         //JOGADOR 2
