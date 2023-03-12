@@ -60,6 +60,72 @@
         );
       }
 
+      function verificar_posicao_jogador1() {
+        if (linha < 1 || linha > 3 || coluna < 1 || coluna > 3) {
+          alert("Posição inexistente, tente novamente!");
+        } else {
+          if (arr[linha - 1][coluna - 1] == "-") {
+            arr[linha - 1][coluna - 1] = "x";
+            confirmacao = true;
+          } else {
+            alert("Posição já ocupada, tente novamente!");
+            confirmacao = false;
+          }
+        }
+      }
+
+      function verificar_vitoria_jogador1() {
+        if (
+          arr[0][0] == arr[0][1] &&
+          arr[0][0] == arr[0][2] &&
+          arr[0][0] == "x"
+        ) {
+          alert("JOGADOR 1 GANHOU, PARABÉNS!");
+        } else if (
+          arr[1][0] == arr[1][1] &&
+          arr[1][1] == arr[1][2] &&
+          arr[1][2] == "x"
+        ) {
+          alert("JOGADOR 1 GANHOU, PARABÉNS!");
+        } else if (
+          arr[2][0] == arr[2][1] &&
+          arr[2][1] == arr[2][2] &&
+          arr[2][2] == "x"
+        ) {
+          alert("JOGADOR 1 GANHOU, PARABÉNS!");
+        } else if (
+          arr[0][0] == arr[1][0] &&
+          arr[1][0] == arr[2][0] &&
+          arr[2][0] == "x"
+        ) {
+          alert("JOGADOR 1 GANHOU, PARABÉNS!");
+        } else if (
+          arr[0][1] == arr[1][1] &&
+          arr[1][1] == arr[2][1] &&
+          arr[2][1] == "x"
+        ) {
+          alert("JOGADOR 1 GANHOU, PARABÉNS!");
+        } else if (
+          arr[0][2] == arr[1][2] &&
+          arr[1][2] == arr[2][2] &&
+          arr[2][2] == "x"
+        ) {
+          alert("JOGADOR 1 GANHOU, PARABÉNS!");
+        } else if (
+          arr[0][0] == arr[1][1] &&
+          arr[1][1] == arr[2][2] &&
+          arr[2][2] == "x"
+        ) {
+          alert("JOGADOR 1 GANHOU, PARABÉNS!");
+        } else if (
+          arr[0][2] == arr[1][1] &&
+          arr[1][1] == arr[2][0] &&
+          arr[2][0] == "x"
+        ) {
+          alert("JOGADOR 1 GANHOU, PARABÉNS!");
+        }
+      }
+
       function mostrar_linha_jogador2() {
         linha = parseFloat(
           prompt(
@@ -112,47 +178,21 @@
         );
       }
 
-      function winner_jogador1() {
-        if (
-          arr[0][0] == arr[0][1] &&
-          arr[0][0] == arr[0][2] &&
-          arr[0][0] == "x"
-        ) {
-          alert("JOGADOR 1 GANHOU, PARABÉNS!");
-        } else if (
-          arr[1][0] == arr[1][1] &&
-          arr[1][1] == arr[1][2] &&
-          arr[1][2] == "x"
-        ) {
-          alert("JOGADOR 1 GANHOU, PARABÉNS!");
-        } else if (
-          arr[2][0] == arr[2][1] &&
-          arr[2][1] == arr[2][2] &&
-          arr[2][2] == "x"
-        ) {
-          alert("JOGADOR 1 GANHOU, PARABÉNS!");
-        } else if (
-          arr[0][0] == arr3[1][0] &&
-          arr[1][0] == arr[2][0] &&
-          arr[2][0] == "x"
-        ) {
-          alert("JOGADOR 1 GANHOU, PARABÉNS!");
-        } else if (
-          arr[0][1] == arr[1][1] &&
-          arr[1][1] == arr[2][1] &&
-          arr[2][1] == "x"
-        ) {
-          alert("JOGADOR 1 GANHOU, PARABÉNS!");
-        } else if (
-          arr[0][2] == arr[1][2] &&
-          arr[1][2] == arr[2][2] &&
-          arr[2][2] == "x"
-        ) {
-          alert("JOGADOR 1 GANHOU, PARABÉNS!");
+      function verificar_posicao_jogador2() {
+        if (linha < 1 || linha > 3 || coluna < 1 || coluna > 3) {
+          alert("Posição inexistente, tente novamente!");
+        } else {
+          if (arr[linha - 1][coluna - 1] == "-") {
+            arr[linha - 1][coluna - 1] = "o";
+            confirmacao = true;
+          } else {
+            alert("Posição já ocupada, tente novamente!");
+            confirmacao = false;
+          }
         }
       }
 
-      function winner_jogador2() {
+      function verificar_vitoria_jogador2() {
         if (
           arr[0][0] == arr[0][1] &&
           arr[0][0] == arr[0][2] &&
@@ -172,7 +212,7 @@
         ) {
           alert("JOGADOR 2 GANHOU, PARABÉNS!");
         } else if (
-          arr[0][0] == arr3[1][0] &&
+          arr[0][0] == arr[1][0] &&
           arr[1][0] == arr[2][0] &&
           arr[2][0] == "o"
         ) {
@@ -217,37 +257,16 @@
         do {
           mostrar_linha_jogador1();
           mostrar_coluna_jogador1();
-
-          if (linha < 1 || linha > 3 || coluna < 1 || coluna > 3) {
-            alert("Posição inexistente, tente novamente!");
-          } else {
-            if (arr[linha - 1][coluna - 1] == "-") {
-              arr[linha - 1][coluna - 1] = "x";
-              confirmacao = true;
-            } else {
-              alert("Posição já ocupada, tente novamente!");
-              confirmacao = false;
-            }
-          }
-          winner_jogador1();
+          verificar_posicao_jogador1();
+          verificar_vitoria_jogador1();
         } while (confirmacao == false);
 
         //JOGADOR 2
         do {
           mostrar_linha_jogador2();
           mostrar_coluna_jogador2();
-
-          if (linha < 1 || linha > 3 || coluna < 1 || coluna > 3) {
-            alert("Posição inexistente, tente novamente!");
-          } else {
-            if (arr[linha - 1][coluna - 1] == "-") {
-              arr[linha - 1][coluna - 1] = "o";
-              confirmacao = true;
-            } else {
-              alert("Posição já ocupada, tente novamente!");
-              confirmacao = false;
-            }
-          }
+          verificar_posicao_jogador2();
+          verificar_vitoria_jogador2();
         } while (confirmacao == false);
       } while (linha != 4 || coluna != 4);
     </script>
