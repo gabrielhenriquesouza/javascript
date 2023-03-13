@@ -17,6 +17,7 @@
       ];
 
       let nomes_naves_cheias = "";
+      let engate_pendente = "";
 
       for (let i = 0; i < hitched_spaceships.length; i++) {
         if (hitched_spaceships[i][1] > 9) {
@@ -24,8 +25,23 @@
         }
       }
 
-      for (let y = 0; y < hitched_spaceships.length; y++) {}
-      alert("Aeronaves com mais de 9 tripulantes: " + nomes_naves_cheias);
+      for (let y = 0; y < hitched_spaceships.length; y++) {
+        for (let x = 0; x < hitched_spaceships[y].length; x++) {
+          if (engate_pendente == "") {
+            if (hitched_spaceships[y][x] === false) {
+              engate_pendente = y + 1;
+              break;
+            }
+          }
+        }
+      }
+
+      alert(
+        "Aeronaves com mais de 9 tripulantes: " +
+          nomes_naves_cheias +
+          "\nPrimeira plataforma com engante pendente: Plataforma " +
+          engate_pendente
+      );
     </script>
   </body>
 </html>
