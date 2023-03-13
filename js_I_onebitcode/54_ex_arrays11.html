@@ -14,7 +14,11 @@
         ][("Darwin", 15, false)],
       ];
 
-      for (let i = 0; hitched_spaceships.length; i++) {}
+      for (let i = 0; i < hitched_spaceships.length; i++) {
+        if (hitched_spaceships[i][1] > 9) {
+          alert(hitched_spaceships[i][1]);
+        }
+      }
     </script>
   </body>
 </html>
