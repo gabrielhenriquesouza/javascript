@@ -18,28 +18,31 @@
 
       let nomes_naves_cheias = "";
       let engate_pendente = "";
+      let nomes_maiusculas = "";
 
       for (let i = 0; i < hitched_spaceships.length; i++) {
+        nomes_maiusculas +=
+          " | " + hitched_spaceships[i][0].toUpperCase() + " | ";
+
         if (hitched_spaceships[i][1] > 9) {
           nomes_naves_cheias += " | " + hitched_spaceships[i][0] + " | ";
         }
-      }
 
-      for (let y = 0; y < hitched_spaceships.length; y++) {
-        for (let x = 0; x < hitched_spaceships[y].length; x++) {
+        for (let j = 0; j < hitched_spaceships[i].length; j++) {
           if (engate_pendente == "") {
-            if (hitched_spaceships[y][x] === false) {
-              engate_pendente = y + 1;
-              break;
+            if (hitched_spaceships[i][j] === false) {
+              engate_pendente = i + 1;
             }
           }
         }
       }
 
       alert(
-        "Aeronaves com mais de 9 tripulantes: " +
+        "\nTodas as espaçonaves: " +
+          nomes_maiusculas +
+          "\n\nAeronaves com mais de 9 tripulantes: " +
           nomes_naves_cheias +
-          "\nPrimeira plataforma com engante pendente: Plataforma " +
+          "\n\nPrimeira plataforma com engante pendente: Plataforma " +
           engate_pendente
       );
     </script>
