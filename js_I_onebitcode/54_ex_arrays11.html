@@ -9,16 +9,23 @@
   <body>
     <script>
       const hitched_spaceships = [
-        ["Fenix", 8, true][("Gollas", 10, true)][("Helmet", 5, false)][
-          ("Elemental", 3, true)
-        ][("Darwin", 15, false)],
+        ["Fenix", 8, true],
+        ["Gollas", 10, true],
+        ["Helmet", 5, false],
+        ["Elemental", 3, true],
+        ["Darwin", 15, false],
       ];
+
+      let nomes_naves_cheias = "";
 
       for (let i = 0; i < hitched_spaceships.length; i++) {
         if (hitched_spaceships[i][1] > 9) {
-          alert(hitched_spaceships[i][1]);
+          nomes_naves_cheias += " | " + hitched_spaceships[i][0] + " | ";
         }
       }
+
+      for (let y = 0; y < hitched_spaceships.length; y++) {}
+      alert("Aeronaves com mais de 9 tripulantes: " + nomes_naves_cheias);
     </script>
   </body>
 </html>
