@@ -27,18 +27,38 @@
         switch (opcao) {
           case "1":
             acelerar = parseFloat(prompt("Quanto deseja acelerar? em Km/s"));
-            if (velocidade <= nave.velocidade_maxima && velocidade >= 0) {
-              velocidade += acelerar;
-            } else {
-              alert("Você ultrapassou a velocidade máxima!");
+            if (acelerar + velocidade > nave.velocidade_maxima) {
+              alert(
+                "Velocidade ultrapassará a velocidade máxima, aceleração negada!"
+              );
+            }else if (velocidade <= nave.velocidade_maxima &&
+                velocidade >= 0){
+                  velocidade += acelerar;
+                }
+
+
+              }else {
+                alert("Você ultrapassou a velocidade máxima!");
+              }
             }
 
             break;
+
           case "2":
             alert(
-              "Velocidade máxima que a nave atingiu: " + velocidade + "Km/s"
+              "Velocidade máxima que a nave atingiu: " +
+                velocidade +
+                "Km/s" +
+                "\nNome da nave: " +
+                nave.nome +
+                "\nTipo da nave: " +
+                nave.tipo +
+                "\nVelocidade máxima da nave: " +
+                nave.velocidade_maxima +
+                "Km/s"
             );
             break;
+
           case "3":
             alert("Finalizando programa!");
             break;
