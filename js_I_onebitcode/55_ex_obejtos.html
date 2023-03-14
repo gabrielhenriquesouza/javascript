@@ -31,17 +31,12 @@
               alert(
                 "Velocidade ultrapassará a velocidade máxima, aceleração negada!"
               );
-            }else if (velocidade <= nave.velocidade_maxima &&
-                velocidade >= 0){
-                  velocidade += acelerar;
-                }
-
-
-              }else {
-                alert("Você ultrapassou a velocidade máxima!");
-              }
+            } else if (
+              velocidade <= nave.velocidade_maxima &&
+              velocidade >= 0
+            ) {
+              velocidade += acelerar;
             }
-
             break;
 
           case "2":
