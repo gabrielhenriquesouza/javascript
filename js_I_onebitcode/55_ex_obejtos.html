@@ -9,9 +9,15 @@
   <body>
     <script>
       let velocidade = 0;
-      let nave = {};
       let opcao = "";
       let acelerar = 0;
+
+      let nave = {};
+      nave.nome = prompt("Nome da nave:");
+      nave.tipo = prompt("Tipo da nave:");
+      nave.velocidade_maxima = parseFloat(
+        prompt("Qual a velocidade máxima desta nave? em Km/s")
+      );
 
       do {
         opcao = prompt(
@@ -21,10 +27,10 @@
         switch (opcao) {
           case "1":
             acelerar = parseFloat(prompt("Quanto deseja acelerar? em Km/s"));
-            if (velocidade <= 100 && velocidade >= 0) {
+            if (velocidade <= nave.velocidade_maxima && velocidade >= 0) {
               velocidade += acelerar;
             } else {
-              alert("Você está na velocidade máxima!");
+              alert("Você ultrapassou a velocidade máxima!");
             }
 
             break;
