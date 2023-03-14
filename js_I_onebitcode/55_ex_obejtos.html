@@ -8,6 +8,53 @@
   </head>
   <body>
     <script>
+      function acelerar_nave() {
+        acelerar = parseFloat(prompt("Quanto deseja acelerar? em Km/s"));
+        if (acelerar + velocidade > nave.velocidade_maxima) {
+          alert(
+            "Velocidade ultrapassará a velocidade máxima, aceleração negada!"
+          );
+        } else if (velocidade <= nave.velocidade_maxima && velocidade >= 0) {
+          velocidade += acelerar;
+        }
+      }
+
+      function parar_nave() {
+        alert(
+          "Velocidade máxima que a nave atingiu: " +
+            velocidade +
+            "Km/s" +
+            "\nNome da nave: " +
+            nave.nome +
+            "\nTipo da nave: " +
+            nave.tipo +
+            "\nVelocidade máxima da nave: " +
+            nave.velocidade_maxima +
+            "Km/s"
+        );
+      }
+
+      function exibir_menu() {
+        do {
+          opcao = prompt(
+            "Você deseja acelerar ou parar a nave?\n1. Acelerar \n2. Parar a nave"
+          );
+
+          switch (opcao) {
+            case "1":
+              acelerar_nave();
+              break;
+
+            case "2":
+              parar_nave();
+              break;
+
+            default:
+              alert("Opção inválidade, tente novamente!");
+          }
+        } while (opcao != "2");
+      }
+
       let velocidade = 0;
       let opcao = "";
       let acelerar = 0;
@@ -19,48 +66,7 @@
         prompt("Qual a velocidade máxima desta nave? em Km/s")
       );
 
-      do {
-        opcao = prompt(
-          "Você deseja acelerar ou parar a nave?\n1. Acelerar \n2. Parar a nave\n3. SAIR"
-        );
-
-        switch (opcao) {
-          case "1":
-            acelerar = parseFloat(prompt("Quanto deseja acelerar? em Km/s"));
-            if (acelerar + velocidade > nave.velocidade_maxima) {
-              alert(
-                "Velocidade ultrapassará a velocidade máxima, aceleração negada!"
-              );
-            } else if (
-              velocidade <= nave.velocidade_maxima &&
-              velocidade >= 0
-            ) {
-              velocidade += acelerar;
-            }
-            break;
-
-          case "2":
-            alert(
-              "Velocidade máxima que a nave atingiu: " +
-                velocidade +
-                "Km/s" +
-                "\nNome da nave: " +
-                nave.nome +
-                "\nTipo da nave: " +
-                nave.tipo +
-                "\nVelocidade máxima da nave: " +
-                nave.velocidade_maxima +
-                "Km/s"
-            );
-            break;
-
-          case "3":
-            alert("Finalizando programa!");
-            break;
-          default:
-            alert("Opção inválidade, tente novamente!");
-        }
-      } while (opcao != "3");
+      exibir_menu();
     </script>
   </body>
 </html>
