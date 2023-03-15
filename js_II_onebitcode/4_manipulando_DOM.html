@@ -17,9 +17,9 @@
 
     <script>
       function addContact() {
-        const contactSection = document.getElementById("contacts-list");
-        const h3 = document.createElement("h3");
-        h3.innerText = "Contato";
+        const contactSection = document.getElementById("contacts-list"); //onde o resultado irá ficar armazenado
+        const h3 = document.createElement("h3"); // Criando um h3
+        h3.innerText = "Contato"; // Colocando texto nesse h3
 
         const ul = document.createElement("ul"); // Criando a UL
 
@@ -30,6 +30,7 @@
         nameInput.name = "fullname"; // Dando o nome do input
         nameLi.appendChild(nameInput); // Adicionando o input na LI
         ul.appendChild(nameLi); // Adicionando a LI na UL
+        ul.appendChild(document.createElement("br")); // pulando uma linha
 
         const phoneLi = document.createElement("li");
         phoneLi.innerText = "Telefone:";
@@ -38,19 +39,28 @@
         phoneInput.name = "phone";
         phoneLi.appendChild(phoneInput);
         ul.appendChild(phoneLi);
+        ul.appendChild(document.createElement("br"));
 
-        const adressLi = document.createElement("li");
-        adressLi.innerText = "Endereço:";
-        const adressInput = document.createElement("input");
-        adressInput.type = "text";
-        adressInput.name = "adress";
-        adressLi.appendChild(adressInput);
-        ul.appendChild(adressLi);
+        const addressLi = document.createElement("li");
+        addressLi.innerText = "Endereço:";
+        const addressInput = document.createElement("input");
+        addressInput.type = "text";
+        addressInput.name = "address";
+        addressLi.appendChild(addressInput);
+        ul.appendChild(addressLi);
+        ul.appendChild(document.createElement("br"));
 
         contactSection.append(h3, ul);
       }
 
-      function removeContact() {}
+      function removeContact() {
+        const contactSection = document.getElementById("contacts-list"); //onde o resultado irá ficar armazenado
+        const titles = document.getElementsByTagName("h3"); //pegar os h3
+        const contacts = document.getElementsByTagName("ul"); //pegar os contatos
+
+        contactSection.removeChild(titles[titles.length - 1]); //excluir último h3
+        contactSection.removeChild(contacts[contacts.length - 1]); //excluir último contato
+      }
     </script>
   </body>
 </html>
