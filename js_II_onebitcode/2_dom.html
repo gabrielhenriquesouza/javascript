@@ -42,6 +42,17 @@
       <button onclick="show()">Exibir</button>
     </ul>
 
-    <script></script>
+    <script>
+      function show() {
+        const contactList = document.getElementById("contact-list");
+        console.log(contactList);
+
+        const listElements = document.getElementsByTagName("li");
+        console.log(listElements);
+
+        const contactInput = document.getElementsByClassName("contact-input");
+        console.log(contactInput);
+      }
+    </script>
   </body>
 </html>
