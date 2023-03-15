@@ -18,9 +18,36 @@
     <script>
       function addContact() {
         const contactSection = document.getElementById("contacts-list");
-
         const h3 = document.createElement("h3");
-        h3.innerText("Contato");
+        h3.innerText = "Contato";
+
+        const ul = document.createElement("ul"); // Criando a UL
+
+        const nameLi = document.createElement("li"); // Criando a LI
+        nameLi.innerText = "Nome:"; // Adicionando texto a LI
+        const nameInput = document.createElement("input"); // Criando Input
+        nameInput.type = "text"; // Dando o tipo do input
+        nameInput.name = "fullname"; // Dando o nome do input
+        nameLi.appendChild(nameInput); // Adicionando o input na LI
+        ul.appendChild(nameLi); // Adicionando a LI na UL
+
+        const phoneLi = document.createElement("li");
+        phoneLi.innerText = "Telefone:";
+        const phoneInput = document.createElement("input");
+        phoneInput.type = "text";
+        phoneInput.name = "phone";
+        phoneLi.appendChild(phoneInput);
+        ul.appendChild(phoneLi);
+
+        const adressLi = document.createElement("li");
+        adressLi.innerText = "Endereço:";
+        const adressInput = document.createElement("input");
+        adressInput.type = "text";
+        adressInput.name = "adress";
+        adressLi.appendChild(adressInput);
+        ul.appendChild(adressLi);
+
+        contactSection.append(h3, ul);
       }
 
       function removeContact() {}
