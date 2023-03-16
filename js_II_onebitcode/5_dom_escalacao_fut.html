@@ -52,13 +52,15 @@
         let confirmacao = confirm(
           "Escalar " + nomeJogador + " como " + posicaoJogador + "?"
         );
-
         if (confirmacao) {
           let li = document.createElement("li"); // criando a li
+          li.id = "jogador-" + numeroCamisa;
           li.innerText =
             posicaoJogador + ": " + nomeJogador + " (" + numeroCamisa + ")"; //o resultado que vai para a página HTML
-          li.id = "jogador-" + numeroCamisa;
           escalar.appendChild(li); //Colocando a ul dentro de onde irá aparecer o resultado
+          document.getElementById("posicao").value = ""; //esvaziando input
+          document.getElementById("nome").value = ""; //esvaziando input
+          document.getElementById("numero").value = ""; //esvaziando input
         }
       }
 
