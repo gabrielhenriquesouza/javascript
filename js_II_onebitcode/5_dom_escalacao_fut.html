@@ -24,15 +24,18 @@
     <h1>ESCALAÇÃO DO TIME</h1>
     <hr />
     <h2>Escalar Jogador</h2>
-    <label for="posicao">Posição: </label> <input type="text" id="posicao" />
-    <label for="nome">Nome:</label> <input type="text" id="nome" />
-    <label for="numero">Número:</label><input type="text" id="numero" />
+    <label for="posicao">Posição: </label>
+    <input type="text" id="posicao" value="Goleiro" />
+    <label for="nome">Nome:</label>
+    <input type="text" id="nome" value="Gabriel" />
+    <label for="numero">Número:</label
+    ><input type="text" id="numero" value="1" />
     <br />
     <input type="submit" value="Escalar" onclick="escalarJogador()" />
     <br />
     <h2>Remover Jogador</h2>
     <label for="removerNumero">Número: </label>
-    <input type="text" id="removerNumero" />
+    <input type="text" id="removerNumero" value="1" />
     <input type="submit" value="Remover" onclick="removerJogador()" />
     <br />
     <h2>Time</h2>
@@ -44,10 +47,12 @@
 
         let posicaoJogador = document.getElementById("posicao"); //posicao Jogador
         let txtPosicao = posicaoJogador.value; //pegando valor do input
+
         let nomeJogador = document.getElementById("nome"); // nome jogador
-        let txtNome = nomeJogador.value;
+        let txtNome = nomeJogador.value; //pegando o nome no input
+
         let numeroCamisa = document.getElementById("numero"); // camisa jogador
-        let txtCamisa = numeroCamisa.value;
+        let txtCamisa = numeroCamisa.value; //pegando o número no input
 
         let ul = document.createElement("ul"); // criando a UL
         let li = document.createElement("li"); // criando a li
@@ -57,7 +62,12 @@
         escalar.appendChild(ul);
       }
 
-      function removerJogador() {}
+      function removerJogador() {
+        let escalar = document.getElementById("mostrarJogadores");
+
+        let remover = document.getElementById("removerNumero");
+        let numeroRemovido = remover.value;
+      }
     </script>
   </body>
 </html>
