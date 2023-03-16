@@ -26,14 +26,38 @@
     <h2>Escalar Jogador</h2>
     <label for="posicao">Posição: </label> <input type="text" id="posicao" />
     <label for="nome">Nome:</label> <input type="text" id="nome" />
-    <label for="numero">Número:</label><input type="text" id="numero" /> <br />
-    <input type="submit" value="Escalar" />
+    <label for="numero">Número:</label><input type="text" id="numero" />
+    <br />
+    <input type="submit" value="Escalar" onclick="escalarJogador()" />
     <br />
     <h2>Remover Jogador</h2>
     <label for="removerNumero">Número: </label>
     <input type="text" id="removerNumero" />
-    <input type="submit" value="Remover" />
+    <input type="submit" value="Remover" onclick="removerJogador()" />
     <br />
-    <h2 id="mostrarJogador">Time</h2>
+    <h2>Time</h2>
+    <section id="mostrarJogadores"></section>
+
+    <script>
+      function escalarJogador() {
+        let escalar = document.getElementById("mostrarJogadores"); // onde irá ficar armazenado o resultado
+
+        let posicaoJogador = document.getElementById("posicao"); //posicao Jogador
+        let txtPosicao = posicaoJogador.value; //pegando valor do input
+        let nomeJogador = document.getElementById("nome"); // nome jogador
+        let txtNome = nomeJogador.value;
+        let numeroCamisa = document.getElementById("numero"); // camisa jogador
+        let txtCamisa = numeroCamisa.value;
+
+        let ul = document.createElement("ul"); // criando a UL
+        let li = document.createElement("li"); // criando a li
+        li.innerText = txtPosicao + ": " + txtNome + " (" + txtCamisa + ")";
+
+        ul.appendChild(li);
+        escalar.appendChild(ul);
+      }
+
+      function removerJogador() {}
+    </script>
   </body>
 </html>
