@@ -56,18 +56,25 @@
 
         let ul = document.createElement("ul"); // criando a UL
         let li = document.createElement("li"); // criando a li
-        li.innerText = txtPosicao + ": " + txtNome + " (" + txtCamisa + ")";
+        li.innerText = txtPosicao + ": " + txtNome + " (" + txtCamisa + ")"; //o resultado que vai para a página HTML
 
-        ul.appendChild(li);
-        escalar.appendChild(ul);
+        ul.appendChild(li); //Colocando os li dentro da ul
+        escalar.appendChild(ul); //Colocando a ul dentro de onde irá aparecer o resultado
       }
 
       function removerJogador() {
         let escalar = document.getElementById("mostrarJogadores");
-        let
+        let jogadores = document.getElementsByTagName("ul");//puxando a ul
 
-        let remover = document.getElementById("removerNumero");
-        let numeroRemovido = remover.value;
+        let remover = document.getElementById("removerNumero");//pegando o input
+        let numeroRemovido = remover.value;//pegando o valor do input
+
+        let numeroCamisa = document.getElementById("numero"); // camisa jogador
+        let txtCamisa = numeroCamisa.value; //pegando o número no input
+
+        if (numeroRemovido == )
+
+        escalar.removeChild(jogadores[jogadores.length - 1]);
       }
     </script>
   </body>
