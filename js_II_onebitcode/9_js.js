@@ -1,17 +1,27 @@
+function createLabel(namelabel, idinput) {
+  label = document.createElement("label");
+  label.inn;
+  label.htmlFor = "";
+}
+
 let buttonAddTechnology = document.querySelector("button[id='addTechnology']");
 
 buttonAddTechnology.addEventListener("click", function (ev) {
-  ev.preventDefault();
+  ev.preventDefault(); // para não reiniciar a página
 
-  let form = document.getElementById("technologies");
+  let displayResult = document.getElementById("technologies"); //onde ficará os resultados
 
-  let ul = document.createElement("ul");
-  let li = document.createElement("li");
-  let formTechnologies = document.createElement("form");
+  let ul = document.createElement("ul"); //criando ul
+  let li = document.createElement("li"); //criando li
+  let formTechnologies = document.createElement("form"); // criando form
 
+  /*
+  let labelTechnologyName = document.createElement("label");
+  labelTechnologyName.htmlFor = "technologyName";
+  labelTechnologyName.innerText = "Nome: ";
   let inputTechnologyName = document.createElement("input");
   inputTechnologyName.type = "text";
-  inputTechnologyName.id = "technologyName";
+  inputTechnologyName.id = "technologyName-" + ul.lenght;
   inputTechnologyName.name = "technologyName";
 
   let yearsExperience0_2 = document.createElement("input");
@@ -32,7 +42,9 @@ buttonAddTechnology.addEventListener("click", function (ev) {
     event.preventDefault();
     alert("Clicou");
   });
+  */
 
+  formTechnologies.appendChild(labelTechnologyName);
   formTechnologies.appendChild(inputTechnologyName);
   formTechnologies.appendChild(yearsExperience0_2);
   formTechnologies.appendChild(yearsExperience3_4);
@@ -40,11 +52,5 @@ buttonAddTechnology.addEventListener("click", function (ev) {
   formTechnologies.appendChild(removeButton);
   li.appendChild(formTechnologies);
   ul.appendChild(li);
-  form.appendChild(ul);
+  displayResult.appendChild(ul);
 });
-
-/*
-    <input type="radio" name="radio" id="" value="A" />
-    <input type="radio" name="radio" id="" value="B" />
-    <input type="radio" name="radio" id="" value="C" />
-*/
