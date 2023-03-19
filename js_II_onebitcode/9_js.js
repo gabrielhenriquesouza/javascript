@@ -1,19 +1,41 @@
-function createLabel(namelabel, idinput) {
+function createLabel(txtlabel, idinput) {
   label = document.createElement("label");
-  label.inn;
-  label.htmlFor = "";
+  label.innerText = txtlabel;
+  label.htmlFor = idinput;
+  return label;
+}
+
+function createInput(type, id, name, indice) {
+  let input = document.createElement("input");
+  input.type = type;
+  input.id = id + indice;
+  input.name = name;
+  return input;
 }
 
 let buttonAddTechnology = document.querySelector("button[id='addTechnology']");
+let indice = 0;
 
 buttonAddTechnology.addEventListener("click", function (ev) {
   ev.preventDefault(); // para não reiniciar a página
 
   let displayResult = document.getElementById("technologies"); //onde ficará os resultados
 
-  let ul = document.createElement("ul"); //criando ul
   let li = document.createElement("li"); //criando li
   let formTechnologies = document.createElement("form"); // criando form
+
+  //CRIANDO INPUT PARA COLETAR O NOME DA TECHNOLOGIA
+  indice += 1;
+  let inputTechnologyName = createInput(
+    "text",
+    "technologyName",
+    "technologyName",
+    indice
+  );
+  let labelTechnologyName = createLabel("Nome: ", "inputTechnologyName");
+
+  //CRIANDO INPUT PARA COLETAR OS ANOS DE EXPERIENCIA
+  let yearsExperience;
 
   /*
   let labelTechnologyName = document.createElement("label");
@@ -43,7 +65,12 @@ buttonAddTechnology.addEventListener("click", function (ev) {
     alert("Clicou");
   });
   */
+  formTechnologies.appendChild(labelTechnologyName);
+  formTechnologies.appendChild(inputTechnologyName);
+  li.appendChild(formTechnologies);
+  displayResult.appendChild(li);
 
+  /*
   formTechnologies.appendChild(labelTechnologyName);
   formTechnologies.appendChild(inputTechnologyName);
   formTechnologies.appendChild(yearsExperience0_2);
@@ -53,4 +80,5 @@ buttonAddTechnology.addEventListener("click", function (ev) {
   li.appendChild(formTechnologies);
   ul.appendChild(li);
   displayResult.appendChild(ul);
+  */
 });
