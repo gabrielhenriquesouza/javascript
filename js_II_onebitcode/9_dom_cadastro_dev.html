@@ -1,10 +1,33 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>CADASTRO DE DEVS</title>
+    <style>
+      body {
+        background-color: #171717;
+        color: white;
+        font-family: Arial, Helvetica, sans-serif;
+      }
+    </style>
+    <script src="9_js.js"></script>
   </head>
-  <body></body>
+  <body>
+    <h1>CADASTRO DE DEVS</h1>
+    <hr />
+    <h2>Cadastrar novo desenvolvedor</h2>
+
+    <label for="name">Nome Completo:</label>
+    <input type="text" name="name" id="name" />
+    <br />
+    <h2>Tecnologias:</h2>
+
+    <input type="submit" value="Adicionar nova" onclick="addTechnologies()" />
+    <br />
+    <form id="technologies"></form>
+    <br />
+    <input type="submit" value="Cadastrar" />
+  </body>
 </html>
