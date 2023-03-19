@@ -1,28 +1,17 @@
-/*function addTechnologies() {
-  let technologies = document.getElementById("technologies");
-  console.log(technologies);
-
-  let labelName = document.createElement("label");
-
-  let technologyName = document.createElement("input");
-  technologyName.type = "text";
-  technologyName.id = "technologyName";
-  technologyName.name = "technologyName";
-
-  technologies.appendChild(technologyName);
-}*/
-
-let buttonAddTechnology = document.getElementById("addTechnology");
+let buttonAddTechnology = document.querySelector("button[id='addTechnology']");
 
 buttonAddTechnology.addEventListener("click", function (ev) {
   ev.preventDefault();
 
-  let technologies = document.getElementById("technologies");
+  let form = document.getElementById("technologies");
 
   let inputTechnologyName = document.createElement("input");
-  technologyName.type = "text";
-  technologyName.id = "technologyName";
-  technologyName.name = "technologyName";
+  inputTechnologyName.type = "text";
+  inputTechnologyName.id = "technologyName";
+  inputTechnologyName.name = "technologyName";
 
-  technologies.appendChild(inputTechnologyName);
+  let yearsExperience = document.createElement("input");
+  yearsExperience.type = "radio";
+
+  form.appendChild(inputTechnologyName);
 });
