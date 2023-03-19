@@ -7,7 +7,6 @@ buttonAddTechnology.addEventListener("click", function (ev) {
 
   let ul = document.createElement("ul");
   let li = document.createElement("li");
-  li.innerText = "Nome: ";
   let formTechnologies = document.createElement("form");
 
   let inputTechnologyName = document.createElement("input");
@@ -27,10 +26,18 @@ buttonAddTechnology.addEventListener("click", function (ev) {
   yearsExperience5.type = "radio";
   yearsExperience5.name = "yearsExperience";
 
+  let removeButton = document.createElement("button");
+  removeButton.innerText = "Remover";
+  removeButton.addEventListener("click", function (event) {
+    event.preventDefault();
+    alert("Clicou");
+  });
+
   formTechnologies.appendChild(inputTechnologyName);
   formTechnologies.appendChild(yearsExperience0_2);
   formTechnologies.appendChild(yearsExperience3_4);
   formTechnologies.appendChild(yearsExperience5);
+  formTechnologies.appendChild(removeButton);
   li.appendChild(formTechnologies);
   ul.appendChild(li);
   form.appendChild(ul);
