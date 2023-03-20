@@ -13,6 +13,7 @@ function createInput(type, id, name, indice) {
   return input;
 }
 
+//Botão de adicionar tecnologias
 let indice = 0;
 let buttonAddTechnology = document.querySelector("button[id='addTechnology']");
 buttonAddTechnology.addEventListener("click", function (ev) {
@@ -104,24 +105,21 @@ buttonAddTechnology.addEventListener("click", function (ev) {
   displayResult.append(li);
 });
 
+//Botão de Registrar
 let buttonRegister = document.getElementById("buttonRegister");
-buttonRegister.addEventListener("click", function (ev) {
-  ev.preventDefault();
+buttonRegister.addEventListener("click", function (eve) {
+  eve.preventDefault();
 
-  let developerInformation = [];
-
-  let developerName = document.getElementById("nameDeveloper");
-  let name = developerName.value;
-  developerInformation.push(name);
-  console.log(developerInformation);
+  let nameDeveloper = document.getElementById("nameDeveloper");
+  let name = nameDeveloper.value;
 
   alert("Desenvolvedor cadastrado com sucesso!");
 
   /*
   Limpando os dados  
   */
-  developerName.value = "";
-  let displayResult = document.getElementById("technologies");
-  let li = document.getElementById("liTechnologies");
-  displayResult.remove(li);
+  nameDeveloper.value = "";
+  let liTechnologies = document.getElementById("liTechnologies");
+  let inputs = document.querySelectorAll("form");
+  liTechnologies.remove(inputs);
 });
