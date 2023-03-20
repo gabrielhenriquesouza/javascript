@@ -23,6 +23,7 @@ buttonAddTechnology.addEventListener("click", function (ev) {
   let li = document.createElement("li");
   li.id = "liTechnologies";
   let formTechnologies = document.createElement("form");
+  formTechnologies.id = "formTechnologies" + indice;
   indice += 1;
 
   /*
@@ -82,7 +83,7 @@ buttonAddTechnology.addEventListener("click", function (ev) {
   removeButton.innerText = "Remover";
   removeButton.addEventListener("click", function (event) {
     event.preventDefault();
-
+    indice -= 1;
     li.remove(formTechnologies);
   });
 
@@ -108,8 +109,6 @@ buttonAddTechnology.addEventListener("click", function (ev) {
 //Botão de Registrar
 let buttonRegister = document.getElementById("buttonRegister");
 buttonRegister.addEventListener("click", function (eve) {
-  eve.preventDefault();
-
   let nameDeveloper = document.getElementById("nameDeveloper");
   let name = nameDeveloper.value;
 
@@ -120,6 +119,11 @@ buttonRegister.addEventListener("click", function (eve) {
   */
   nameDeveloper.value = "";
   let liTechnologies = document.getElementById("liTechnologies");
-  let inputs = document.querySelectorAll("form");
-  liTechnologies.remove(inputs);
+
+  for (let i = 0; i < indice; i++) {
+    let inputs = document.getElementById("formTechnologies" + i);
+    console.log(inputs);
+    liTechnologies.remove(inputs);
+    console.log("removi");
+  }
 });
