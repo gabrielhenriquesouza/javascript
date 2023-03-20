@@ -13,6 +13,10 @@ function createInput(type, id, name, indice) {
   return input;
 }
 
+function checkingNull() {
+  console.log("Null");
+}
+
 //Botão de adicionar tecnologias
 let indice = 0;
 let buttonAddTechnology = document.querySelector("button[id='addTechnology']");
@@ -109,21 +113,37 @@ buttonAddTechnology.addEventListener("click", function (ev) {
 //Botão de Registrar
 let buttonRegister = document.getElementById("buttonRegister");
 buttonRegister.addEventListener("click", function (eve) {
+  eve.preventDefault();
+
+  let developerData = [];
+
   let nameDeveloper = document.getElementById("nameDeveloper");
   let name = nameDeveloper.value;
+  developerData.push(name);
 
+  for (let ind = 0; ind < indice; ind++) {
+    let technologyName = document.getElementById("technologyName" + ind);
+    if (technologyName == null) {
+      checkingNull();
+    } else {
+      let technology = technologyName.value;
+      developerData.push(technology);
+    }
+  }
+  console.log(nameDeveloper);
   alert("Desenvolvedor cadastrado com sucesso!");
 
   /*
   Limpando os dados  
   */
   nameDeveloper.value = "";
-  let liTechnologies = document.getElementById("liTechnologies");
-
   for (let i = 0; i < indice; i++) {
     let inputs = document.getElementById("formTechnologies" + i);
-    console.log(inputs);
-    liTechnologies.remove(inputs);
-    console.log("removi");
+    if (inputs == null) {
+      console.log("null");
+    } else {
+      let liTechnologies = document.getElementById("liTechnologies");
+      liTechnologies.remove(inputs);
+    }
   }
 });
