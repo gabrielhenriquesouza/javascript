@@ -62,7 +62,7 @@ buttonAddTechnology.addEventListener("click", function (ev) {
     indice
   );
   let labelYearsExperience3_4 = createLabel(
-    "0-2 anos",
+    "3-4 anos",
     "yearsExperience",
     indice
   );
@@ -72,25 +72,34 @@ buttonAddTechnology.addEventListener("click", function (ev) {
     "yearsExperience",
     indice
   );
-  let labelYearsExperience5 = createLabel(
-    "0-2 anos",
-    "yearsExperience",
-    indice
-  );
+  let labelYearsExperience5 = createLabel("5+ anos", "yearsExperience", indice);
+
   /*
+  CRIANDO O BOTÃO DE REMOVER TECHNOLOGIA 
+  */
   let removeButton = document.createElement("button");
   removeButton.innerText = "Remover";
   removeButton.addEventListener("click", function (event) {
     event.preventDefault();
-    alert("Clicou");
-  });
-  */
 
-  formTechnologies.appendChild(labelTechnologyName);
-  formTechnologies.appendChild(inputTechnologyName);
-  formTechnologies.appendChild(labelExperience);
-  formTechnologies.appendChild(inputYearsExperience0_2);
-  formTechnologies.appendChild(labelYearsExperience0_2);
-  li.appendChild(formTechnologies);
-  displayResult.appendChild(li);
+    li.remove(formTechnologies);
+  });
+
+  /*
+  ADICIONANDO OS ITENS
+   */
+  formTechnologies.append(
+    labelTechnologyName,
+    inputTechnologyName,
+    labelExperience,
+    inputYearsExperience0_2,
+    labelYearsExperience0_2,
+    inputYearsExperience3_4,
+    labelYearsExperience3_4,
+    inputYearsExperience5,
+    labelYearsExperience5,
+    removeButton
+  );
+  li.append(formTechnologies);
+  displayResult.append(li);
 });
