@@ -78,15 +78,6 @@ buttonAddTechnology.addEventListener("click", function (ev) {
     indice
   );
   /*
-
-  let yearsExperience3_4 = document.createElement("input");
-  yearsExperience3_4.type = "radio";
-  yearsExperience3_4.name = "yearsExperience";
-
-  let yearsExperience5 = document.createElement("input");
-  yearsExperience5.type = "radio";
-  yearsExperience5.name = "yearsExperience";
-
   let removeButton = document.createElement("button");
   removeButton.innerText = "Remover";
   removeButton.addEventListener("click", function (event) {
@@ -102,16 +93,4 @@ buttonAddTechnology.addEventListener("click", function (ev) {
   formTechnologies.appendChild(labelYearsExperience0_2);
   li.appendChild(formTechnologies);
   displayResult.appendChild(li);
-
-  /*
-  formTechnologies.appendChild(labelTechnologyName);
-  formTechnologies.appendChild(inputTechnologyName);
-  formTechnologies.appendChild(yearsExperience0_2);
-  formTechnologies.appendChild(yearsExperience3_4);
-  formTechnologies.appendChild(yearsExperience5);
-  formTechnologies.appendChild(removeButton);
-  li.appendChild(formTechnologies);
-  ul.appendChild(li);
-  displayResult.appendChild(ul);
-  */
 });
