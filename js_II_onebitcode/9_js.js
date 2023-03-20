@@ -52,33 +52,37 @@ buttonAddTechnology.addEventListener("click", function (ev) {
   );
   let inputYearsExperience0_2 = createInput(
     "radio",
-    "yearsExperience",
+    "yearsExperience0-2",
     "yearsExperience",
     indice
   );
   let labelYearsExperience0_2 = createLabel(
     "0-2 anos",
-    "yearsExperience",
+    "yearsExperience0-2",
     indice
   );
   let inputYearsExperience3_4 = createInput(
     "radio",
-    "yearsExperience",
+    "yearsExperience3-4",
     "yearsExperience",
     indice
   );
   let labelYearsExperience3_4 = createLabel(
     "3-4 anos",
-    "yearsExperience",
+    "yearsExperience3-4",
     indice
   );
   let inputYearsExperience5 = createInput(
     "radio",
-    "yearsExperience",
+    "yearsExperience5",
     "yearsExperience",
     indice
   );
-  let labelYearsExperience5 = createLabel("5+ anos", "yearsExperience", indice);
+  let labelYearsExperience5 = createLabel(
+    "5+ anos",
+    "yearsExperience5",
+    indice
+  );
 
   /*
   CRIANDO O BOTÃO DE REMOVER TECHNOLOGIA 
@@ -121,7 +125,7 @@ buttonRegister.addEventListener("click", function (eve) {
   let name = nameDeveloper.value;
   developerData.push(name);
 
-  for (let ind = 0; ind < indice; ind++) {
+  for (let ind = 1; ind <= indice; ind++) {
     let technologyName = document.getElementById("technologyName" + ind);
     if (technologyName == null) {
       checkingNull();
@@ -129,8 +133,13 @@ buttonRegister.addEventListener("click", function (eve) {
       let technology = technologyName.value;
       developerData.push(technology);
     }
+
+    let DEFINIRNOME = document.querySelector(
+      "input[name=yearsExperience]:checked"
+    );
   }
-  console.log(nameDeveloper);
+
+  console.log(developerData);
   alert("Desenvolvedor cadastrado com sucesso!");
 
   /*
