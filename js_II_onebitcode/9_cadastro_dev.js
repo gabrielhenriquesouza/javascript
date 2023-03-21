@@ -24,8 +24,10 @@ buttonAddTechnology.addEventListener("click", function (ev) {
   ev.preventDefault(); // para não reiniciar a página
 
   let displayResult = document.getElementById("technologies");
+
   let li = document.createElement("li");
   li.id = "liTechnologies";
+
   let formTechnologies = document.createElement("form");
   formTechnologies.id = "formTechnologies" + indice;
   indice += 1;
@@ -132,7 +134,6 @@ buttonRegister.addEventListener("click", function (eve) {
     } else {
       let technology = technologyName.value;
       developerData.push(technology);
-    }
     }
   }
 
