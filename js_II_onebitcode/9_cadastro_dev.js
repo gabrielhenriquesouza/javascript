@@ -133,13 +133,9 @@ buttonRegister.addEventListener("click", function (eve) {
       let technology = technologyName.value;
       developerData.push(technology);
     }
-
-    let DEFINIRNOME = document.querySelector(
-      "input[name=yearsExperience]:checked"
-    );
+    }
   }
 
-  console.log(developerData);
   alert("Desenvolvedor cadastrado com sucesso!");
 
   /*
