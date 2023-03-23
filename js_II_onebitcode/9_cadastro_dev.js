@@ -5,11 +5,12 @@ function createLabel(txtlabel, idinput, indice) {
   return label;
 }
 
-function createInput(type, id, name, indice) {
+function createInput(type, id, name, value, indice) {
   let input = document.createElement("input");
   input.type = type;
   input.id = id + indice;
   input.name = name;
+  input.value = value;
   return input;
 }
 
@@ -39,6 +40,7 @@ buttonAddTechnology.addEventListener("click", function (ev) {
     "text",
     "technologyName",
     "technologyName",
+    "",
     indice
   );
   let labelTechnologyName = createLabel("Nome: ", "technologyName", indice);
@@ -56,6 +58,7 @@ buttonAddTechnology.addEventListener("click", function (ev) {
     "radio",
     "yearsExperience0-2",
     "yearsExperience",
+    "0-2 anos",
     indice
   );
   let labelYearsExperience0_2 = createLabel(
@@ -67,6 +70,7 @@ buttonAddTechnology.addEventListener("click", function (ev) {
     "radio",
     "yearsExperience3-4",
     "yearsExperience",
+    "3-4 anos",
     indice
   );
   let labelYearsExperience3_4 = createLabel(
@@ -78,6 +82,7 @@ buttonAddTechnology.addEventListener("click", function (ev) {
     "radio",
     "yearsExperience5",
     "yearsExperience",
+    "5+ anos",
     indice
   );
   let labelYearsExperience5 = createLabel(
@@ -151,5 +156,10 @@ buttonRegister.addEventListener("click", function (eve) {
       let liTechnologies = document.getElementById("liTechnologies");
       liTechnologies.remove(inputs);
     }
+
+    yearsExperience = document.querySelector(
+      'input[name="yearsExperience"]:checked'
+    );
+    console.log(yearsExperience);
   }
 });
