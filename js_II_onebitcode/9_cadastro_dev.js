@@ -1,165 +1,108 @@
-function createLabel(txtlabel, idinput, indice) {
-  label = document.createElement("label");
-  label.innerText = txtlabel;
-  label.htmlFor = idinput + indice;
+function createLabel(text, htmlFor) {
+  const label = document.createElement("label");
+  label.htmlFor = htmlFor;
+  label.innerText = text;
   return label;
 }
 
-function createInput(type, id, name, value, indice) {
-  let input = document.createElement("input");
-  input.type = type;
-  input.id = id + indice;
-  input.name = name;
+function createInput(id, value, name, type = "text", placeholder = "") {
+  const input = document.createElement("input");
+  input.id = id;
   input.value = value;
+  input.name = name;
+  input.type = type;
+  input.placeholder = placeholder;
   return input;
 }
 
-function checkingNull() {
-  console.log("Null");
-}
-
 //Botão de adicionar tecnologias
-let indice = 0;
-let buttonAddTechnology = document.querySelector("button[id='addTechnology']");
-buttonAddTechnology.addEventListener("click", function (ev) {
-  ev.preventDefault(); // para não reiniciar a página
+const addTechBtn = document.getElementById("addTechBtn");
+const form = document.getElementById("devForm");
+const developers = [];
+let inputRows = 0;
+addTechBtn.addEventListener("click", function (ev) {
+  const stackInputs = document.getElementById("stackInputs");
 
-  let displayResult = document.getElementById("technologies");
+  const newRow = document.createElement("li");
+  const rowIndex = inputRows;
+  inputRows++;
+  newRow.id = "inputRow-" + rowIndex;
+  newRow.className = "inputRow";
 
-  let li = document.createElement("li");
-  li.id = "liTechnologies";
+  const techNameLabel = createLabel("Nome: ", "techName-" + rowIndex);
+  const techNameInput = createInput("techName-" + rowIndex, null, "techName");
 
-  let formTechnologies = document.createElement("form");
-  formTechnologies.id = "formTechnologies" + indice;
-  indice += 1;
-
-  /*
-  CRIANDO INPUT PARA COLETAR O NOME DA TECHNOLOGIA
-  */
-  let inputTechnologyName = createInput(
-    "text",
-    "technologyName",
-    "technologyName",
-    "",
-    indice
-  );
-  let labelTechnologyName = createLabel("Nome: ", "technologyName", indice);
-
-  /*
-  CRIANDO INPUT PARA COLETAR OS ANOS DE EXPERIENCIA
-  */
-  let labelExperience = createLabel(
-    " Experiência: ",
-    "yearsExperience",
-    "yearsExperience",
-    indice
-  );
-  let inputYearsExperience0_2 = createInput(
-    "radio",
-    "yearsExperience0-2",
-    "yearsExperience",
+  const expLabel = createLabel("Experiência: ");
+  const id1 = "expRadio-" + rowIndex + ".1";
+  const expRadio1 = createInput(
+    id1,
     "0-2 anos",
-    indice
+    "techExp-" + rowIndex,
+    "radio"
   );
-  let labelYearsExperience0_2 = createLabel(
-    "0-2 anos",
-    "yearsExperience0-2",
-    indice
-  );
-  let inputYearsExperience3_4 = createInput(
-    "radio",
-    "yearsExperience3-4",
-    "yearsExperience",
+  const expLabel1 = createLabel("0-2 anos", id1);
+  const id2 = "expRadio-" + rowIndex + ".2";
+  const expRadio2 = createInput(
+    id2,
     "3-4 anos",
-    indice
+    "techExp-" + rowIndex,
+    "radio"
   );
-  let labelYearsExperience3_4 = createLabel(
-    "3-4 anos",
-    "yearsExperience3-4",
-    indice
-  );
-  let inputYearsExperience5 = createInput(
-    "radio",
-    "yearsExperience5",
-    "yearsExperience",
-    "5+ anos",
-    indice
-  );
-  let labelYearsExperience5 = createLabel(
-    "5+ anos",
-    "yearsExperience5",
-    indice
-  );
+  const expLabel2 = createLabel("3-4 anos", id2);
+  const id3 = "expRadio-" + rowIndex + ".3";
+  const expRadio3 = createInput(id3, "5+ anos", "techExp-" + rowIndex, "radio");
+  const expLabel3 = createLabel("5+ anos", id3);
 
-  /*
-  CRIANDO O BOTÃO DE REMOVER TECHNOLOGIA 
-  */
-  let removeButton = document.createElement("button");
-  removeButton.innerText = "Remover";
-  removeButton.addEventListener("click", function (event) {
-    event.preventDefault();
-    indice -= 1;
-    li.remove(formTechnologies);
+  const removeRowBtn = document.createElement("button");
+  removeRowBtn.type = "button";
+  removeRowBtn.innerText = "Remover";
+  removeRowBtn.addEventListener("click", function () {
+    stackInputs.removeChild(newRow);
   });
 
-  /*
-  ADICIONANDO OS ITENS
-   */
-  formTechnologies.append(
-    labelTechnologyName,
-    inputTechnologyName,
-    labelExperience,
-    inputYearsExperience0_2,
-    labelYearsExperience0_2,
-    inputYearsExperience3_4,
-    labelYearsExperience3_4,
-    inputYearsExperience5,
-    labelYearsExperience5,
-    removeButton
+  newRow.append(
+    techNameLabel,
+    techNameInput,
+    expLabel,
+    expRadio1,
+    expLabel1,
+    expRadio2,
+    expLabel2,
+    expRadio3,
+    expLabel3,
+    removeRowBtn
   );
-  li.append(formTechnologies);
-  displayResult.append(li);
+
+  stackInputs.appendChild(newRow);
 });
 
 //Botão de Registrar
-let buttonRegister = document.getElementById("buttonRegister");
-buttonRegister.addEventListener("click", function (eve) {
-  eve.preventDefault();
+form.addEventListener("submit", function (ev) {
+  ev.preventDefault();
 
-  let developerData = [];
+  const fullnameInput = document.getElementById("fullname");
+  const inputRows = document.querySelectorAll(".inputRow");
 
-  let nameDeveloper = document.getElementById("nameDeveloper");
-  let name = nameDeveloper.value;
-  developerData.push(name);
+  let technologies = [];
+  inputRows.forEach(function (row) {
+    // #rowId input[name="techName"]
+    const techName = document.querySelector(
+      "#" + row.id + ' input[name="techName"]'
+    ).value;
+    const techExp = document.querySelector(
+      "#" + row.id + ' input[type="radio"]:checked'
+    ).value;
+    technologies.push({ name: techName, exp: techExp });
+  });
 
-  for (let ind = 1; ind <= indice; ind++) {
-    let technologyName = document.getElementById("technologyName" + ind);
-    if (technologyName == null) {
-      checkingNull();
-    } else {
-      let technology = technologyName.value;
-      developerData.push(technology);
-    }
-  }
+  const newDev = { fullname: fullnameInput.value, technologies: technologies };
+  developers.push(newDev);
+  alert("Dev cadastrado com sucesso!");
 
-  alert("Desenvolvedor cadastrado com sucesso!");
+  fullnameInput.value = "";
+  inputRows.forEach(function (row) {
+    row.remove();
+  });
 
-  /*
-  Limpando os dados  
-  */
-  nameDeveloper.value = "";
-  for (let i = 0; i < indice; i++) {
-    let inputs = document.getElementById("formTechnologies" + i);
-    if (inputs == null) {
-      console.log("null");
-    } else {
-      let liTechnologies = document.getElementById("liTechnologies");
-      liTechnologies.remove(inputs);
-    }
-
-    yearsExperience = document.querySelector(
-      'input[name="yearsExperience"]:checked'
-    );
-    console.log(yearsExperience);
-  }
+  console.log(developers);
 });
