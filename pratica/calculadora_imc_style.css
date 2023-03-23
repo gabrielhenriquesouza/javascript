@@ -1,0 +1,55 @@
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
+body {
+  background-color: #171717;
+}
+
+.calculator {
+  background-color: black;
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+
+  width: 350px;
+  height: 600px;
+}
+
+.titleCalculator {
+  text-align: center;
+
+  padding: 30px 0px 5px 0px;
+}
+
+.formCalculator {
+  width: 250px;
+  background-color: blueviolet;
+}
+
+.calculatorLabel {
+  font-size: 23px;
+}
+
+.calculatorInput {
+  font-size: 20px;
+  text-align: center;
+
+  width: 130px;
+  height: 40px;
+  margin: 0px 0px 25px 0px;
+}
+
+.calculateButton {
+  width: 250px;
+  padding: 5px;
+  font-size: 18px;
+  margin: 0px 0px 50px 0px;
+}
+
+.result {
+  background-color: white;
+
+  width: 250px;
+  height: 100px;
+}
