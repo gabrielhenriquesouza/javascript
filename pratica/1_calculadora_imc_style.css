@@ -4,7 +4,16 @@
 }
 
 body {
-  background-color: #171717;
+  background-color: #292828;
+}
+
+.container {
+  width: 100vw;
+  height: 100vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .calculator {
@@ -13,7 +22,13 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 
   width: 350px;
-  height: 600px;
+  height: 540px;
+  border-radius: 20px;
+  box-shadow: 0px 5px 10px black;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .titleCalculator {
@@ -22,9 +37,16 @@ body {
   padding: 30px 0px 5px 0px;
 }
 
+.hrCalculator {
+  width: 350px;
+  margin-bottom: 2px;
+}
+
 .formCalculator {
+  background-color: black;
+
   width: 250px;
-  background-color: blueviolet;
+  padding: 40px 0px 0px 0px;
 }
 
 .calculatorLabel {
@@ -41,9 +63,10 @@ body {
 }
 
 .calculateButton {
+  font-size: 18px;
+
   width: 250px;
   padding: 5px;
-  font-size: 18px;
   margin: 0px 0px 50px 0px;
 }
 
