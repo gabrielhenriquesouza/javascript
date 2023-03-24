@@ -4,14 +4,14 @@ document
   .getElementById("calculateBtn")
   .addEventListener("click", function (ev) {
     ev.preventDefault();
-    if (result != "") {
-    }
 
     const personsName = document.getElementById("name").value;
     const height = document.getElementById("height").value;
     const weight = document.getElementById("weight").value;
+    let txt = document.getElementById("txt");
 
     let imc = weight / (height * height);
+
     let rel = "";
     if (imc < 18.5) {
       rel = "está abaixo do peso!";
@@ -25,12 +25,6 @@ document
       rel = "está com obesidade grave!";
     }
 
-    const resultTxt = personsName + " seu IMC é " + imc + " e você " + rel;
-    result.append(resultTxt);
+    txt = personsName + " seu IMC é " + imc + " e você " + rel;
+    result.append(txt);
   });
-
-/*MENOR QUE 18,5	MAGREZA	0
-ENTRE 18,5 E 24,9	NORMAL	0
-ENTRE 25,0 E 29,9	SOBREPESO	I
-ENTRE 30,0 E 39,9	OBESIDADE	II
-MAIOR QUE 40,0	OBESIDADE GRAVE	 */
