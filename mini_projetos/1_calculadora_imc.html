@@ -14,33 +14,39 @@
         <h1 class="titleCalculator">Calculadora - IMC</h1>
         <hr class="hrCalculator" />
 
-        <form class="formCalculator">
-          <label for="name" class="calculatorLabel">Nome:</label>
-          <input type="text" name="name" id="name" class="calculatorInput" />
+        <form class="formCalculator inputContainer">
+          <label for="name" class="calculatorLabel item1">Nome:</label>
+          <input
+            type="text"
+            name="name"
+            id="name"
+            class="calculatorInput item2"
+          />
           <br />
-
-          <label for="height" class="calculatorLabel">Altura:</label>
+          <label for="height" class="calculatorLabel item3">Altura:</label>
           <input
             type="number"
             name="height"
             id="height"
-            class="calculatorInput"
+            class="calculatorInput item4"
           />
           <br />
-
-          <label for="weight" class="calculatorLabel">Peso:</label>
+          <label for="weight" class="calculatorLabel item5">Peso:</label>
           <input
             type="number"
             name="weight"
             id="weight"
-            class="calculatorInput"
+            class="calculatorInput item6"
           />
           <br />
 
-          <button class="calculateButton">Calcular</button>
+          <button id="calculateBtn" class="calculateButton item7">
+            Calcular
+          </button>
+
           <br />
-          
-          <div class="result"></div>
+
+          <div id="result" class="result item8"></div>
         </form>
       </div>
     </div>
