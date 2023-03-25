@@ -1,0 +1,26 @@
+/* cor do green #04D939*/
+* {
+  margin: 0px;
+  padding: 0px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.bodyContainer {
+  background-color: #012340;
+  color: #03a63c;
+
+  width: 100vw;
+  height: 100vh;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.btn {
+  background-color: #025959;
+  border: px solid black;
+
+  width: 150px;
+  height: 150px;
+}
