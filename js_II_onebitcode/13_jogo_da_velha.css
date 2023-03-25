@@ -8,7 +8,7 @@
 
 .bodyContainer {
   background-color: #082c3b;
-  color: #04bf8a;
+  color: rgb(0, 231, 231);
   font-size: 30px;
 
   width: 100vw;
@@ -20,15 +20,34 @@
   justify-content: center;
 }
 
+.containerInputs {
+  margin: 20px 0px 0px 0px;
+}
+
 .inputs {
   padding: 8px;
   background-color: #026873;
+  color: rgb(245, 245, 245);
+  font-size: 18px;
+}
+
+#start {
+  margin: 20px 0px 20px 0px;
+  background-color: rgb(0, 231, 231);
+  border-radius: 25px;
+  font-size: 22px;
+  padding: 14px;
+
+  transition: 0.3s;
+}
+#start:hover {
+  background-color: rgba(0, 255, 255, 0.322);
 }
 
 .btn {
   background-color: #026873;
   border: 3px solid #051e29;
-  display: inline-block;
+  font-size: 100px;
 
   width: 150px;
   height: 150px;
