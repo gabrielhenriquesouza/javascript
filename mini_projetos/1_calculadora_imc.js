@@ -1,3 +1,22 @@
+const calculateBtn = document.getElementById("calculateBtn");
+
+calculateBtn.addEventListener("click", function (event) {
+  event.preventDefault();
+
+  const name = document.getElementById("name").value;
+  const height = document.getElementById("height").value;
+  const weight = document.getElementById("weight").value;
+  const result = document.getElementById("result");
+
+  if (name !== "" && height !== "" && weight !== "") {
+    const imc = weight / (height * height).toFixed(2);
+    result.textContent = imc;
+  } else {
+    result.textContent = "Preencha todos os campos!";
+  }
+});
+
+/*
 let result = document.getElementById("result");
 let indice = 0;
 
@@ -7,8 +26,8 @@ document
     ev.preventDefault();
     indice += 1;
     if (indice >= 2) {
-      do
-      result.remove();
+      let removeDiv = document.getElementById("paragrafh" + (indice - 1));
+      result.removeChild(removeDiv);
     }
 
     const personsName = document.getElementById("name").value;
@@ -32,7 +51,14 @@ document
       rel = "está com obesidade grave!";
     }
 
-    let txt = personsName + " seu IMC é " + imc + " e você " + rel;
+    let txt =
+      personsName +
+      " seu IMC é " +
+      imc.toString().slice(0, 5) +
+      " e você " +
+      rel;
     divTxt.append(txt);
     result.append(divTxt);
   });
+
+*/
