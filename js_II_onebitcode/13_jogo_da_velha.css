@@ -1,13 +1,15 @@
-/* cor do green #04D939*/
+/* cor do green #03A64A*/
 * {
   margin: 0px;
   padding: 0px;
+  border: 0px;
   font-family: Arial, Helvetica, sans-serif;
 }
 
 .bodyContainer {
-  background-color: #012340;
-  color: #03a63c;
+  background-color: #082c3b;
+  color: #04bf8a;
+  font-size: 30px;
 
   width: 100vw;
   height: 100vh;
@@ -17,10 +19,52 @@
   align-items: center;
   justify-content: center;
 }
+
+.inputs {
+  padding: 8px;
+  background-color: #026873;
+}
+
 .btn {
-  background-color: #025959;
-  border: px solid black;
+  background-color: #026873;
+  border: 3px solid #051e29;
+  display: inline-block;
 
   width: 150px;
   height: 150px;
+}
+.containerBtn {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-areas:
+    "item1 item2 item3"
+    "item4 item5 item6"
+    "item7 item8 item9";
+}
+.item1 {
+  grid-area: item1;
+}
+.item2 {
+  grid-area: item2;
+}
+.item3 {
+  grid-area: item3;
+}
+.item4 {
+  grid-area: item4;
+}
+.item5 {
+  grid-area: item5;
+}
+.item6 {
+  grid-area: item6;
+}
+.item7 {
+  grid-area: item7;
+}
+.item8 {
+  grid-area: item8;
+}
+.item9 {
+  grid-area: item9;
 }
