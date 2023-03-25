@@ -1,14 +1,21 @@
 let result = document.getElementById("result");
+let indice = 0;
 
 document
   .getElementById("calculateBtn")
   .addEventListener("click", function (ev) {
     ev.preventDefault();
+    indice += 1;
+    if (indice >= 2) {
+      do
+      result.remove();
+    }
 
     const personsName = document.getElementById("name").value;
     const height = document.getElementById("height").value;
     const weight = document.getElementById("weight").value;
-    let txt = document.getElementById("txt");
+    let divTxt = document.createElement("div");
+    divTxt.id = "paragrafh" + indice;
 
     let imc = weight / (height * height);
 
@@ -25,6 +32,7 @@ document
       rel = "está com obesidade grave!";
     }
 
-    txt = personsName + " seu IMC é " + imc + " e você " + rel;
-    result.append(txt);
+    let txt = personsName + " seu IMC é " + imc + " e você " + rel;
+    divTxt.append(txt);
+    result.append(divTxt);
   });
