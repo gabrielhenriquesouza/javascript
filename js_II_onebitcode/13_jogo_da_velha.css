@@ -25,28 +25,29 @@
 }
 
 .inputs {
-  padding: 8px;
   background-color: #026873;
   color: rgb(245, 245, 245);
   font-size: 18px;
+  padding: 8px;
 }
 
 #start {
-  margin: 20px 0px 20px 0px;
-  background-color: rgb(0, 231, 231);
-  border-radius: 25px;
+  background-color: rgba(0, 231, 231, 0.842);
   font-size: 22px;
+  border-radius: 25px;
   padding: 14px;
+  margin: 20px 0px 20px 0px;
 
   transition: 0.3s;
 }
 #start:hover {
-  background-color: rgba(0, 255, 255, 0.322);
+  background-color: rgba(0, 255, 255, 0.466);
 }
 
 .btn {
   background-color: #026873;
-  border: 3px solid #051e29;
+  color: #062633;
+  border: 3px solid #04171f;
   font-size: 100px;
 
   width: 150px;
