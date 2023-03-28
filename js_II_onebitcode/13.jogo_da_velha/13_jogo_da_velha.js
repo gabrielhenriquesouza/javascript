@@ -1,10 +1,78 @@
 function initializeGame() {
-  alert("começou");
+  player1Move();
+  player2Move();
 }
 
-function player1Move(ev) {
-  alert("KKKKKKKKKKKK");
+function checkButtonClickedPlayer1() {
+  document.getElementById("item1").addEventListener("click", function () {
+    if (this.dataset.value === "-") {
+      this.innerText = "x";
+      this.dataset.value = "x";
+    }
+  });
+
+  document.getElementById("item2").addEventListener("click", function () {
+    if (this.dataset.value === "-") {
+      this.innerText = "x";
+      this.dataset.value = "x";
+    }
+  });
+
+  document.getElementById("item3").addEventListener("click", function () {
+    if (this.dataset.value === "-") {
+      this.innerText = "x";
+      this.dataset.value = "x";
+    }
+  });
+
+  document.getElementById("item4").addEventListener("click", function () {
+    if (this.dataset.value === "-") {
+      this.innerText = "x";
+      this.dataset.value = "x";
+    }
+  });
+
+  document.getElementById("item5").addEventListener("click", function () {
+    if (this.dataset.value === "-") {
+      this.innerText = "x";
+      this.dataset.value = "x";
+    }
+  });
+
+  document.getElementById("item6").addEventListener("click", function () {
+    if (this.dataset.value === "-") {
+      this.innerText = "x";
+      this.dataset.value = "x";
+    }
+  });
+
+  document.getElementById("item7").addEventListener("click", function () {
+    if (this.dataset.value === "-") {
+      this.innerText = "x";
+      this.dataset.value = "x";
+    }
+  });
+
+  document.getElementById("item8").addEventListener("click", function () {
+    if (this.dataset.value === "-") {
+      this.innerText = "x";
+      this.dataset.value = "x";
+    }
+  });
+
+  document.getElementById("item9").addEventListener("click", function () {
+    if (this.dataset.value === "-") {
+      this.innerText = "x";
+      this.dataset.value = "x";
+    }
+  });
 }
+
+function player1Move() {
+  checkButtonClickedPlayer1();
+}
+
+function player2Move() {}
 
 let nameX = document.getElementById("x");
 let nameO = document.getElementById("o");
@@ -29,6 +97,4 @@ for (let i = 1; i <= 9; i++) {
 console.table(arr);
 
 document.getElementById("start").addEventListener("click", initializeGame);
-document.getElementsByClassName("btn").addEventListener("click");
-
 // const value = charKeyBtn.dataset.value;
