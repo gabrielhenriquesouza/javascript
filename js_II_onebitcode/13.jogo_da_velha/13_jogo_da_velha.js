@@ -1,17 +1,34 @@
+function initializeGame() {
+  alert("começou");
+}
+
+function player1Move(ev) {
+  alert("KKKKKKKKKKKK");
+}
+
 let nameX = document.getElementById("x");
 let nameO = document.getElementById("o");
 
 let arr = [[], [], []];
-for (let i = 1; i <= 3; i++) {
-  arr[0].push(document.getElementById("item" + i));
-}
-for (let o = 4; o <= 6; o++) {
-  arr[1].push(document.getElementById("item" + o));
-}
-for (let p = 7; p <= 9; p++) {
-  arr[2].push(document.getElementById("item" + p));
+for (let i = 1; i <= 9; i++) {
+  if (i <= 3) {
+    let element = document.getElementById("item" + i);
+    let value = element.dataset.value;
+    arr[0].push(value);
+  } else if (i <= 6) {
+    let element = document.getElementById("item" + i);
+    let value = element.dataset.value;
+    arr[1].push(value);
+  } else if (i <= 9) {
+    let element = document.getElementById("item" + i);
+    let value = element.dataset.value;
+    arr[2].push(value);
+  }
 }
 
-document.getElementById("start").addEventListener("click", function (ev) {
-  alert("clicou");
-});
+console.table(arr);
+
+document.getElementById("start").addEventListener("click", initializeGame);
+document.getElementsByClassName("btn").addEventListener("click");
+
+// const value = charKeyBtn.dataset.value;
