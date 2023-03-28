@@ -12,5 +12,6 @@ for (let p = 7; p <= 9; p++) {
   arr[2].push(document.getElementById("item" + p));
 }
 
-let btn1 = document.getElementById("item1");
-console.log(btn1);
+document.getElementById("start").addEventListener("click", function (ev) {
+  alert("clicou");
+});

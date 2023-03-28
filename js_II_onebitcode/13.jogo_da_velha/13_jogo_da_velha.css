@@ -30,6 +30,9 @@
   font-size: 18px;
   padding: 8px;
 }
+.inputs::placeholder {
+  color: white;
+}
 
 #start {
   background-color: rgba(0, 231, 231, 0.842);
