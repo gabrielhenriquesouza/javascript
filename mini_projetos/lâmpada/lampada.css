@@ -28,13 +28,17 @@
   justify-content: center;
 }
 
+.img {
+  width: 200px;
+}
+
 #lightUp {
   margin: 20px 0px 0px 0px;
-  padding: 5px;
+  padding: 3px 5px;
   font-size: 20px;
 }
 
 #toSwitchOff {
-  padding: 5px 0px 5px 4px;
+  padding: 3px 5px;
   font-size: 20px;
 }
