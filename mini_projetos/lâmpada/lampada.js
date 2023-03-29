@@ -1,5 +1,6 @@
 let img = document.getElementById("img");
 let btn = document.getElementById("turnOnAndTurnOff");
+let result = document.getElementById("result");
 
 //Botão para ligar a lampada
 btn.addEventListener("click", function () {
@@ -30,15 +31,11 @@ img.addEventListener("mouseout", function () {
 
 //Duplo click quebra a lampada
 img.addEventListener("dblclick", function () {
-  let result = document.getElementById("result");
-
-  result.removeChild(img);
-
   let imgBroken = document.createElement("img");
   imgBroken.src = "imagens/quebrada.jpg";
   imgBroken.id = "brokenImage";
-
   btn.textContent = "Lâmpada quebrada";
 
+  result.removeChild(img);
   result.appendChild(imgBroken);
 });
