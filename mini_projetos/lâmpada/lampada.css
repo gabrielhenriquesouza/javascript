@@ -32,13 +32,8 @@
   width: 200px;
 }
 
-#lightUp {
+#turnOnAndTurnOff {
   margin: 20px 0px 0px 0px;
-  padding: 3px 5px;
-  font-size: 20px;
-}
-
-#toSwitchOff {
   padding: 3px 5px;
   font-size: 20px;
 }
