@@ -1,8 +1,3 @@
-function initializeGame() {
-  checkButtonClickedPlayer1();
-  checkButtonClickedPlayer2();
-}
-
 function checkButtonClickedPlayer1() {
   let verification = false;
   document.getElementById("item1").addEventListener("click", function () {
@@ -10,6 +5,9 @@ function checkButtonClickedPlayer1() {
       if (this.dataset.value === "-") {
         this.innerText = "x";
         this.dataset.value = "x";
+        arr[0][0] = "x";
+        checkWin();
+
         return (verification = true);
       }
     }
@@ -20,6 +18,9 @@ function checkButtonClickedPlayer1() {
       if (this.dataset.value === "-") {
         this.innerText = "x";
         this.dataset.value = "x";
+        arr[0][1] = "x";
+        checkWin();
+
         return (verification = true);
       }
     }
@@ -30,6 +31,9 @@ function checkButtonClickedPlayer1() {
       if (this.dataset.value === "-") {
         this.innerText = "x";
         this.dataset.value = "x";
+        arr[0][2] = "x";
+        checkWin();
+
         return (verification = true);
       }
     }
@@ -40,6 +44,9 @@ function checkButtonClickedPlayer1() {
       if (this.dataset.value === "-") {
         this.innerText = "x";
         this.dataset.value = "x";
+        arr[1][0] = "x";
+        checkWin();
+
         return (verification = true);
       }
     }
@@ -50,6 +57,9 @@ function checkButtonClickedPlayer1() {
       if (this.dataset.value === "-") {
         this.innerText = "x";
         this.dataset.value = "x";
+        arr[1][1] = "x";
+        checkWin();
+
         return (verification = true);
       }
     }
@@ -60,6 +70,9 @@ function checkButtonClickedPlayer1() {
       if (this.dataset.value === "-") {
         this.innerText = "x";
         this.dataset.value = "x";
+        arr[1][2] = "x";
+        checkWin();
+
         return (verification = true);
       }
     }
@@ -70,6 +83,9 @@ function checkButtonClickedPlayer1() {
       if (this.dataset.value === "-") {
         this.innerText = "x";
         this.dataset.value = "x";
+        arr[2][0] = "x";
+        checkWin();
+
         return (verification = true);
       }
     }
@@ -80,6 +96,9 @@ function checkButtonClickedPlayer1() {
       if (this.dataset.value === "-") {
         this.innerText = "x";
         this.dataset.value = "x";
+        arr[2][1] = "x";
+        checkWin();
+
         return (verification = true);
       }
     }
@@ -90,6 +109,9 @@ function checkButtonClickedPlayer1() {
       if (this.dataset.value === "-") {
         this.innerText = "x";
         this.dataset.value = "x";
+        arr[2][2] = "x";
+        checkWin();
+
         return (verification = true);
       }
     }
@@ -103,6 +125,9 @@ function checkButtonClickedPlayer2() {
       if (this.dataset.value === "-") {
         this.innerText = "o";
         this.dataset.value = "o";
+        arr[0][0] = "o";
+        checkWin();
+
         return (verification = true);
       }
     }
@@ -112,6 +137,9 @@ function checkButtonClickedPlayer2() {
       if (this.dataset.value === "-") {
         this.innerText = "o";
         this.dataset.value = "o";
+        arr[0][1] = "o";
+        checkWin();
+
         return (verification = true);
       }
     }
@@ -121,6 +149,9 @@ function checkButtonClickedPlayer2() {
       if (this.dataset.value === "-") {
         this.innerText = "o";
         this.dataset.value = "o";
+        arr[0][2] = "o";
+        checkWin();
+
         return (verification = true);
       }
     }
@@ -130,6 +161,9 @@ function checkButtonClickedPlayer2() {
       if (this.dataset.value === "-") {
         this.innerText = "o";
         this.dataset.value = "o";
+        arr[1][0] = "o";
+        checkWin();
+
         return (verification = true);
       }
     }
@@ -139,6 +173,9 @@ function checkButtonClickedPlayer2() {
       if (this.dataset.value === "-") {
         this.innerText = "o";
         this.dataset.value = "o";
+        arr[1][1] = "o";
+        checkWin();
+
         return (verification = true);
       }
     }
@@ -148,6 +185,9 @@ function checkButtonClickedPlayer2() {
       if (this.dataset.value === "-") {
         this.innerText = "o";
         this.dataset.value = "o";
+        arr[1][2] = "o";
+        checkWin();
+
         return (verification = true);
       }
     }
@@ -157,6 +197,9 @@ function checkButtonClickedPlayer2() {
       if (this.dataset.value === "-") {
         this.innerText = "o";
         this.dataset.value = "o";
+        arr[2][0] = "o";
+        checkWin();
+
         return (verification = true);
       }
     }
@@ -166,6 +209,9 @@ function checkButtonClickedPlayer2() {
       if (this.dataset.value === "-") {
         this.innerText = "o";
         this.dataset.value = "o";
+        arr[2][1] = "o";
+        checkWin();
+
         return (verification = true);
       }
     }
@@ -175,10 +221,200 @@ function checkButtonClickedPlayer2() {
       if (this.dataset.value === "-") {
         this.innerText = "o";
         this.dataset.value = "o";
+        arr[2][2] = "o";
+        checkWin();
+
         return (verification = true);
       }
     }
   });
+}
+
+function checkWin() {
+  if (
+    arr[0][0] === arr[0][1] &&
+    arr[0][1] === arr[0][2] &&
+    arr[0][0] !== "-" &&
+    arr[0][0] === "x"
+  ) {
+    document.getElementById("item1").style.backgroundColor = "#03A64A";
+    document.getElementById("item2").style.backgroundColor = "#03A64A";
+    document.getElementById("item3").style.backgroundColor = "#03A64A";
+  }
+
+  if (
+    arr[1][0] === arr[1][1] &&
+    arr[1][1] === arr[1][2] &&
+    arr[1][0] !== "-" &&
+    arr[1][0] === "x"
+  ) {
+    document.getElementById("item4").style.backgroundColor = "#03A64A";
+    document.getElementById("item5").style.backgroundColor = "#03A64A";
+    document.getElementById("item6").style.backgroundColor = "#03A64A";
+  }
+
+  if (
+    arr[2][0] === arr[2][1] &&
+    arr[2][1] === arr[2][2] &&
+    arr[2][0] !== "-" &&
+    arr[2][0] === "x"
+  ) {
+    document.getElementById("item7").style.backgroundColor = "#03A64A";
+    document.getElementById("item8").style.backgroundColor = "#03A64A";
+    document.getElementById("item9").style.backgroundColor = "#03A64A";
+  }
+
+  if (
+    arr[0][0] === arr[1][0] &&
+    arr[1][0] === arr[2][0] &&
+    arr[2][0] !== "-" &&
+    arr[2][0] === "x"
+  ) {
+    document.getElementById("item0").style.backgroundColor = "#03A64A";
+    document.getElementById("item0").style.backgroundColor = "#03A64A";
+    document.getElementById("item0").style.backgroundColor = "#03A64A";
+  }
+
+  if (
+    arr[0][1] === arr[1][1] &&
+    arr[1][1] === arr[2][1] &&
+    arr[2][1] !== "-" &&
+    arr[2][1] === "x"
+  ) {
+    document.getElementById("item0").style.backgroundColor = "#03A64A";
+    document.getElementById("item0").style.backgroundColor = "#03A64A";
+    document.getElementById("item0").style.backgroundColor = "#03A64A";
+  }
+
+  if (
+    arr[0][2] === arr[1][2] &&
+    arr[1][2] === arr[2][2] &&
+    arr[2][2] !== "-" &&
+    arr[2][2] === "x"
+  ) {
+    document.getElementById("item0").style.backgroundColor = "#03A64A";
+    document.getElementById("item0").style.backgroundColor = "#03A64A";
+    document.getElementById("item0").style.backgroundColor = "#03A64A";
+  }
+
+  if (
+    arr[0][0] === arr[1][1] &&
+    arr[1][1] === arr[2][2] &&
+    arr[2][2] !== "-" &&
+    arr[2][2] === "x"
+  ) {
+    document.getElementById("item0").style.backgroundColor = "#03A64A";
+    document.getElementById("item0").style.backgroundColor = "#03A64A";
+    document.getElementById("item0").style.backgroundColor = "#03A64A";
+  }
+
+  if (
+    arr[0][2] === arr[1][1] &&
+    arr[1][1] === arr[2][0] &&
+    arr[2][0] !== "-" &&
+    arr[2][0] === "x"
+  ) {
+    document.getElementById("item0").style.backgroundColor = "#03A64A";
+    document.getElementById("item0").style.backgroundColor = "#03A64A";
+    document.getElementById("item0").style.backgroundColor = "#03A64A";
+  }
+
+  //----------------------------------------------------------------------
+
+  if (
+    arr[0][0] === arr[0][1] &&
+    arr[0][1] === arr[0][2] &&
+    arr[0][0] !== "-" &&
+    arr[0][0] === "o"
+  ) {
+    document.getElementById("item1").style.backgroundColor = "#03A64A";
+    document.getElementById("item2").style.backgroundColor = "#03A64A";
+    document.getElementById("item3").style.backgroundColor = "#03A64A";
+  }
+
+  if (
+    arr[1][0] === arr[1][1] &&
+    arr[1][1] === arr[1][2] &&
+    arr[1][0] !== "-" &&
+    arr[1][0] === "o"
+  ) {
+    document.getElementById("item4").style.backgroundColor = "#03A64A";
+    document.getElementById("item5").style.backgroundColor = "#03A64A";
+    document.getElementById("item6").style.backgroundColor = "#03A64A";
+  }
+
+  if (
+    arr[2][0] === arr[2][1] &&
+    arr[2][1] === arr[2][2] &&
+    arr[2][0] !== "-" &&
+    arr[2][0] === "o"
+  ) {
+    document.getElementById("item7").style.backgroundColor = "#03A64A";
+    document.getElementById("item8").style.backgroundColor = "#03A64A";
+    document.getElementById("item9").style.backgroundColor = "#03A64A";
+  }
+
+  if (
+    arr[0][0] === arr[1][0] &&
+    arr[1][0] === arr[2][0] &&
+    arr[2][0] !== "-" &&
+    arr[2][0] === "o"
+  ) {
+    document.getElementById("item0").style.backgroundColor = "#03A64A";
+    document.getElementById("item0").style.backgroundColor = "#03A64A";
+    document.getElementById("item0").style.backgroundColor = "#03A64A";
+  }
+
+  if (
+    arr[0][1] === arr[1][1] &&
+    arr[1][1] === arr[2][1] &&
+    arr[2][1] !== "-" &&
+    arr[2][1] === "o"
+  ) {
+    document.getElementById("item0").style.backgroundColor = "#03A64A";
+    document.getElementById("item0").style.backgroundColor = "#03A64A";
+    document.getElementById("item0").style.backgroundColor = "#03A64A";
+  }
+
+  if (
+    arr[0][2] === arr[1][2] &&
+    arr[1][2] === arr[2][2] &&
+    arr[2][2] !== "-" &&
+    arr[2][2] === "o"
+  ) {
+    document.getElementById("item0").style.backgroundColor = "#03A64A";
+    document.getElementById("item0").style.backgroundColor = "#03A64A";
+    document.getElementById("item0").style.backgroundColor = "#03A64A";
+  }
+
+  if (
+    arr[0][0] === arr[1][1] &&
+    arr[1][1] === arr[2][2] &&
+    arr[2][2] !== "-" &&
+    arr[2][2] === "o"
+  ) {
+    document.getElementById("item0").style.backgroundColor = "#03A64A";
+    document.getElementById("item0").style.backgroundColor = "#03A64A";
+    document.getElementById("item0").style.backgroundColor = "#03A64A";
+  }
+
+  if (
+    arr[0][2] === arr[1][1] &&
+    arr[1][1] === arr[2][0] &&
+    arr[2][0] !== "-" &&
+    arr[2][0] === "o"
+  ) {
+    document.getElementById("item0").style.backgroundColor = "#03A64A";
+    document.getElementById("item0").style.backgroundColor = "#03A64A";
+    document.getElementById("item0").style.backgroundColor = "#03A64A";
+  }
+}
+
+function initializeGame() {
+  for (let i = 1; i <= 9; i++) {
+    checkButtonClickedPlayer1();
+    checkButtonClickedPlayer2();
+  }
 }
 
 let nameX = document.getElementById("x");
@@ -200,8 +436,6 @@ for (let i = 1; i <= 9; i++) {
     arr[2].push(value);
   }
 }
-
-console.table(arr);
 
 document.getElementById("start").addEventListener("click", initializeGame);
 // const value = charKeyBtn.dataset.value;
