@@ -128,6 +128,10 @@ function checkButtonClickedPlayer2() {
         arr[0][0] = "o";
         checkWin();
 
+        let title = document.getElementById("title");
+        let nameX = document.getElementById("x").value;
+        title.textContent = `Vez de ${nameX}`;
+
         return (verification = true);
       }
     }
@@ -270,9 +274,9 @@ function checkWin() {
     arr[2][0] !== "-" &&
     arr[2][0] === "x"
   ) {
-    document.getElementById("item0").style.backgroundColor = "#03A64A";
-    document.getElementById("item0").style.backgroundColor = "#03A64A";
-    document.getElementById("item0").style.backgroundColor = "#03A64A";
+    document.getElementById("item1").style.backgroundColor = "#03A64A";
+    document.getElementById("item4").style.backgroundColor = "#03A64A";
+    document.getElementById("item7").style.backgroundColor = "#03A64A";
   }
 
   if (
@@ -281,9 +285,9 @@ function checkWin() {
     arr[2][1] !== "-" &&
     arr[2][1] === "x"
   ) {
-    document.getElementById("item0").style.backgroundColor = "#03A64A";
-    document.getElementById("item0").style.backgroundColor = "#03A64A";
-    document.getElementById("item0").style.backgroundColor = "#03A64A";
+    document.getElementById("item2").style.backgroundColor = "#03A64A";
+    document.getElementById("item5").style.backgroundColor = "#03A64A";
+    document.getElementById("item8").style.backgroundColor = "#03A64A";
   }
 
   if (
@@ -292,9 +296,9 @@ function checkWin() {
     arr[2][2] !== "-" &&
     arr[2][2] === "x"
   ) {
-    document.getElementById("item0").style.backgroundColor = "#03A64A";
-    document.getElementById("item0").style.backgroundColor = "#03A64A";
-    document.getElementById("item0").style.backgroundColor = "#03A64A";
+    document.getElementById("item3").style.backgroundColor = "#03A64A";
+    document.getElementById("item6").style.backgroundColor = "#03A64A";
+    document.getElementById("item9").style.backgroundColor = "#03A64A";
   }
 
   if (
@@ -303,9 +307,9 @@ function checkWin() {
     arr[2][2] !== "-" &&
     arr[2][2] === "x"
   ) {
-    document.getElementById("item0").style.backgroundColor = "#03A64A";
-    document.getElementById("item0").style.backgroundColor = "#03A64A";
-    document.getElementById("item0").style.backgroundColor = "#03A64A";
+    document.getElementById("item1").style.backgroundColor = "#03A64A";
+    document.getElementById("item5").style.backgroundColor = "#03A64A";
+    document.getElementById("item9").style.backgroundColor = "#03A64A";
   }
 
   if (
@@ -314,9 +318,9 @@ function checkWin() {
     arr[2][0] !== "-" &&
     arr[2][0] === "x"
   ) {
-    document.getElementById("item0").style.backgroundColor = "#03A64A";
-    document.getElementById("item0").style.backgroundColor = "#03A64A";
-    document.getElementById("item0").style.backgroundColor = "#03A64A";
+    document.getElementById("item3").style.backgroundColor = "#03A64A";
+    document.getElementById("item5").style.backgroundColor = "#03A64A";
+    document.getElementById("item7").style.backgroundColor = "#03A64A";
   }
 
   //----------------------------------------------------------------------
@@ -360,9 +364,9 @@ function checkWin() {
     arr[2][0] !== "-" &&
     arr[2][0] === "o"
   ) {
-    document.getElementById("item0").style.backgroundColor = "#03A64A";
-    document.getElementById("item0").style.backgroundColor = "#03A64A";
-    document.getElementById("item0").style.backgroundColor = "#03A64A";
+    document.getElementById("item1").style.backgroundColor = "#03A64A";
+    document.getElementById("item4").style.backgroundColor = "#03A64A";
+    document.getElementById("item7").style.backgroundColor = "#03A64A";
   }
 
   if (
@@ -371,9 +375,9 @@ function checkWin() {
     arr[2][1] !== "-" &&
     arr[2][1] === "o"
   ) {
-    document.getElementById("item0").style.backgroundColor = "#03A64A";
-    document.getElementById("item0").style.backgroundColor = "#03A64A";
-    document.getElementById("item0").style.backgroundColor = "#03A64A";
+    document.getElementById("item2").style.backgroundColor = "#03A64A";
+    document.getElementById("item5").style.backgroundColor = "#03A64A";
+    document.getElementById("item8").style.backgroundColor = "#03A64A";
   }
 
   if (
@@ -382,9 +386,9 @@ function checkWin() {
     arr[2][2] !== "-" &&
     arr[2][2] === "o"
   ) {
-    document.getElementById("item0").style.backgroundColor = "#03A64A";
-    document.getElementById("item0").style.backgroundColor = "#03A64A";
-    document.getElementById("item0").style.backgroundColor = "#03A64A";
+    document.getElementById("item3").style.backgroundColor = "#03A64A";
+    document.getElementById("item6").style.backgroundColor = "#03A64A";
+    document.getElementById("item9").style.backgroundColor = "#03A64A";
   }
 
   if (
@@ -393,9 +397,9 @@ function checkWin() {
     arr[2][2] !== "-" &&
     arr[2][2] === "o"
   ) {
-    document.getElementById("item0").style.backgroundColor = "#03A64A";
-    document.getElementById("item0").style.backgroundColor = "#03A64A";
-    document.getElementById("item0").style.backgroundColor = "#03A64A";
+    document.getElementById("item1").style.backgroundColor = "#03A64A";
+    document.getElementById("item5").style.backgroundColor = "#03A64A";
+    document.getElementById("item9").style.backgroundColor = "#03A64A";
   }
 
   if (
@@ -404,21 +408,18 @@ function checkWin() {
     arr[2][0] !== "-" &&
     arr[2][0] === "o"
   ) {
-    document.getElementById("item0").style.backgroundColor = "#03A64A";
-    document.getElementById("item0").style.backgroundColor = "#03A64A";
-    document.getElementById("item0").style.backgroundColor = "#03A64A";
+    document.getElementById("item3").style.backgroundColor = "#03A64A";
+    document.getElementById("item5").style.backgroundColor = "#03A64A";
+    document.getElementById("item7").style.backgroundColor = "#03A64A";
   }
 }
 
 function initializeGame() {
-  for (let i = 1; i <= 9; i++) {
+  for (let i = 1; i <= 5; i++) {
     checkButtonClickedPlayer1();
     checkButtonClickedPlayer2();
   }
 }
-
-let nameX = document.getElementById("x");
-let nameO = document.getElementById("o");
 
 let arr = [[], [], []];
 for (let i = 1; i <= 9; i++) {
