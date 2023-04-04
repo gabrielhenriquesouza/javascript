@@ -573,7 +573,11 @@ function restart() {
   for (let i = 1; i <= 9; i++) {
     let item = document.getElementById("item" + i);
     item.dataset.value = "-";
+    item.style.backgroundColor = "#026873";
+    item.textContent = "";
   }
+
+  initializeGame();
 }
 
 function initializeGame() {
