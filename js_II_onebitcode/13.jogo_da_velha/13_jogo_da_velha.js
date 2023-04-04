@@ -8,6 +8,10 @@ function checkButtonClickedPlayer1() {
         arr[0][0] = "x";
         checkWin();
 
+        let title = document.getElementById("title");
+        let nameO = document.getElementById("o").value;
+        title.textContent = `Vez de ${nameO}`;
+
         return (verification = true);
       }
     }
@@ -20,6 +24,10 @@ function checkButtonClickedPlayer1() {
         this.dataset.value = "x";
         arr[0][1] = "x";
         checkWin();
+
+        let title = document.getElementById("title");
+        let nameO = document.getElementById("o").value;
+        title.textContent = `Vez de ${nameO}`;
 
         return (verification = true);
       }
@@ -34,6 +42,10 @@ function checkButtonClickedPlayer1() {
         arr[0][2] = "x";
         checkWin();
 
+        let title = document.getElementById("title");
+        let nameO = document.getElementById("o").value;
+        title.textContent = `Vez de ${nameO}`;
+
         return (verification = true);
       }
     }
@@ -46,6 +58,10 @@ function checkButtonClickedPlayer1() {
         this.dataset.value = "x";
         arr[1][0] = "x";
         checkWin();
+
+        let title = document.getElementById("title");
+        let nameO = document.getElementById("o").value;
+        title.textContent = `Vez de ${nameO}`;
 
         return (verification = true);
       }
@@ -60,6 +76,10 @@ function checkButtonClickedPlayer1() {
         arr[1][1] = "x";
         checkWin();
 
+        let title = document.getElementById("title");
+        let nameO = document.getElementById("o").value;
+        title.textContent = `Vez de ${nameO}`;
+
         return (verification = true);
       }
     }
@@ -72,6 +92,10 @@ function checkButtonClickedPlayer1() {
         this.dataset.value = "x";
         arr[1][2] = "x";
         checkWin();
+
+        let title = document.getElementById("title");
+        let nameO = document.getElementById("o").value;
+        title.textContent = `Vez de ${nameO}`;
 
         return (verification = true);
       }
@@ -86,6 +110,10 @@ function checkButtonClickedPlayer1() {
         arr[2][0] = "x";
         checkWin();
 
+        let title = document.getElementById("title");
+        let nameO = document.getElementById("o").value;
+        title.textContent = `Vez de ${nameO}`;
+
         return (verification = true);
       }
     }
@@ -99,6 +127,10 @@ function checkButtonClickedPlayer1() {
         arr[2][1] = "x";
         checkWin();
 
+        let title = document.getElementById("title");
+        let nameO = document.getElementById("o").value;
+        title.textContent = `Vez de ${nameO}`;
+
         return (verification = true);
       }
     }
@@ -111,6 +143,10 @@ function checkButtonClickedPlayer1() {
         this.dataset.value = "x";
         arr[2][2] = "x";
         checkWin();
+
+        let title = document.getElementById("title");
+        let nameO = document.getElementById("o").value;
+        title.textContent = `Vez de ${nameO}`;
 
         return (verification = true);
       }
@@ -144,6 +180,10 @@ function checkButtonClickedPlayer2() {
         arr[0][1] = "o";
         checkWin();
 
+        let title = document.getElementById("title");
+        let nameX = document.getElementById("x").value;
+        title.textContent = `Vez de ${nameX}`;
+
         return (verification = true);
       }
     }
@@ -155,6 +195,10 @@ function checkButtonClickedPlayer2() {
         this.dataset.value = "o";
         arr[0][2] = "o";
         checkWin();
+
+        let title = document.getElementById("title");
+        let nameX = document.getElementById("x").value;
+        title.textContent = `Vez de ${nameX}`;
 
         return (verification = true);
       }
@@ -168,6 +212,10 @@ function checkButtonClickedPlayer2() {
         arr[1][0] = "o";
         checkWin();
 
+        let title = document.getElementById("title");
+        let nameX = document.getElementById("x").value;
+        title.textContent = `Vez de ${nameX}`;
+
         return (verification = true);
       }
     }
@@ -179,6 +227,10 @@ function checkButtonClickedPlayer2() {
         this.dataset.value = "o";
         arr[1][1] = "o";
         checkWin();
+
+        let title = document.getElementById("title");
+        let nameX = document.getElementById("x").value;
+        title.textContent = `Vez de ${nameX}`;
 
         return (verification = true);
       }
@@ -192,6 +244,10 @@ function checkButtonClickedPlayer2() {
         arr[1][2] = "o";
         checkWin();
 
+        let title = document.getElementById("title");
+        let nameX = document.getElementById("x").value;
+        title.textContent = `Vez de ${nameX}`;
+
         return (verification = true);
       }
     }
@@ -203,6 +259,10 @@ function checkButtonClickedPlayer2() {
         this.dataset.value = "o";
         arr[2][0] = "o";
         checkWin();
+
+        let title = document.getElementById("title");
+        let nameX = document.getElementById("x").value;
+        title.textContent = `Vez de ${nameX}`;
 
         return (verification = true);
       }
@@ -216,6 +276,10 @@ function checkButtonClickedPlayer2() {
         arr[2][1] = "o";
         checkWin();
 
+        let title = document.getElementById("title");
+        let nameX = document.getElementById("x").value;
+        title.textContent = `Vez de ${nameX}`;
+
         return (verification = true);
       }
     }
@@ -227,6 +291,10 @@ function checkButtonClickedPlayer2() {
         this.dataset.value = "o";
         arr[2][2] = "o";
         checkWin();
+
+        let title = document.getElementById("title");
+        let nameX = document.getElementById("x").value;
+        title.textContent = `Vez de ${nameX}`;
 
         return (verification = true);
       }
@@ -414,9 +482,16 @@ function checkWin() {
   }
 }
 
+function stopGame() {}
+
 function initializeGame() {
+  let title = document.getElementById("title");
+  let nameX = document.getElementById("x").value;
+  title.textContent = `Vez de ${nameX}`;
+
   for (let i = 1; i <= 5; i++) {
     checkButtonClickedPlayer1();
+
     checkButtonClickedPlayer2();
   }
 }

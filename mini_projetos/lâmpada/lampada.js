@@ -1,8 +1,8 @@
 let img = document.getElementById("img");
 let btn = document.getElementById("turnOnAndTurnOff");
-let result = document.getElementById("result");
+let result = document.getElementById("imgContainer");
 
-//Botão para ligar a lampada
+//Botão para ligar e desligar a lampada
 btn.addEventListener("click", function () {
   if (this.textContent == "Ligar") {
     img.src = "imagens/ligada.jpg";
@@ -15,14 +15,14 @@ btn.addEventListener("click", function () {
   }
 });
 
-//Quando o mouse estiver em cima a lampada liga
+//Quando o mouse entrar no foco a lampada liga
 img.addEventListener("mouseover", function () {
   img.src = "imagens/ligada.jpg";
   img.alt = "lampada_ligada";
   btn.textContent = "Desligar";
 });
 
-//Quando o mouse sair a lampada desliga
+//Quando o mouse sair do foco a lampada desliga
 img.addEventListener("mouseout", function () {
   img.src = "imagens/desligada.jpg";
   img.alt = "lampada_desligada";
