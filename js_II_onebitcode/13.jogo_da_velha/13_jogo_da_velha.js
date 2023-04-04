@@ -6,11 +6,12 @@ function checkButtonClickedPlayer1() {
         this.innerText = "x";
         this.dataset.value = "x";
         arr[0][0] = "x";
-        checkWin();
 
         let title = document.getElementById("title");
         let nameO = document.getElementById("o").value;
         title.textContent = `Vez de ${nameO}`;
+
+        checkWin();
 
         return (verification = true);
       }
@@ -23,11 +24,12 @@ function checkButtonClickedPlayer1() {
         this.innerText = "x";
         this.dataset.value = "x";
         arr[0][1] = "x";
-        checkWin();
 
         let title = document.getElementById("title");
         let nameO = document.getElementById("o").value;
         title.textContent = `Vez de ${nameO}`;
+
+        checkWin();
 
         return (verification = true);
       }
@@ -40,11 +42,12 @@ function checkButtonClickedPlayer1() {
         this.innerText = "x";
         this.dataset.value = "x";
         arr[0][2] = "x";
-        checkWin();
 
         let title = document.getElementById("title");
         let nameO = document.getElementById("o").value;
         title.textContent = `Vez de ${nameO}`;
+
+        checkWin();
 
         return (verification = true);
       }
@@ -57,11 +60,12 @@ function checkButtonClickedPlayer1() {
         this.innerText = "x";
         this.dataset.value = "x";
         arr[1][0] = "x";
-        checkWin();
 
         let title = document.getElementById("title");
         let nameO = document.getElementById("o").value;
         title.textContent = `Vez de ${nameO}`;
+
+        checkWin();
 
         return (verification = true);
       }
@@ -74,11 +78,12 @@ function checkButtonClickedPlayer1() {
         this.innerText = "x";
         this.dataset.value = "x";
         arr[1][1] = "x";
-        checkWin();
 
         let title = document.getElementById("title");
         let nameO = document.getElementById("o").value;
         title.textContent = `Vez de ${nameO}`;
+
+        checkWin();
 
         return (verification = true);
       }
@@ -91,11 +96,12 @@ function checkButtonClickedPlayer1() {
         this.innerText = "x";
         this.dataset.value = "x";
         arr[1][2] = "x";
-        checkWin();
 
         let title = document.getElementById("title");
         let nameO = document.getElementById("o").value;
         title.textContent = `Vez de ${nameO}`;
+
+        checkWin();
 
         return (verification = true);
       }
@@ -108,11 +114,12 @@ function checkButtonClickedPlayer1() {
         this.innerText = "x";
         this.dataset.value = "x";
         arr[2][0] = "x";
-        checkWin();
 
         let title = document.getElementById("title");
         let nameO = document.getElementById("o").value;
         title.textContent = `Vez de ${nameO}`;
+
+        checkWin();
 
         return (verification = true);
       }
@@ -125,11 +132,12 @@ function checkButtonClickedPlayer1() {
         this.innerText = "x";
         this.dataset.value = "x";
         arr[2][1] = "x";
-        checkWin();
 
         let title = document.getElementById("title");
         let nameO = document.getElementById("o").value;
         title.textContent = `Vez de ${nameO}`;
+
+        checkWin();
 
         return (verification = true);
       }
@@ -142,7 +150,6 @@ function checkButtonClickedPlayer1() {
         this.innerText = "x";
         this.dataset.value = "x";
         arr[2][2] = "x";
-        checkWin();
 
         let title = document.getElementById("title");
         let nameO = document.getElementById("o").value;
@@ -312,6 +319,7 @@ function checkWin() {
     document.getElementById("item1").style.backgroundColor = "#03A64A";
     document.getElementById("item2").style.backgroundColor = "#03A64A";
     document.getElementById("item3").style.backgroundColor = "#03A64A";
+    stopGame();
   }
 
   if (
@@ -323,6 +331,7 @@ function checkWin() {
     document.getElementById("item4").style.backgroundColor = "#03A64A";
     document.getElementById("item5").style.backgroundColor = "#03A64A";
     document.getElementById("item6").style.backgroundColor = "#03A64A";
+    stopGame();
   }
 
   if (
@@ -334,6 +343,7 @@ function checkWin() {
     document.getElementById("item7").style.backgroundColor = "#03A64A";
     document.getElementById("item8").style.backgroundColor = "#03A64A";
     document.getElementById("item9").style.backgroundColor = "#03A64A";
+    stopGame();
   }
 
   if (
@@ -345,6 +355,7 @@ function checkWin() {
     document.getElementById("item1").style.backgroundColor = "#03A64A";
     document.getElementById("item4").style.backgroundColor = "#03A64A";
     document.getElementById("item7").style.backgroundColor = "#03A64A";
+    stopGame();
   }
 
   if (
@@ -356,6 +367,7 @@ function checkWin() {
     document.getElementById("item2").style.backgroundColor = "#03A64A";
     document.getElementById("item5").style.backgroundColor = "#03A64A";
     document.getElementById("item8").style.backgroundColor = "#03A64A";
+    stopGame();
   }
 
   if (
@@ -367,6 +379,7 @@ function checkWin() {
     document.getElementById("item3").style.backgroundColor = "#03A64A";
     document.getElementById("item6").style.backgroundColor = "#03A64A";
     document.getElementById("item9").style.backgroundColor = "#03A64A";
+    stopGame();
   }
 
   if (
@@ -378,6 +391,7 @@ function checkWin() {
     document.getElementById("item1").style.backgroundColor = "#03A64A";
     document.getElementById("item5").style.backgroundColor = "#03A64A";
     document.getElementById("item9").style.backgroundColor = "#03A64A";
+    stopGame();
   }
 
   if (
@@ -389,6 +403,7 @@ function checkWin() {
     document.getElementById("item3").style.backgroundColor = "#03A64A";
     document.getElementById("item5").style.backgroundColor = "#03A64A";
     document.getElementById("item7").style.backgroundColor = "#03A64A";
+    stopGame();
   }
 
   //----------------------------------------------------------------------
@@ -402,6 +417,7 @@ function checkWin() {
     document.getElementById("item1").style.backgroundColor = "#03A64A";
     document.getElementById("item2").style.backgroundColor = "#03A64A";
     document.getElementById("item3").style.backgroundColor = "#03A64A";
+    stopGame();
   }
 
   if (
@@ -413,6 +429,7 @@ function checkWin() {
     document.getElementById("item4").style.backgroundColor = "#03A64A";
     document.getElementById("item5").style.backgroundColor = "#03A64A";
     document.getElementById("item6").style.backgroundColor = "#03A64A";
+    stopGame();
   }
 
   if (
@@ -424,6 +441,7 @@ function checkWin() {
     document.getElementById("item7").style.backgroundColor = "#03A64A";
     document.getElementById("item8").style.backgroundColor = "#03A64A";
     document.getElementById("item9").style.backgroundColor = "#03A64A";
+    stopGame();
   }
 
   if (
@@ -435,6 +453,7 @@ function checkWin() {
     document.getElementById("item1").style.backgroundColor = "#03A64A";
     document.getElementById("item4").style.backgroundColor = "#03A64A";
     document.getElementById("item7").style.backgroundColor = "#03A64A";
+    stopGame();
   }
 
   if (
@@ -446,6 +465,7 @@ function checkWin() {
     document.getElementById("item2").style.backgroundColor = "#03A64A";
     document.getElementById("item5").style.backgroundColor = "#03A64A";
     document.getElementById("item8").style.backgroundColor = "#03A64A";
+    stopGame();
   }
 
   if (
@@ -457,6 +477,7 @@ function checkWin() {
     document.getElementById("item3").style.backgroundColor = "#03A64A";
     document.getElementById("item6").style.backgroundColor = "#03A64A";
     document.getElementById("item9").style.backgroundColor = "#03A64A";
+    stopGame();
   }
 
   if (
@@ -468,6 +489,7 @@ function checkWin() {
     document.getElementById("item1").style.backgroundColor = "#03A64A";
     document.getElementById("item5").style.backgroundColor = "#03A64A";
     document.getElementById("item9").style.backgroundColor = "#03A64A";
+    stopGame();
   }
 
   if (
@@ -479,10 +501,30 @@ function checkWin() {
     document.getElementById("item3").style.backgroundColor = "#03A64A";
     document.getElementById("item5").style.backgroundColor = "#03A64A";
     document.getElementById("item7").style.backgroundColor = "#03A64A";
+    stopGame();
   }
 }
 
-function stopGame() {}
+function stopGame() {
+  for (let i = 1; i <= 9; i++) {
+    if (i <= 3) {
+      let item = document.getElementById("item" + i);
+      if (item.dataset.value === "-") {
+        item.dataset.value = "!";
+      }
+    } else if (i <= 6) {
+      let item = document.getElementById("item" + i);
+      if (item.dataset.value === "-") {
+        item.dataset.value = "!";
+      }
+    } else if (i <= 9) {
+      let item = document.getElementById("item" + i);
+      if (item.dataset.value === "-") {
+        item.dataset.value = "!";
+      }
+    }
+  }
+}
 
 function initializeGame() {
   let title = document.getElementById("title");
@@ -514,4 +556,3 @@ for (let i = 1; i <= 9; i++) {
 }
 
 document.getElementById("start").addEventListener("click", initializeGame);
-// const value = charKeyBtn.dataset.value;
