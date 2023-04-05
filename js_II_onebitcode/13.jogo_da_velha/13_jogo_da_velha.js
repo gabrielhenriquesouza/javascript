@@ -1,612 +1,132 @@
-function checkButtonClickedPlayer1() {
-  let verification = false;
-  document.getElementById("item1").addEventListener("click", function () {
-    if (verification === false) {
-      if (this.dataset.value === "-") {
-        this.innerText = "x";
-        this.dataset.value = "x";
-        arr[0][0] = "x";
-
-        let title = document.getElementById("title");
-        let nameO = document.getElementById("o").value;
-        title.textContent = `Vez de ${nameO}`;
-
-        checkWin();
-
-        return (verification = true);
-      }
-    }
-  });
-
-  document.getElementById("item2").addEventListener("click", function () {
-    if (verification === false) {
-      if (this.dataset.value === "-") {
-        this.innerText = "x";
-        this.dataset.value = "x";
-        arr[0][1] = "x";
-
-        let title = document.getElementById("title");
-        let nameO = document.getElementById("o").value;
-        title.textContent = `Vez de ${nameO}`;
-
-        checkWin();
-
-        return (verification = true);
-      }
-    }
-  });
-
-  document.getElementById("item3").addEventListener("click", function () {
-    if (verification === false) {
-      if (this.dataset.value === "-") {
-        this.innerText = "x";
-        this.dataset.value = "x";
-        arr[0][2] = "x";
-
-        let title = document.getElementById("title");
-        let nameO = document.getElementById("o").value;
-        title.textContent = `Vez de ${nameO}`;
-
-        checkWin();
-
-        return (verification = true);
-      }
-    }
-  });
-
-  document.getElementById("item4").addEventListener("click", function () {
-    if (verification === false) {
-      if (this.dataset.value === "-") {
-        this.innerText = "x";
-        this.dataset.value = "x";
-        arr[1][0] = "x";
-
-        let title = document.getElementById("title");
-        let nameO = document.getElementById("o").value;
-        title.textContent = `Vez de ${nameO}`;
-
-        checkWin();
-
-        return (verification = true);
-      }
-    }
-  });
-
-  document.getElementById("item5").addEventListener("click", function () {
-    if (verification === false) {
-      if (this.dataset.value === "-") {
-        this.innerText = "x";
-        this.dataset.value = "x";
-        arr[1][1] = "x";
-
-        let title = document.getElementById("title");
-        let nameO = document.getElementById("o").value;
-        title.textContent = `Vez de ${nameO}`;
-
-        checkWin();
-
-        return (verification = true);
-      }
-    }
-  });
-
-  document.getElementById("item6").addEventListener("click", function () {
-    if (verification === false) {
-      if (this.dataset.value === "-") {
-        this.innerText = "x";
-        this.dataset.value = "x";
-        arr[1][2] = "x";
-
-        let title = document.getElementById("title");
-        let nameO = document.getElementById("o").value;
-        title.textContent = `Vez de ${nameO}`;
-
-        checkWin();
-
-        return (verification = true);
-      }
-    }
-  });
-
-  document.getElementById("item7").addEventListener("click", function () {
-    if (verification === false) {
-      if (this.dataset.value === "-") {
-        this.innerText = "x";
-        this.dataset.value = "x";
-        arr[2][0] = "x";
-
-        let title = document.getElementById("title");
-        let nameO = document.getElementById("o").value;
-        title.textContent = `Vez de ${nameO}`;
-
-        checkWin();
-
-        return (verification = true);
-      }
-    }
-  });
-
-  document.getElementById("item8").addEventListener("click", function () {
-    if (verification === false) {
-      if (this.dataset.value === "-") {
-        this.innerText = "x";
-        this.dataset.value = "x";
-        arr[2][1] = "x";
-
-        let title = document.getElementById("title");
-        let nameO = document.getElementById("o").value;
-        title.textContent = `Vez de ${nameO}`;
-
-        checkWin();
-
-        return (verification = true);
-      }
-    }
-  });
-
-  document.getElementById("item9").addEventListener("click", function () {
-    if (verification === false) {
-      if (this.dataset.value === "-") {
-        this.innerText = "x";
-        this.dataset.value = "x";
-        arr[2][2] = "x";
-
-        let title = document.getElementById("title");
-        let nameO = document.getElementById("o").value;
-        title.textContent = `Vez de ${nameO}`;
-
-        checkWin();
-
-        return (verification = true);
-      }
-    }
-  });
-}
-
-function checkButtonClickedPlayer2() {
-  let verification = false;
-  document.getElementById("item1").addEventListener("click", function () {
-    if (verification === false) {
-      if (this.dataset.value === "-") {
-        this.innerText = "o";
-        this.dataset.value = "o";
-        arr[0][0] = "o";
-
-        let title = document.getElementById("title");
-        let nameX = document.getElementById("x").value;
-        title.textContent = `Vez de ${nameX}`;
-
-        checkWin();
-
-        return (verification = true);
-      }
-    }
-  });
-  document.getElementById("item2").addEventListener("click", function () {
-    if (verification === false) {
-      if (this.dataset.value === "-") {
-        this.innerText = "o";
-        this.dataset.value = "o";
-        arr[0][1] = "o";
-
-        let title = document.getElementById("title");
-        let nameX = document.getElementById("x").value;
-        title.textContent = `Vez de ${nameX}`;
-
-        checkWin();
-
-        return (verification = true);
-      }
-    }
-  });
-  document.getElementById("item3").addEventListener("click", function () {
-    if (verification === false) {
-      if (this.dataset.value === "-") {
-        this.innerText = "o";
-        this.dataset.value = "o";
-        arr[0][2] = "o";
-
-        let title = document.getElementById("title");
-        let nameX = document.getElementById("x").value;
-        title.textContent = `Vez de ${nameX}`;
-
-        checkWin();
-
-        return (verification = true);
-      }
-    }
-  });
-  document.getElementById("item4").addEventListener("click", function () {
-    if (verification === false) {
-      if (this.dataset.value === "-") {
-        this.innerText = "o";
-        this.dataset.value = "o";
-        arr[1][0] = "o";
-
-        let title = document.getElementById("title");
-        let nameX = document.getElementById("x").value;
-        title.textContent = `Vez de ${nameX}`;
-
-        checkWin();
-
-        return (verification = true);
-      }
-    }
-  });
-  document.getElementById("item5").addEventListener("click", function () {
-    if (verification === false) {
-      if (this.dataset.value === "-") {
-        this.innerText = "o";
-        this.dataset.value = "o";
-        arr[1][1] = "o";
-
-        let title = document.getElementById("title");
-        let nameX = document.getElementById("x").value;
-        title.textContent = `Vez de ${nameX}`;
-
-        checkWin();
-
-        return (verification = true);
-      }
-    }
-  });
-  document.getElementById("item6").addEventListener("click", function () {
-    if (verification === false) {
-      if (this.dataset.value === "-") {
-        this.innerText = "o";
-        this.dataset.value = "o";
-        arr[1][2] = "o";
-
-        let title = document.getElementById("title");
-        let nameX = document.getElementById("x").value;
-        title.textContent = `Vez de ${nameX}`;
-
-        checkWin();
-
-        return (verification = true);
-      }
-    }
-  });
-  document.getElementById("item7").addEventListener("click", function () {
-    if (verification === false) {
-      if (this.dataset.value === "-") {
-        this.innerText = "o";
-        this.dataset.value = "o";
-        arr[2][0] = "o";
-
-        let title = document.getElementById("title");
-        let nameX = document.getElementById("x").value;
-        title.textContent = `Vez de ${nameX}`;
-
-        checkWin();
-
-        return (verification = true);
-      }
-    }
-  });
-  document.getElementById("item8").addEventListener("click", function () {
-    if (verification === false) {
-      if (this.dataset.value === "-") {
-        this.innerText = "o";
-        this.dataset.value = "o";
-        arr[2][1] = "o";
-
-        let title = document.getElementById("title");
-        let nameX = document.getElementById("x").value;
-        title.textContent = `Vez de ${nameX}`;
-
-        checkWin();
-
-        return (verification = true);
-      }
-    }
-  });
-  document.getElementById("item9").addEventListener("click", function () {
-    if (verification === false) {
-      if (this.dataset.value === "-") {
-        this.innerText = "o";
-        this.dataset.value = "o";
-        arr[2][2] = "o";
-
-        let title = document.getElementById("title");
-        let nameX = document.getElementById("x").value;
-        title.textContent = `Vez de ${nameX}`;
-
-        checkWin();
-
-        return (verification = true);
-      }
-    }
-  });
-}
-
-function checkWin() {
-  if (
-    arr[0][0] === arr[0][1] &&
-    arr[0][1] === arr[0][2] &&
-    arr[0][0] !== "-" &&
-    arr[0][0] === "x"
-  ) {
-    document.getElementById("item1").style.backgroundColor = "#03A64A";
-    document.getElementById("item2").style.backgroundColor = "#03A64A";
-    document.getElementById("item3").style.backgroundColor = "#03A64A";
-    winnerX();
-    stopGame();
-  }
-
-  if (
-    arr[1][0] === arr[1][1] &&
-    arr[1][1] === arr[1][2] &&
-    arr[1][0] !== "-" &&
-    arr[1][0] === "x"
-  ) {
-    document.getElementById("item4").style.backgroundColor = "#03A64A";
-    document.getElementById("item5").style.backgroundColor = "#03A64A";
-    document.getElementById("item6").style.backgroundColor = "#03A64A";
-    winnerX();
-    stopGame();
-  }
-
-  if (
-    arr[2][0] === arr[2][1] &&
-    arr[2][1] === arr[2][2] &&
-    arr[2][0] !== "-" &&
-    arr[2][0] === "x"
-  ) {
-    document.getElementById("item7").style.backgroundColor = "#03A64A";
-    document.getElementById("item8").style.backgroundColor = "#03A64A";
-    document.getElementById("item9").style.backgroundColor = "#03A64A";
-    winnerX();
-    stopGame();
-  }
-
-  if (
-    arr[0][0] === arr[1][0] &&
-    arr[1][0] === arr[2][0] &&
-    arr[2][0] !== "-" &&
-    arr[2][0] === "x"
-  ) {
-    document.getElementById("item1").style.backgroundColor = "#03A64A";
-    document.getElementById("item4").style.backgroundColor = "#03A64A";
-    document.getElementById("item7").style.backgroundColor = "#03A64A";
-    winnerX();
-    stopGame();
-  }
-
-  if (
-    arr[0][1] === arr[1][1] &&
-    arr[1][1] === arr[2][1] &&
-    arr[2][1] !== "-" &&
-    arr[2][1] === "x"
-  ) {
-    document.getElementById("item2").style.backgroundColor = "#03A64A";
-    document.getElementById("item5").style.backgroundColor = "#03A64A";
-    document.getElementById("item8").style.backgroundColor = "#03A64A";
-    winnerX();
-    stopGame();
-  }
-
-  if (
-    arr[0][2] === arr[1][2] &&
-    arr[1][2] === arr[2][2] &&
-    arr[2][2] !== "-" &&
-    arr[2][2] === "x"
-  ) {
-    document.getElementById("item3").style.backgroundColor = "#03A64A";
-    document.getElementById("item6").style.backgroundColor = "#03A64A";
-    document.getElementById("item9").style.backgroundColor = "#03A64A";
-    winnerX();
-    stopGame();
-  }
-
-  if (
-    arr[0][0] === arr[1][1] &&
-    arr[1][1] === arr[2][2] &&
-    arr[2][2] !== "-" &&
-    arr[2][2] === "x"
-  ) {
-    document.getElementById("item1").style.backgroundColor = "#03A64A";
-    document.getElementById("item5").style.backgroundColor = "#03A64A";
-    document.getElementById("item9").style.backgroundColor = "#03A64A";
-    winnerX();
-    stopGame();
-  }
-
-  if (
-    arr[0][2] === arr[1][1] &&
-    arr[1][1] === arr[2][0] &&
-    arr[2][0] !== "-" &&
-    arr[2][0] === "x"
-  ) {
-    document.getElementById("item3").style.backgroundColor = "#03A64A";
-    document.getElementById("item5").style.backgroundColor = "#03A64A";
-    document.getElementById("item7").style.backgroundColor = "#03A64A";
-    winnerX();
-    stopGame();
-  }
-
-  //----------------------------------------------------------------------
-
-  if (
-    arr[0][0] === arr[0][1] &&
-    arr[0][1] === arr[0][2] &&
-    arr[0][0] !== "-" &&
-    arr[0][0] === "o"
-  ) {
-    document.getElementById("item1").style.backgroundColor = "#03A64A";
-    document.getElementById("item2").style.backgroundColor = "#03A64A";
-    document.getElementById("item3").style.backgroundColor = "#03A64A";
-    winnerO();
-    stopGame();
-  }
-
-  if (
-    arr[1][0] === arr[1][1] &&
-    arr[1][1] === arr[1][2] &&
-    arr[1][0] !== "-" &&
-    arr[1][0] === "o"
-  ) {
-    document.getElementById("item4").style.backgroundColor = "#03A64A";
-    document.getElementById("item5").style.backgroundColor = "#03A64A";
-    document.getElementById("item6").style.backgroundColor = "#03A64A";
-    winnerO();
-    stopGame();
-  }
-
-  if (
-    arr[2][0] === arr[2][1] &&
-    arr[2][1] === arr[2][2] &&
-    arr[2][0] !== "-" &&
-    arr[2][0] === "o"
-  ) {
-    document.getElementById("item7").style.backgroundColor = "#03A64A";
-    document.getElementById("item8").style.backgroundColor = "#03A64A";
-    document.getElementById("item9").style.backgroundColor = "#03A64A";
-    winnerO();
-    stopGame();
-  }
-
-  if (
-    arr[0][0] === arr[1][0] &&
-    arr[1][0] === arr[2][0] &&
-    arr[2][0] !== "-" &&
-    arr[2][0] === "o"
-  ) {
-    document.getElementById("item1").style.backgroundColor = "#03A64A";
-    document.getElementById("item4").style.backgroundColor = "#03A64A";
-    document.getElementById("item7").style.backgroundColor = "#03A64A";
-    winnerO();
-    stopGame();
-  }
-
-  if (
-    arr[0][1] === arr[1][1] &&
-    arr[1][1] === arr[2][1] &&
-    arr[2][1] !== "-" &&
-    arr[2][1] === "o"
-  ) {
-    document.getElementById("item2").style.backgroundColor = "#03A64A";
-    document.getElementById("item5").style.backgroundColor = "#03A64A";
-    document.getElementById("item8").style.backgroundColor = "#03A64A";
-    winnerO();
-    stopGame();
-  }
-
-  if (
-    arr[0][2] === arr[1][2] &&
-    arr[1][2] === arr[2][2] &&
-    arr[2][2] !== "-" &&
-    arr[2][2] === "o"
-  ) {
-    document.getElementById("item3").style.backgroundColor = "#03A64A";
-    document.getElementById("item6").style.backgroundColor = "#03A64A";
-    document.getElementById("item9").style.backgroundColor = "#03A64A";
-    winnerO();
-    stopGame();
-  }
-
-  if (
-    arr[0][0] === arr[1][1] &&
-    arr[1][1] === arr[2][2] &&
-    arr[2][2] !== "-" &&
-    arr[2][2] === "o"
-  ) {
-    document.getElementById("item1").style.backgroundColor = "#03A64A";
-    document.getElementById("item5").style.backgroundColor = "#03A64A";
-    document.getElementById("item9").style.backgroundColor = "#03A64A";
-    winnerO();
-    stopGame();
-  }
-
-  if (
-    arr[0][2] === arr[1][1] &&
-    arr[1][1] === arr[2][0] &&
-    arr[2][0] !== "-" &&
-    arr[2][0] === "o"
-  ) {
-    document.getElementById("item3").style.backgroundColor = "#03A64A";
-    document.getElementById("item5").style.backgroundColor = "#03A64A";
-    document.getElementById("item7").style.backgroundColor = "#03A64A";
-    winnerO();
-    stopGame();
-  }
-}
-
-function winnerX() {
-  let title = document.getElementById("title");
-  let nameX = document.getElementById("x").value;
-  title.textContent = `${nameX} GANHOU!`;
-}
-
-function winnerO() {
-  let title = document.getElementById("title");
-  let nameO = document.getElementById("o").value;
-  title.textContent = `${nameO} GANHOU!`;
-}
-
-function stopGame() {
-  for (let i = 1; i <= 9; i++) {
-    if (i <= 3) {
-      let item = document.getElementById("item" + i);
-      if (item.dataset.value === "-") {
-        item.dataset.value = "!";
-      }
-    } else if (i <= 6) {
-      let item = document.getElementById("item" + i);
-      if (item.dataset.value === "-") {
-        item.dataset.value = "!";
-      }
-    } else if (i <= 9) {
-      let item = document.getElementById("item" + i);
-      if (item.dataset.value === "-") {
-        item.dataset.value = "!";
-      }
-    }
-  }
-
-  let btn = document.getElementById("start");
-  btn.textContent = "Reiniciar";
-  btn.addEventListener("click", restart);
-}
-
-function restart() {
-  for (let i = 1; i <= 9; i++) {
-    let item = document.getElementById("item" + i);
-    item.dataset.value = "-";
-    item.style.backgroundColor = "#026873";
-    item.textContent = "";
-  }
-
-  initializeGame();
+// Variáveis globais úteis
+const boardRegions = document.querySelectorAll("#gameBoard span");
+let vBoard = [];
+let turnPlayer = "";
+
+function updateTitle() {
+  const playerInput = document.getElementById(turnPlayer);
+  document.getElementById("turnPlayer").innerText = playerInput.value;
 }
 
 function initializeGame() {
-  let title = document.getElementById("title");
-  let nameX = document.getElementById("x").value;
-  title.textContent = `Vez de ${nameX}`;
-
-  for (let i = 1; i <= 5; i++) {
-    checkButtonClickedPlayer1();
-
-    checkButtonClickedPlayer2();
-  }
+  // Inicializa as variáveis globais
+  vBoard = [
+    ["", "", ""],
+    ["", "", ""],
+    ["", "", ""],
+  ];
+  turnPlayer = "player1";
+  // Ajusta o título da página (caso seja necessário)
+  document.querySelector("h2").innerHTML =
+    'Vez de: <span id="turnPlayer"></span>';
+  updateTitle();
+  // Limpa o tabuleiro (caso seja necessário) e adiciona os eventos de clique
+  boardRegions.forEach(function (element) {
+    element.classList.remove("win");
+    element.innerText = "";
+    element.classList.add("cursor-pointer");
+    element.addEventListener("click", handleBoardClick);
+  });
+}
+// Verifica se existem três regiões iguais em sequência e devolve as regiões
+function getWinRegions() {
+  const winRegions = [];
+  if (
+    vBoard[0][0] &&
+    vBoard[0][0] === vBoard[0][1] &&
+    vBoard[0][0] === vBoard[0][2]
+  )
+    winRegions.push("0.0", "0.1", "0.2");
+  if (
+    vBoard[1][0] &&
+    vBoard[1][0] === vBoard[1][1] &&
+    vBoard[1][0] === vBoard[1][2]
+  )
+    winRegions.push("1.0", "1.1", "1.2");
+  if (
+    vBoard[2][0] &&
+    vBoard[2][0] === vBoard[2][1] &&
+    vBoard[2][0] === vBoard[2][2]
+  )
+    winRegions.push("2.0", "2.1", "2.2");
+  if (
+    vBoard[0][0] &&
+    vBoard[0][0] === vBoard[1][0] &&
+    vBoard[0][0] === vBoard[2][0]
+  )
+    winRegions.push("0.0", "1.0", "2.0");
+  if (
+    vBoard[0][1] &&
+    vBoard[0][1] === vBoard[1][1] &&
+    vBoard[0][1] === vBoard[2][1]
+  )
+    winRegions.push("0.1", "1.1", "2.1");
+  if (
+    vBoard[0][2] &&
+    vBoard[0][2] === vBoard[1][2] &&
+    vBoard[0][2] === vBoard[2][2]
+  )
+    winRegions.push("0.2", "1.2", "2.2");
+  if (
+    vBoard[0][0] &&
+    vBoard[0][0] === vBoard[1][1] &&
+    vBoard[0][0] === vBoard[2][2]
+  )
+    winRegions.push("0.0", "1.1", "2.2");
+  if (
+    vBoard[0][2] &&
+    vBoard[0][2] === vBoard[1][1] &&
+    vBoard[0][2] === vBoard[2][0]
+  )
+    winRegions.push("0.2", "1.1", "2.0");
+  return winRegions;
+}
+// Desabilita uma região do tabuleiro para que não seja mais clicável
+function disableRegion(element) {
+  element.classList.remove("cursor-pointer");
+  element.removeEventListener("click", handleBoardClick);
+}
+// Pinta as regiões onde o jogador venceu e mostra seu nome na tela
+function handleWin(regions) {
+  regions.forEach(function (region) {
+    document
+      .querySelector('[data-region="' + region + '"]')
+      .classList.add("win");
+  });
+  const playerName = document.getElementById(turnPlayer).value;
+  document.querySelector("h2").innerHTML = playerName + " venceu!";
 }
 
-let arr = [[], [], []];
-for (let i = 1; i <= 9; i++) {
-  if (i <= 3) {
-    let element = document.getElementById("item" + i);
-    let value = element.dataset.value;
-    arr[0].push(value);
-  } else if (i <= 6) {
-    let element = document.getElementById("item" + i);
-    let value = element.dataset.value;
-    arr[1].push(value);
-  } else if (i <= 9) {
-    let element = document.getElementById("item" + i);
-    let value = element.dataset.value;
-    arr[2].push(value);
+function handleBoardClick(ev) {
+  // Obtém os índices da região clicada
+  const span = ev.currentTarget;
+  const region = span.dataset.region; // N.N
+  const rowColumnPair = region.split("."); // ["N", "N"]
+  const row = rowColumnPair[0];
+  const column = rowColumnPair[1];
+  // Marca a região clicada com o símbolo do jogador
+  if (turnPlayer === "player1") {
+    span.innerText = "X";
+    vBoard[row][column] = "X";
+  } else {
+    span.innerText = "O";
+    vBoard[row][column] = "O";
+  }
+  // Limpa o console e exibe nosso tabuleiro virtual
+  console.clear();
+  console.table(vBoard);
+  // Desabilita a região clicada
+  disableRegion(span);
+  // Verifica se alguém venceu
+  const winRegions = getWinRegions();
+  if (winRegions.length > 0) {
+    handleWin(winRegions);
+  } else if (vBoard.flat().includes("")) {
+    turnPlayer = turnPlayer === "player1" ? "player2" : "player1";
+    updateTitle();
+  } else {
+    document.querySelector("h2").innerHTML = "Empate!";
   }
 }
-
+// Adiciona o evento no botão que inicia o jogo
 document.getElementById("start").addEventListener("click", initializeGame);

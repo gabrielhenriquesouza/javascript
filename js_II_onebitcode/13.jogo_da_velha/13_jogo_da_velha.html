@@ -4,44 +4,29 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Joga da velha</title>
-    <link rel="stylesheet" href="13_jogo_da_velha.css" />
-    <script src="13_jogo_da_velha.js" defer></script>
+    <title>Jogo da Velha</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="index.js" defer></script>
   </head>
   <body class="bodyContainer">
-    <h1 id="title">Jogo da velha</h1>
-
-    <div class="containerInputs">
-      <label for="x">x </label>
-      <input
-        class="inputs"
-        type="text"
-        name="x"
-        id="x"
-        placeholder="nome jogador 1"
-      />
-      <label for="o">o </label>
-      <input
-        class="inputs"
-        type="text"
-        name="o"
-        id="o"
-        placeholder="nome jogador 2"
-      />
-    </div>
-
-    <button id="start">Começar</button>
-
-    <div class="containerBtn">
-      <span class="btn" id="item1" data-region="0-0" data-value="-"></span>
-      <span class="btn" id="item2" data-region="0-1" data-value="-"></span>
-      <span class="btn" id="item3" data-region="0-2" data-value="-"></span>
-      <span class="btn" id="item4" data-region="1-0" data-value="-"></span>
-      <span class="btn" id="item5" data-region="1-1" data-value="-"></span>
-      <span class="btn" id="item6" data-region="1-2" data-value="-"></span>
-      <span class="btn" id="item7" data-region="1-2" data-value="-"></span>
-      <span class="btn" id="item8" data-region="2-1" data-value="-"></span>
-      <span class="btn" id="item9" data-region="2-2" data-value="-"></span>
-    </div>
+    <h1>Jogo da Velha</h1>
+    <hr />
+    <label for="player1">X</label>
+    <input type="text" id="player1" placeholder="Nome do Jogador 1" />
+    <label for="player2">O</label>
+    <input type="text" id="player2" placeholder="Nome do Jogador 2" />
+    <button id="start">Começar!</button>
+    <h2>Vez de: <span id="turnPlayer"></span></h2>
+    <section id="gameBoard">
+      <span class="cursor-pointer" data-region="0.0"></span>
+      <span class="cursor-pointer" data-region="0.1"></span>
+      <span class="cursor-pointer" data-region="0.2"></span>
+      <span class="cursor-pointer" data-region="1.0"></span>
+      <span class="cursor-pointer" data-region="1.1"></span>
+      <span class="cursor-pointer" data-region="1.2"></span>
+      <span class="cursor-pointer" data-region="2.0"></span>
+      <span class="cursor-pointer" data-region="2.1"></span>
+      <span class="cursor-pointer" data-region="2.2"></span>
+    </section>
   </body>
 </html>
