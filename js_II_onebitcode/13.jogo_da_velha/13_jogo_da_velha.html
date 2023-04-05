@@ -5,16 +5,26 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Jogo da Velha</title>
-    <link rel="stylesheet" href="style.css" />
-    <script src="index.js" defer></script>
+    <link rel="stylesheet" href="13_jogo_da_velha.css" />
+    <script src="13_jogo_da_velha.js" defer></script>
   </head>
   <body class="bodyContainer">
     <h1>Jogo da Velha</h1>
-    <hr />
+
     <label for="player1">X</label>
-    <input type="text" id="player1" placeholder="Nome do Jogador 1" />
+    <input
+      class="inputs"
+      type="text"
+      id="player1"
+      placeholder="Nome do Jogador 1"
+    />
     <label for="player2">O</label>
-    <input type="text" id="player2" placeholder="Nome do Jogador 2" />
+    <input
+      class="inputs"
+      type="text"
+      id="player2"
+      placeholder="Nome do Jogador 2"
+    />
     <button id="start">Começar!</button>
     <h2>Vez de: <span id="turnPlayer"></span></h2>
     <section id="gameBoard">
