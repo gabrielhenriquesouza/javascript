@@ -28,6 +28,15 @@ document.getElementById("cookieBtn").addEventListener("click", function () {
   const expiration = "expires=" + new Date(2023, 4, 7) + ";";
   const path = "path=/;";
   document.cookie = cookie + expiration + path;
-  input.value = "";
+  console.log(document.cookie);
+});
+
+document.getElementById("cookie2Btn").addEventListener("click", function () {
+  let input = document.getElementById("cookie2");
+  // cookieName=value; expires=UTCStringDate; path=/;
+  const cookie = "text=" + input.value + ";";
+  const expiration = "expires=" + new Date(2023, 4, 7) + ";";
+  const path = "path=/;";
+  document.cookie = cookie + expiration + path;
   console.log(document.cookie);
 });
