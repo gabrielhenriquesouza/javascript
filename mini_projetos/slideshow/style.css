@@ -26,17 +26,35 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+
+  position: relative;
 }
 
 .btn {
   background-color: transparent;
-  color: white;
+  color: transparent;
   height: 380px;
-  width: 50px;
+  width: 80px;
+  border-radius: 10px;
+  border: none;
+}
+.btn:hover {
+  background-color: rgba(0, 0, 0, 0.377);
+  color: white;
+}
+#next {
+  position: absolute;
+  top: 0%;
+  left: 91.2%;
+}
+#previous {
+  position: absolute;
+  top: 0%;
+  left: 0%;
 }
 
 .img {
-  width: 790px;
+  width: 890px;
   height: 370px;
   border-radius: 10px;
 }
