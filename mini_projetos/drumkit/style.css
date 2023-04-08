@@ -18,7 +18,16 @@ body {
   align-items: center;
 }
 
+.imgBattery {
+  position: absolute;
+
+  width: 100vw;
+  height: 300px;
+}
+
 .title {
+  position: relative;
+
   color: yellow;
   font-size: 4em;
   margin: 0em 0em 1em 0em;
@@ -26,7 +35,9 @@ body {
 }
 
 .btn {
-  background-color: transparent;
+  position: relative;
+
+  background-color: rgba(0, 0, 0, 0.596);
   color: white;
   font-size: 60px;
   border: 1px solid white;
@@ -35,10 +46,11 @@ body {
 
   width: 80px;
   height: 80px;
-  margin: 0px 0px 0px 40px;
+  margin: 0px 20px 0px 20px;
 }
 
 .btn:hover {
   transition: 0.4s;
   border: 1px solid yellow;
+  color: rgb(255, 255, 0);
 }
