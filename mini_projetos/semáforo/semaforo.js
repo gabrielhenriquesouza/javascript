@@ -1,15 +1,18 @@
 function leaveInRed() {
-  img.src = "imagens/vermelho.png";
+  img.src =
+    "https://raw.githubusercontent.com/fernandoleonid/mini-projetos-js/master/02-semaforo/img/vermelho.png";
   img.alt = "vermelho";
 }
 
 function leaveInYellow() {
-  img.src = "imagens/amarelo.png";
+  img.src =
+    "https://raw.githubusercontent.com/fernandoleonid/mini-projetos-js/master/02-semaforo/img/amarelo.png";
   img.alt = "amarelo";
 }
 
 function leaveInGreen() {
-  img.src = "imagens/verde.png";
+  img.src =
+    "https://raw.githubusercontent.com/fernandoleonid/mini-projetos-js/master/02-semaforo/img/verde.png";
   img.alt = "verde";
 }
 

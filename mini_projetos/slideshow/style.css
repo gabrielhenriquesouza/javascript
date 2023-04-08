@@ -39,6 +39,7 @@ body {
   border: none;
 }
 .btn:hover {
+  transition: 0.5s;
   background-color: rgba(0, 0, 0, 0.377);
   color: white;
 }
