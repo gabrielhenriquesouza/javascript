@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>desestruturação de arrays e objetos</title>
+  </head>
+  <body>
+    <script>
+      const person = {
+        name: "Luke",
+        job: "Farmer",
+        parents: ["Anakin", "Padme"],
+      };
+
+      let { name } = person;
+      let { job, parents } = person;
+      console.log(`Nome: ${name}
+      Trabalho: ${job}
+      Pais: ${parents}`);
+
+      let [father, mother] = parents;
+      console.log(father, mother);
+    </script>
+  </body>
+</html>
