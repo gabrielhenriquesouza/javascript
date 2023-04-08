@@ -4,15 +4,14 @@
 }
 
 body {
-  background-color: white;
-  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
-    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  background-color: rgb(255, 255, 255);
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 header {
-  background-color: black;
+  background-color: #171717;
   color: white;
-  font-size: 50px;
+  font-size: 40px;
 
   width: auto;
   height: 100px;
@@ -23,8 +22,9 @@ header {
 }
 
 .container {
-  width: 100vw;
-  height: 100vh;
+  width: 98vw;
+  height: 84vh;
+
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -34,7 +34,7 @@ header {
 .imgBattery {
   position: absolute;
 
-  width: 70vw;
+  width: 99.6vw;
   height: 300px;
 }
 
@@ -43,8 +43,9 @@ header {
 
   color: yellow;
   font-size: 4em;
-  margin: 0em 0em 1em 0em;
   text-shadow: 5px 5px 5px rgba(0, 0, 0, 0.699);
+
+  margin: 0em 0em 1em 0em;
 }
 
 .btn {
@@ -64,12 +65,13 @@ header {
 
 .btn:hover {
   transition: 0.4s;
+
   border: 1px solid yellow;
   color: rgb(255, 255, 0);
 }
 
 footer {
-  background-color: black;
+  background-color: #171717;
   color: white;
   font-size: 20px;
 
