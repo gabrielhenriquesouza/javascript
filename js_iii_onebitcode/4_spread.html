@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>operador spread</title>
+  </head>
+  <body>
+    <script>
+      const towns = [
+        "Prontera",
+        "Izlude",
+        "Payon",
+        "Alberta",
+        "Geffen",
+        "Morroc",
+      ];
+
+      console.log(towns);
+      console.log(...towns);
+      console.log(...towns[0]);
+
+      const townsCopy = towns;
+
+      townsCopy.pop();
+      townsCopy.pop();
+      townsCopy.push("Juno");
+
+      console.log({ towns, townsCopy });
+
+      const townsClone = [...towns];
+
+      townsClone.push("Aldebaran");
+
+      console.log({ towns, townsCopy, townsClone });
+
+      const townsObj = { ...towns };
+      const townsObjClone = { ...townsObj };
+
+      townsObjClone.test = "Test";
+
+      console.log({ townsObj, townsObjClone });
+    </script>
+  </body>
+</html>
