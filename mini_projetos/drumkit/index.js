@@ -1,6 +1,8 @@
-function whenToClick() {}
+function increaseButton(ev) {
+  let btn = document.getElementById(ev);
+  btn.classList = "btn biggerButton";
+}
 
-//Audios
 const soundA = new Audio("audios/songA.wav");
 const soundS = new Audio("audios/songS.wav");
 const soundD = new Audio("audios/songD.wav");
@@ -11,7 +13,6 @@ const soundJ = new Audio("audios/songJ.wav");
 const soundK = new Audio("audios/songK.wav");
 const soundL = new Audio("audios/songL.wav");
 
-//Quando clicar em um botão sai algum audio
 document.getElementById("btnA").addEventListener("click", () => soundA.play());
 document.getElementById("btnS").addEventListener("click", () => soundS.play());
 document.getElementById("btnD").addEventListener("click", () => soundD.play());
@@ -25,37 +26,32 @@ document.getElementById("btnL").addEventListener("click", () => soundL.play());
 document.body.addEventListener("keypress", (ev) => {
   const key = ev.key;
 
-  if (key === "a") {
+  if (key === "a" || key === "A") {
     soundA.play();
+    increaseButton("btnA");
   }
-  if (key === "s") {
+  if (key === "s" || key === "S") {
     soundS.play();
   }
-  if (key === "d") {
+  if (key === "d" || key === "D") {
     soundD.play();
   }
-  if (key === "f") {
+  if (key === "f" || key === "F") {
     soundF.play();
   }
-  if (key === "g") {
+  if (key === "g" || key === "G") {
     soundG.play();
   }
-  if (key === "h") {
+  if (key === "h" || key === "H") {
     soundH.play();
   }
-  if (key === "j") {
+  if (key === "j" || key === "J") {
     soundJ.play();
   }
-  if (key === "k") {
+  if (key === "k" || key === "K") {
     soundK.play();
   }
-  if (key === "l") {
+  if (key === "l" || key === "L") {
     soundL.play();
   }
 });
-
-/*document.body.addEventListener("keypress", function (event) {
-  const key = event.key;
-  const code = event.keyCode;
-  console.log(`Key: ${key}, Code ${code}`);
-});*/

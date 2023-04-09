@@ -63,6 +63,12 @@ header {
   margin: 0px 20px 0px 20px;
 }
 
+.biggerButton {
+  width: 100px;
+  height: 100px;
+  font-size: 80px;
+}
+
 .btn:hover {
   transition: 0.4s;
 
