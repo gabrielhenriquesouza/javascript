@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>coalescência nula</title>
+  </head>
+  <body>
+    <script>
+      let a = 0;
+
+      let b = a || 42;
+
+      console.log({ a, b });
+
+      b = a ?? 42;
+
+      console.log({ a, b });
+
+      let c = null ?? 42; //se o valor da esquerda for null ou undefined ele vai receber o valor da direita
+
+      console.log({ c });
+    </script>
+  </body>
+</html>
