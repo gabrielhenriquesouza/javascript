@@ -1,6 +1,10 @@
 function increaseButton(ev) {
   let btn = document.getElementById(ev);
-  btn.classList = "btn biggerButton";
+  btn.classList = "biggerButton";
+
+  setTimeout(() => {
+    btn.classList = "btn";
+  }, 300);
 }
 
 const soundA = new Audio("audios/songA.wav");
@@ -32,26 +36,34 @@ document.body.addEventListener("keypress", (ev) => {
   }
   if (key === "s" || key === "S") {
     soundS.play();
+    increaseButton("btnS");
   }
   if (key === "d" || key === "D") {
     soundD.play();
+    increaseButton("btnD");
   }
   if (key === "f" || key === "F") {
     soundF.play();
+    increaseButton("btnF");
   }
   if (key === "g" || key === "G") {
     soundG.play();
+    increaseButton("btnG");
   }
   if (key === "h" || key === "H") {
     soundH.play();
+    increaseButton("btnH");
   }
   if (key === "j" || key === "J") {
     soundJ.play();
+    increaseButton("btnJ");
   }
   if (key === "k" || key === "K") {
     soundK.play();
+    increaseButton("btnK");
   }
   if (key === "l" || key === "L") {
     soundL.play();
+    increaseButton("btnL");
   }
 });
