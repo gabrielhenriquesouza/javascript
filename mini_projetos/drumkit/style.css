@@ -22,8 +22,8 @@ header {
 }
 
 .container {
-  width: 98vw;
-  height: 84vh;
+  width: 100vw;
+  height: 50vh;
 
   display: flex;
   flex-direction: column;
@@ -32,18 +32,22 @@ header {
 }
 
 .imgBattery {
-  width: 99.6vw;
+  width: 100vw; /*99.6*/
   height: 300px;
 }
 
 .title {
+  position: absolute;
+
   color: yellow;
   font-size: 4em;
   text-shadow: 5px 5px 5px rgba(0, 0, 0, 0.699);
-  margin: 0em 0em 1em 0em;
+  margin: 0em 0em 2em 0em;
 }
 
 .buttons {
+  margin-top: 120px;
+  position: absolute;
 }
 
 .btn {
@@ -90,9 +94,69 @@ footer {
   font-size: 20px;
 
   width: auto;
-  height: 1000px;
+  height: 100px;
 
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+@media (max-width: 320px) {
+  header {
+    font-size: 16px;
+
+    width: auto;
+    height: 60px;
+  }
+
+  .title {
+    font-size: 2em;
+  }
+
+  .buttons {
+    display: grid;
+    grid-template-areas: "btnA btnS btnD" "btnF btnG btnH" "btnJ btnK btnL";
+  }
+  #btnA {
+    grid-area: btnA;
+  }
+  #btnS {
+    grid-area: btnS;
+  }
+  #btnD {
+    grid-area: btnD;
+  }
+  #btnF {
+    grid-area: btnF;
+  }
+  #btnG {
+    grid-area: btnG;
+  }
+  #btnH {
+    grid-area: btnH;
+  }
+  #btnJ {
+    grid-area: btnJ;
+  }
+  #btnK {
+    grid-area: btnK;
+  }
+  #btnL {
+    grid-area: btnL;
+  }
+
+  .btn {
+    font-size: 16px;
+
+    width: 50px;
+    height: 50px;
+    margin: 5px;
+  }
+
+  footer {
+    font-size: 12px;
+
+    width: auto;
+    height: 60px;
+  }
 }

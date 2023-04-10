@@ -52,9 +52,9 @@ let calculateMedian = (...numbers) => {};
 
 /*
 mediana(2, 4, 5, 7, 42, 99) === 6
-// porque 5 e 7 estão juntos no centro da sequência e
+porque 5 e 7 estão juntos no centro da sequência e
 media(5, 7) === 6
 
 mediana(15, 14, 8, 7, 3) === 8
-// porque 8 está no centro da sequência
+porque 8 está no centro da sequência
  */
