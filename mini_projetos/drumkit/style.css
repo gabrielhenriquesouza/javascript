@@ -101,7 +101,7 @@ footer {
   align-items: center;
 }
 
-@media (max-width: 320px) {
+@media (max-width: 768px) {
   header {
     font-size: 14px;
 
@@ -111,18 +111,18 @@ footer {
 
   .title {
     font-size: 1.8em;
-    margin: 0em 0em 6em 0em;
+    margin: 0em 0em 7em 0em;
   }
 
   .container {
-    height: 100vh;
+    height: 300px;
+
+    margin: 60px 0px 60px 0px;
   }
 
   .buttons {
     margin-top: 3em;
-  }
 
-  .buttons {
     display: grid;
     grid-template-areas: "btnA btnS btnD" "btnF btnG btnH" "btnJ btnK btnL";
   }
@@ -155,11 +155,19 @@ footer {
   }
 
   .btn {
-    font-size: 16px;
+    font-size: 30px;
 
-    width: 50px;
-    height: 50px;
+    width: 60px;
+    height: 60px;
     margin: 5px;
+  }
+
+  .biggerButton {
+    font-size: 30px;
+
+    width: 60px;
+    height: 60px;
+    margin: 0px;
   }
 
   footer {
