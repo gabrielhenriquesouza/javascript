@@ -1,19 +1,21 @@
-/*let SimpleAverage = (...numbers) => {
-  console.log(numbers);
-  let initialValue = 0
-  let sum = numbers.reduce(accumulator, currentValue) => accumulator + currentValue, initialValue;
-  console.log(numbers)
+let SimpleAverage = (...numbers) => {
+  let initialValue = 0;
+
+  let sum = numbers.reduce(
+    (accumulator, currentValue) => accumulator + currentValue,
+    initialValue
+  );
+
+  let average = sum / numbers.length;
+
+  console.log(
+    `Calculo de Média Aritmética Simples
+    Suas Notas: ( ${numbers} )
+    Sua Média: ( ${average.toFixed(1)} )`
+  );
 };
+SimpleAverage(8, 6.2, 7);
 
-SimpleAverage(10, 10, 10);
-*/
+let weightedAverage =;
 
-const array1 = [1, 2, 3, 4];
-const initialValue = 0;
-const sumWithInitial = array1.reduce(
-  (accumulator, currentValue) => accumulator + currentValue,
-  initialValue
-);
-
-console.log(sumWithInitial);
-// Expected output: 10
+weightedAverage({ n: 7, p: 2}, { n: 9, p: 5 }, { n: 3, p: 1 })
