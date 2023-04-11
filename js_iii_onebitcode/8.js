@@ -1,3 +1,5 @@
+//----------------------------------------------------------------------------
+
 let calculateSimpleAverage = (...numbers) => {
   let initialValue = 0;
 
@@ -15,6 +17,8 @@ Sua Média: ( ${average.toFixed(1)} )
 `);
 };
 calculateSimpleAverage(8, 6.2, 7);
+
+//----------------------------------------------------------------------------
 
 let calculateWeightedAverage = (...objects) => {
   let sum = 0;
@@ -48,18 +52,16 @@ Média: ( ${average.toFixed(2)} )
 };
 calculateWeightedAverage({ n: 7, p: 2 }, { n: 9, p: 5 }, { n: 3, p: 1 });
 
+//----------------------------------------------------------------------------
+
 let calculateMedian = (...numbers) => {
   let median = 0;
 
   if (numbers.length % 2 == 0) {
-    for (let i = 0; i < numbers.length / 2; i++) {
-      console.log(numbers[i]);
-      median = (numbers[i] + numbers[i + 1]) / 2;
-    }
+    median =
+      (numbers[numbers.length / 2] + numbers[numbers.length / 2 - 1]) / 2;
   } else {
-    for (let i = 0; i < numbers.length / 2; i++) {
-      median = numbers[i];
-    }
+    median = numbers[numbers.length / 2 - 0.5];
   }
 
   console.log(`
@@ -69,12 +71,9 @@ Mediana: ( ${median} )
 `);
 };
 calculateMedian(2, 4, 5, 7, 42, 99);
+calculateMedian(15, 14, 8, 7, 3);
 
-/*
-mediana(2, 4, 5, 7, 42, 99) === 6
-porque 5 e 7 estão juntos no centro da sequência e
-media(5, 7) === 6
+//----------------------------------------------------------------------------
 
-mediana(15, 14, 8, 7, 3) === 8
-porque 8 está no centro da sequência
- */
+let calculateMode = (...numbers) => {};
+calculateMode(1, 1, 5, 4, 9, 7, 4, 3, 5, 2, 4, 0, 4);
