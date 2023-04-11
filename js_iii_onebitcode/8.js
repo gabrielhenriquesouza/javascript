@@ -48,7 +48,27 @@ Média: ( ${average.toFixed(2)} )
 };
 calculateWeightedAverage({ n: 7, p: 2 }, { n: 9, p: 5 }, { n: 3, p: 1 });
 
-let calculateMedian = (...numbers) => {};
+let calculateMedian = (...numbers) => {
+  let median = 0;
+
+  if (numbers.length % 2 == 0) {
+    for (let i = 0; i < numbers.length / 2; i++) {
+      console.log(numbers[i]);
+      median = (numbers[i] + numbers[i + 1]) / 2;
+    }
+  } else {
+    for (let i = 0; i < numbers.length / 2; i++) {
+      median = numbers[i];
+    }
+  }
+
+  console.log(`
+Cálculo de Mediana
+Números informados: ( ${numbers} )
+Mediana: ( ${median} )
+`);
+};
+calculateMedian(2, 4, 5, 7, 42, 99);
 
 /*
 mediana(2, 4, 5, 7, 42, 99) === 6
