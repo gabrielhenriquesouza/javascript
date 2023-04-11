@@ -101,7 +101,83 @@ footer {
   align-items: center;
 }
 
-@media (max-width: 480px) {
+@media ((min-width: 601px) and  (max-width: 1125px)) {
+  header {
+    font-size: 30px;
+  }
+
+  .container {
+    height: 450px;
+
+    margin: 50px 0px 50px 0px;
+  }
+
+  .title {
+    font-size: 3em;
+    margin: 0em 0em 7em 0em;
+  }
+
+  .imgBattery {
+    height: 450px;
+  }
+
+  .buttons {
+    margin-top: 6em;
+
+    display: grid;
+    grid-template-areas: "btnA btnS btnD" "btnF btnG btnH" "btnJ btnK btnL";
+  }
+
+  .btn {
+    font-size: 80px;
+
+    width: 100px;
+    height: 100px;
+    margin: 7px;
+  }
+
+  .biggerButton {
+    font-size: 80px;
+
+    width: 100px;
+    height: 100px;
+    margin: 0px;
+  }
+
+  #btnA {
+    grid-area: btnA;
+  }
+  #btnS {
+    grid-area: btnS;
+  }
+  #btnD {
+    grid-area: btnD;
+  }
+  #btnF {
+    grid-area: btnF;
+  }
+  #btnG {
+    grid-area: btnG;
+  }
+  #btnH {
+    grid-area: btnH;
+  }
+  #btnJ {
+    grid-area: btnJ;
+  }
+  #btnK {
+    grid-area: btnK;
+  }
+  #btnL {
+    grid-area: btnL;
+  }
+
+  footer {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 600px) {
   header {
     font-size: 14px;
 
@@ -176,71 +252,5 @@ footer {
 
     width: auto;
     height: 50px;
-  }
-}
-
-@media (max-width: 1125px) {
-  .container {
-    height: 400px;
-  }
-
-  .title {
-    font-size: 3em;
-    margin: 0em 0em 6em 0em;
-  }
-
-  .imgBattery {
-    height: 400px;
-  }
-
-  .buttons {
-    margin-top: 3em;
-
-    display: grid;
-    grid-template-areas: "btnA btnS btnD" "btnF btnG btnH" "btnJ btnK btnL";
-  }
-
-  .btn {
-    font-size: 80px;
-
-    width: 100px;
-    height: 100px;
-    margin: 7px;
-  }
-
-  .biggerButton {
-    font-size: 30px;
-
-    width: 60px;
-    height: 60px;
-    margin: 0px;
-  }
-
-  #btnA {
-    grid-area: btnA;
-  }
-  #btnS {
-    grid-area: btnS;
-  }
-  #btnD {
-    grid-area: btnD;
-  }
-  #btnF {
-    grid-area: btnF;
-  }
-  #btnG {
-    grid-area: btnG;
-  }
-  #btnH {
-    grid-area: btnH;
-  }
-  #btnJ {
-    grid-area: btnJ;
-  }
-  #btnK {
-    grid-area: btnK;
-  }
-  #btnL {
-    grid-area: btnL;
   }
 }
