@@ -75,5 +75,17 @@ calculateMedian(15, 14, 8, 7, 3);
 
 //----------------------------------------------------------------------------
 
-let calculateMode = (...numbers) => {};
+let calculateMode = (...numbers) => {
+  let counter = 0;
+  for (let i = 0; i < numbers.length; i++) {
+    for (let ind = i - 1; ind !== -1; ind--) {
+      if (numbers[i] == numbers[ind]) {
+        counter += 1;
+      }
+    }
+  }
+  console.log(counter);
+};
+
 calculateMode(1, 1, 5, 4, 9, 7, 4, 3, 5, 2, 4, 0, 4);
+//para cada número tenho que ver quantas vezes ele se repetiu nos numeros anterio
