@@ -7,75 +7,92 @@ function increaseButton(ev) {
   }, 300);
 }
 
-const soundA = new Audio("audios/songA.wav");
-const soundS = new Audio("audios/songS.wav");
-const soundD = new Audio("audios/songD.wav");
-const soundF = new Audio("audios/songF.wav");
-const soundG = new Audio("audios/songG.wav");
-const soundH = new Audio("audios/songH.wav");
-const soundJ = new Audio("audios/songJ.wav");
-const soundK = new Audio("audios/songK.wav");
-const soundL = new Audio("audios/songL.wav");
+let sounds = {
+  soundA: new Audio("audios/songA.wav"),
+  soundS: new Audio("audios/songS.wav"),
+  soundD: new Audio("audios/songD.wav"),
+  soundF: new Audio("audios/songF.wav"),
+  soundG: new Audio("audios/songG.wav"),
+  soundH: new Audio("audios/songH.wav"),
+  soundJ: new Audio("audios/songJ.wav"),
+  soundK: new Audio("audios/songK.wav"),
+  soundL: new Audio("audios/songL.wav"),
+};
 
 document.getElementById("btnA").addEventListener("click", () => {
-  soundA.play();
+  sounds.soundA.play();
   increaseButton("btnA");
 });
 document.getElementById("btnS").addEventListener("click", () => {
-  soundS.play();
+  sounds.soundS.play();
   increaseButton("btnS");
 });
 document.getElementById("btnD").addEventListener("click", () => {
-  soundD.play();
+  sounds.soundD.play();
   increaseButton("btnD");
 });
 document.getElementById("btnF").addEventListener("click", () => {
-  soundF.play();
+  sounds.soundF.play();
   increaseButton("btnF");
 });
-document.getElementById("btnG").addEventListener("click", () => {});
-document.getElementById("btnH").addEventListener("click", () => {});
-document.getElementById("btnJ").addEventListener("click", () => {});
-document.getElementById("btnK").addEventListener("click", () => {});
-document.getElementById("btnL").addEventListener("click", () => {});
+document.getElementById("btnG").addEventListener("click", () => {
+  sounds.soundG.play();
+  increaseButton("btnG");
+});
+document.getElementById("btnH").addEventListener("click", () => {
+  sounds.soundH.play();
+  increaseButton("btnH");
+});
+document.getElementById("btnJ").addEventListener("click", () => {
+  sounds.soundJ.play();
+  increaseButton("btnJ");
+});
+document.getElementById("btnK").addEventListener("click", () => {
+  sounds.soundK.play();
+  increaseButton("btnK");
+});
+document.getElementById("btnL").addEventListener("click", () => {
+  sounds.soundL.play();
+  increaseButton("btnL");
+});
 
 document.body.addEventListener("keypress", (ev) => {
   const key = ev.key;
 
   if (key === "a" || key === "A") {
-    soundA.play();
+    sounds.soundA.play();
     increaseButton("btnA");
   }
   if (key === "s" || key === "S") {
-    soundS.play();
+    sounds.soundS.play();
     increaseButton("btnS");
   }
   if (key === "d" || key === "D") {
-    soundD.play();
+    sounds.soundD.play();
     increaseButton("btnD");
   }
   if (key === "f" || key === "F") {
-    soundF.play();
+    sounds.soundF.play();
     increaseButton("btnF");
   }
   if (key === "g" || key === "G") {
-    soundG.play();
+    sounds.soundG.play();
     increaseButton("btnG");
   }
   if (key === "h" || key === "H") {
-    soundH.play();
+    sounds.soundH.play();
     increaseButton("btnH");
   }
   if (key === "j" || key === "J") {
-    soundJ.play();
+    sounds.soundJ.play();
     increaseButton("btnJ");
   }
   if (key === "k" || key === "K") {
-    soundK.play();
+    sounds.soundK.play();
     increaseButton("btnK");
   }
   if (key === "l" || key === "L") {
-    soundL.play();
+    sounds.soundL.play();
     increaseButton("btnL");
   }
 });
