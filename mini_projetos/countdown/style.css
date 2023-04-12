@@ -92,10 +92,6 @@ body {
 }
 
 @media (max-width: 667px) {
-  body {
-    background-color: #2e2e2e;
-  }
-
   .title h1 {
     font-size: 5em;
   }
@@ -114,6 +110,17 @@ body {
 
   .countdown div p {
     font-size: 0.7em;
+  }
+
+  #registerBtn {
+    font-size: 1.2em;
+
+    width: 125px;
+    height: 35px;
+  }
+
+  #registerBtn:hover {
+    font-size: 1.3em;
   }
 }
 
