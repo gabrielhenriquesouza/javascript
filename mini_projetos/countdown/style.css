@@ -63,10 +63,6 @@ body {
 }
 
 @media (max-width: 900px) {
-  body {
-    background-color: #302f2f;
-  }
-
   .title h1 {
     font-size: 6em;
   }
@@ -84,15 +80,76 @@ body {
   }
 
   #registerBtn {
-    font-size: 1.6em;
+    font-size: 1.4em;
 
-    width: 170px;
-    height: 40px;
-
-    border-radius: 15px;
+    width: 155px;
+    height: 35px;
   }
 
   #registerBtn:hover {
-    font-size: 1.7em;
+    font-size: 1.5em;
+  }
+}
+
+@media (max-width: 667px) {
+  body {
+    background-color: #2e2e2e;
+  }
+
+  .title h1 {
+    font-size: 5em;
+  }
+
+  .title p {
+    font-size: 1.5em;
+  }
+
+  .countdown div {
+    margin: 0px 22px 0px 22px;
+  }
+
+  .countdown div h1 {
+    font-size: 3.8em;
+  }
+
+  .countdown div p {
+    font-size: 0.7em;
+  }
+}
+
+@media (max-width: 450px) {
+  .title h1 {
+    font-size: 3em;
+  }
+
+  .title p {
+    font-size: 1em;
+  }
+
+  .countdown {
+    margin: 5em 0em;
+  }
+
+  .countdown div {
+    margin: 0px 10px 0px 10px;
+  }
+
+  .countdown div h1 {
+    font-size: 2.6em;
+  }
+
+  .countdown div p {
+    font-size: 0.5em;
+  }
+
+  #registerBtn {
+    font-size: 1em;
+
+    width: 110px;
+    height: 30px;
+  }
+
+  #registerBtn:hover {
+    font-size: 1.1em;
   }
 }
