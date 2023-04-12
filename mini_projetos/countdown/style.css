@@ -1,0 +1,52 @@
+* {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #171717;
+  color: rgba(0, 255, 255, 0.705);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.container {
+  width: 100vw;
+  height: 100vh;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.title h1 {
+  font-size: 7em;
+}
+
+.title p {
+  font-size: 2em;
+  text-align: center;
+}
+
+.countdown {
+  display: flex;
+  flex-direction: row;
+
+  margin: 100px 0px;
+}
+
+.countdown div {
+  margin: 0px 50px 0px 50px;
+  text-align: center;
+}
+
+.countdown div h1 {
+  font-size: 7em;
+}
+
+#registerBtn {
+  font-size: 1.6em;
+
+  padding: 5px 10px;
+}
