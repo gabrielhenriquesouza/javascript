@@ -42,37 +42,58 @@ Média Ponderada: ${weightedAverage(
 //----------------------------------------------------------------------------
 
 let calculateMedian = (...numbers) => {
-  let median = 0;
+  const orderedNumbers = [...numbers].sort((a, b) => a - b);
+  const middle = Math.floor(orderedNumbers.length / 2);
 
-  if (numbers.length % 2 == 0) {
-    median =
-      (numbers[numbers.length / 2] + numbers[numbers.length / 2 - 1]) / 2;
-  } else {
-    median = numbers[numbers.length / 2 - 0.5];
+  if (orderedNumbers.length % 2 !== 0) {
+    return orderedNumbers[middle];
   }
 
-  console.log(`
-Cálculo de Mediana
-Números informados: ( ${numbers} )
-Mediana: ( ${median} )
-`);
+  const firstMedian = orderedNumbers[middle - 1];
+  const secondMedian = orderedNumbers[middle];
+  return (firstMedian + secondMedian) / 2;
 };
-calculateMedian(2, 4, 5, 7, 42, 99);
-calculateMedian(15, 14, 8, 7, 3);
+console.log(`
+Mediana: ${calculateMedian(2, 5, 99, 4, 42, 7)}
+`);
+console.log(`
+Mediana: ${calculateMedian(15, 14, 8, 7, 3)}
+`);
 
 //----------------------------------------------------------------------------
 
-let calculateMode = (...numbers) => {
-  let counter = 0;
-  for (let i = 0; i < numbers.length; i++) {
-    for (let ind = i - 1; ind !== -1; ind--) {
-      if (numbers[i] == numbers[ind]) {
-        counter += 1;
-      }
-    }
-  }
-  console.log(counter);
+const mode = (...numbers) => {
+  // [ [n, qtd], [n, qtd], [n, qtd] ]
+  const quantities = numbers.map((num) => [
+    num,
+    numbers.filter((n) => num === n).length,
+  ]);
+  quantities.sort((a, b) => b[1] - a[1]);
+  return quantities[0][0];
 };
 
-calculateMode(1, 1, 5, 4, 9, 7, 4, 3, 5, 2, 4, 0, 4);
-//para cada número tenho que ver quantas vezes ele se repetiu nos numeros anterio
+console.log(
+  `Moda: ${mode(
+    1,
+    1,
+    99,
+    99,
+    99,
+    99,
+    99,
+    99,
+    99,
+    99,
+    5,
+    4,
+    9,
+    7,
+    4,
+    3,
+    5,
+    2,
+    4,
+    0,
+    4
+  )}`
+);
