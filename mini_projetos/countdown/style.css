@@ -6,7 +6,7 @@
 
 body {
   background-color: #171717;
-  color: rgba(0, 255, 255, 0.705);
+  color: rgb(8, 223, 223);
   font-family: Arial, Helvetica, sans-serif;
 }
 
@@ -33,7 +33,7 @@ body {
   display: flex;
   flex-direction: row;
 
-  margin: 100px 0px;
+  margin: 8em 0em;
 }
 
 .countdown div {
@@ -46,7 +46,53 @@ body {
 }
 
 #registerBtn {
+  background-color: rgb(8, 223, 223);
   font-size: 1.6em;
 
-  padding: 5px 10px;
+  width: 170px;
+  height: 40px;
+
+  border-radius: 15px;
+}
+
+#registerBtn:hover {
+  transition: 0.3s;
+  background-color: rgba(8, 223, 223, 0.479);
+
+  font-size: 1.7em;
+}
+
+@media (max-width: 900px) {
+  body {
+    background-color: #302f2f;
+  }
+
+  .title h1 {
+    font-size: 6em;
+  }
+
+  .title p {
+    font-size: 1.8em;
+  }
+
+  .countdown div {
+    margin: 0px 30px 0px 30px;
+  }
+
+  .countdown div h1 {
+    font-size: 6em;
+  }
+
+  #registerBtn {
+    font-size: 1.6em;
+
+    width: 170px;
+    height: 40px;
+
+    border-radius: 15px;
+  }
+
+  #registerBtn:hover {
+    font-size: 1.7em;
+  }
 }
