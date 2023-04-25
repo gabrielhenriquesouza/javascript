@@ -34,7 +34,7 @@ let hours = document.getElementById("hours");
 let minutes = document.getElementById("minutes");
 let seconds = document.getElementById("seconds");
 
-days.innerText = 0;
+days.innerText = 3;
 hours.innerText = 0;
 minutes.innerText = 0;
 seconds.innerText = 10;
