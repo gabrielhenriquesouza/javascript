@@ -1,0 +1,26 @@
+* {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #171717;
+  color: white;
+}
+
+.container {
+  background-color: blue;
+}
+
+.calculadora {
+  background-color: red;
+}
+
+.displayResult {
+}
+
+.btn {
+  width: 200px;
+  height: 30px;
+}
