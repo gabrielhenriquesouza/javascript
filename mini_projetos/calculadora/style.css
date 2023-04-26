@@ -22,18 +22,23 @@ body {
 .calculator {
   background-color: #242424;
   border-radius: 10px;
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.548);
 
   width: 478px;
   height: auto;
 }
 
 .displayResult {
-  background-color: black;
-  font-size: 40px;
+  background-color: #242424;
+  font-size: 55px;
   margin: 15px 0px 0px 10px;
 
   width: 456px;
   height: 120px;
+
+  display: flex;
+  align-items: center;
+  justify-content: end;
 }
 
 .buttons {
@@ -47,6 +52,16 @@ body {
   font-size: 40px;
   background-color: #424242;
   color: white;
+  border-radius: 10px;
 
   margin: 0px 1px 6px 0px;
+}
+
+.btnDark {
+  background-color: #323232;
+}
+
+.btnBlue {
+  background-color: rgb(136, 243, 243);
+  color: black;
 }
