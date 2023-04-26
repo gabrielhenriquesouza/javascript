@@ -7,6 +7,7 @@
 body {
   background-color: #171717;
   color: white;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 .container {
@@ -20,22 +21,32 @@ body {
 
 .calculator {
   background-color: #242424;
+  border-radius: 10px;
 
-  width: 450px;
+  width: 478px;
+  height: auto;
 }
 
 .displayResult {
-  background-color: blanchedalmond;
+  background-color: black;
+  font-size: 40px;
+  margin: 15px 0px 0px 10px;
 
-  width: 450px;
-  height: 100px;
+  width: 456px;
+  height: 120px;
+}
+
+.buttons {
+  margin: 14px 10px 8px 10px;
 }
 
 .btn {
-  width: 90px;
+  width: 110px;
   height: 70px;
 
   font-size: 40px;
   background-color: #424242;
   color: white;
+
+  margin: 0px 1px 6px 0px;
 }
