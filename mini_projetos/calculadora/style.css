@@ -15,22 +15,27 @@ body {
 
   display: flex;
   align-items: center;
-  align-content: center;
+  justify-content: center;
 }
 
 .calculator {
-  background-color: red;
-  width: 500px;
+  background-color: #242424;
+
+  width: 450px;
 }
 
 .displayResult {
   background-color: blanchedalmond;
+
   width: 450px;
   height: 100px;
 }
 
 .btn {
-  width: 100px;
-  height: 80px;
-  font-size: 50px;
+  width: 90px;
+  height: 70px;
+
+  font-size: 40px;
+  background-color: #424242;
+  color: white;
 }
