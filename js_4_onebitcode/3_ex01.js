@@ -1,4 +1,4 @@
-/* class User {
+class User {
   constructor(fullname, email, password) {
     this.fullname = fullname;
     this.email = email;
@@ -13,12 +13,13 @@
   }
 }
 
+//Dados do usuário
 const user1 = new User("Gabriel Henrique", "gabriel123@gmail.com", "123456");
 console.log(user1);
 
+//Verifica se os dados do login estão certos
 const login = user1.login("gabriel123@gmail.com", "123456");
 console.log(login);
-*/
 
 class Product {
   constructor(name, description, price) {
@@ -31,14 +32,18 @@ class Product {
     this.inStock += amount;
   }
   calculateDiscount(discount) {
-    discountedPrice = (discount / 100) * discount;
+    this.price = this.price - (discount / 100) * this.price;
   }
 }
 
-const arroz = new Product("Arroz", "Arroz Kibom", "$20");
+//Cria o produto
+const arroz = new Product("Arroz", "Arroz Kibom", "20");
 console.log(arroz);
 
+//Adiciona estoque
 arroz.addToStock(20);
 console.log(arroz);
 
+//Calcula desconto
 arroz.calculateDiscount(30);
+console.log(arroz);
