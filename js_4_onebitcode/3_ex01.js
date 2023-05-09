@@ -4,6 +4,7 @@ class User {
     this.email = email;
     this.password = password;
   }
+
   login(emailDigited, passwordDigited) {
     if (emailDigited === this.email && passwordDigited === this.password) {
       console.log("Login realizado com sucesso!");
@@ -28,9 +29,11 @@ class Product {
     this.price = price;
     this.inStock = 0;
   }
+
   addToStock(amount) {
     this.inStock += amount;
   }
+
   calculateDiscount(discount) {
     this.price = this.price - (discount / 100) * this.price;
   }
