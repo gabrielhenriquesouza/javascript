@@ -11,12 +11,25 @@ class Property {
 
 class House extends Property {}
 
-class Apartment extends Property {}
+class Apartment extends Property {
+  constructor(number, area, price) {
+    super(area, price);
+    this.number = number;
+  }
+
+  getFloor() {
+    return this.number.slice(0, -2);
+  }
+}
 
 const land = new Property(200, 50000);
 
 const someHouse = new House(120, 100000);
 
+const apt = new Apartment("100", 200, 100000);
+
 console.log(land);
 console.log(someHouse);
 console.log(someHouse.getPricePerSquareMeter());
+console.log(apt);
+console.log(apt.getFloor());
