@@ -4,15 +4,19 @@ class Account {
   constructor(user) {
     this.email = user.email;
     this.#password = user.password;
-    this.#balance = 0;
+    this.#balance = 500;
   }
 
   getBalance(email, password) {
-    if (email === this.email && password === this.#password) {
+    if (this.#authenticate(email, password)) {
       return this.#balance;
     } else {
       console.log("ERRO");
     }
+  }
+
+  #authenticate(email, password) {
+    return email === this.email && password === this.#password;
   }
 }
 
