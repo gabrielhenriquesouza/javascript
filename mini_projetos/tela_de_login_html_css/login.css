@@ -3,6 +3,10 @@
   margin: 0px;
 }
 
+body {
+  background-color: #171717;
+}
+
 .container-login {
   width: 100vw;
   height: 100vh;
@@ -17,11 +21,10 @@
   border-radius: 80px 0px;
 
   width: 450px;
-  height: 450px;
+  height: 440px;
 }
 
 .content-login {
-  background-color: rgb(243, 13, 13);
   margin: 50px;
 
   width: 350px;
@@ -37,7 +40,6 @@
 
 .form-login {
   font-family: Arial, Helvetica, sans-serif;
-  background-color: blue;
   margin: 25px 0px 0px 0px;
 }
 
@@ -46,22 +48,38 @@
 }
 
 .form-login input {
-  width: 346px;
-  height: 35px;
+  font-size: 18px;
+  padding: 0px 15px 0px 15px;
+  border-radius: 7px;
+
+  width: 316px;
+  height: 50px;
 }
 
 #email {
-  margin: 5px 0px 10px 0px;
+  margin: 2px 0px 10px 0px;
 }
 
 #password {
-  margin: 0px 0px 20px 0px;
+  margin: 2px 0px 20px 0px;
 }
 
 .to-enter {
+  font-size: 20px;
+  border-radius: 7px;
+
+  margin: 0px 0px 30px 0px;
+
   width: 350px;
-  height: 35px;
+  height: 50px;
+}
+
+.access-area-to-register {
+  font-size: 18px;
+  text-align: center;
 }
 
 .access-form-register {
+  color: white;
+  text-decoration: none;
 }
