@@ -1,85 +1,92 @@
 * {
-  padding: 0px;
-  margin: 0px;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
 }
 
 body {
-  background-color: #171717;
+  background-color: #f6f6f9;
 }
 
-.container-login {
-  width: 100vw;
-  height: 100vh;
+.container {
+  width: 450px;
+
+  background-color: #0088d2;
+  border-radius: 70px 0 70px 0;
+  padding: 20px 50px;
+  margin-left: auto;
+  margin-right: auto;
 
   display: flex;
   justify-content: center;
-  align-items: center;
+  transform: translateY(50%);
+  flex-direction: column;
 }
 
-.login {
-  background-color: rgb(0, 140, 255);
-  border-radius: 80px 0px;
-
-  width: 450px;
-  height: 440px;
-}
-
-.content-login {
-  margin: 50px;
-
-  width: 350px;
-  height: 380px;
-}
-
-.title-login {
-  color: white;
+.container h2 {
+  margin: 2rem 0;
   text-align: center;
-  font-size: 22px;
-  margin: 0px 0px 15px 0px;
+  padding-bottom: 2rem;
+  color: #f6f6f9;
+  border-bottom: 1px solid #f6f6f9;
+  font-size: 2rem;
 }
 
-.form-login {
-  font-family: Arial, Helvetica, sans-serif;
-  margin: 25px 0px 0px 0px;
+.form {
+  margin-bottom: 2rem;
 }
 
-.form-login label {
-  color: white;
+.form label,
+input {
+  display: block;
+  width: 100%;
 }
 
-.form-login input {
+.form label {
+  margin-bottom: 2px;
+  color: #f6f6f9;
   font-size: 18px;
-  padding: 0px 15px 0px 15px;
-  border-radius: 7px;
+}
 
-  width: 316px;
+.form input {
+  padding: 15px;
+  outline: none;
+  border: 0;
+  margin-bottom: 10px;
+  font-size: 1rem;
+  border-radius: 5px;
+}
+
+.form a {
+  width: 100%;
+
+  background: #f6f6f9;
+  color: #000;
   height: 50px;
-}
-
-#email {
-  margin: 2px 0px 10px 0px;
-}
-
-#password {
-  margin: 2px 0px 20px 0px;
-}
-
-.to-enter {
-  font-size: 20px;
-  border-radius: 7px;
-
-  margin: 0px 0px 30px 0px;
-
-  width: 350px;
-  height: 50px;
-}
-
-.access-area-to-register {
-  font-size: 18px;
-  text-align: center;
-}
-
-.access-form-register {
-  color: white;
+  padding: 15px;
+  margin-top: 20px;
   text-decoration: none;
+  font-size: 1.2rem;
+  border-radius: 5px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.link a {
+  color: #f6f6f9;
+  text-decoration: none;
+}
+
+.link a:hover {
+  text-decoration: underline;
 }
