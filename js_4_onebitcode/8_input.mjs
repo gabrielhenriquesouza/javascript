@@ -1,4 +1,4 @@
-import { Component } from "./8_component";
+import { Component } from "./8_component.mjs";
 
 export class Input extends Component {
   constructor(parent, options) {
