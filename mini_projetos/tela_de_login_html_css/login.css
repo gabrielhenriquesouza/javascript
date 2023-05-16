@@ -14,28 +14,53 @@
 
 .login {
   background-color: rgb(0, 140, 255);
+  border-radius: 80px 0px;
 
   width: 450px;
   height: 450px;
-
-  display: ;
 }
 
 .content-login {
-  background-color: black;
+  background-color: rgb(243, 13, 13);
+  margin: 50px;
 
-  width: 100px;
-  height: ;
+  width: 350px;
+  height: 380px;
 }
 
 .title-login {
   color: white;
   text-align: center;
+  font-size: 22px;
+  margin: 0px 0px 15px 0px;
 }
 
 .form-login {
   font-family: Arial, Helvetica, sans-serif;
   background-color: blue;
+  margin: 25px 0px 0px 0px;
+}
+
+.form-login label {
+  color: white;
+}
+
+.form-login input {
+  width: 346px;
+  height: 35px;
+}
+
+#email {
+  margin: 5px 0px 10px 0px;
+}
+
+#password {
+  margin: 0px 0px 20px 0px;
+}
+
+.to-enter {
+  width: 350px;
+  height: 35px;
 }
 
 .access-form-register {
