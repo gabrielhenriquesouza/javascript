@@ -11,6 +11,7 @@ body {
 
 .navbar {
   background-color: #171717;
+  padding: 0px 40px;
 
   width: 100vw;
   height: 70px;
@@ -24,28 +25,25 @@ body {
   color: #fff;
   text-decoration: none;
   font-size: 33px;
-  padding-left: 40px;
 }
 
-.links {
-  padding-right: 40px;
-
+.nav-menu {
   display: flex;
   flex-direction: row;
   gap: 70px;
 }
 
-.links li {
+.nav-menu li {
   list-style: none;
   font-size: 17px;
 }
 
-.links a {
+.nav-menu a {
   text-decoration: none;
   color: #fff;
 }
 
-.links a:hover {
+.nav-menu a:hover {
   transition: 0.3s;
   color: #76b9dd;
 }
@@ -55,8 +53,57 @@ body {
   cursor: pointer;
 }
 
+.bar {
+  display: block;
+
+  width: 28px;
+  height: 3px;
+
+  background-color: #fff;
+  border-radius: 2px;
+  margin: 5px auto;
+
+  transition: all 0.3s ease-in-out;
+}
+
 @media (max-width: 768px) {
-  body {
-    background-color: red;
+  .hamburguer {
+    display: block;
+  }
+
+  .hamburguer.active .bar:nth-child(2) {
+    opacity: 0;
+  }
+
+  .hamburguer.active .bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
+
+  .hamburguer.active .bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+  }
+
+  .nav-menu {
+    width: 100%;
+
+    position: fixed;
+    left: -100%;
+    top: 70px;
+    gap: 0;
+
+    border-radius: 0px 0px 20px 20px;
+    background-color: #171717;
+    text-align: center;
+    flex-direction: column;
+
+    transition: 0.3s;
+  }
+
+  .nav-item {
+    margin: 16px 0;
+  }
+
+  .nav-menu.active {
+    left: 0;
   }
 }
