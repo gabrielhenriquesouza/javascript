@@ -11,8 +11,8 @@ class Character {
       `Vida do(a) ${oponente.nome} antes do ataque: ${oponente.pontosDeVida}`
     );
 
-    const ataqueMenosDefesa = this.pontosDeAtaque - oponente.pontosDeDefesa;
-    oponente.pontosDeVida -= ataqueMenosDefesa;
+    const calculadorDeDano = this.pontosDeAtaque - oponente.pontosDeDefesa;
+    oponente.pontosDeVida -= calculadorDeDano;
 
     console.log(
       `Vida do(a) ${oponente.nome} depois do ataque: ${oponente.pontosDeVida}`
@@ -30,9 +30,9 @@ class Thief extends Character {
       `Vida do(a) ${oponente.nome} antes do ataque: ${oponente.pontosDeVida}`
     );
 
-    const ataqueMenosDefesa =
+    const calculadorDeDano =
       (this.pontosDeAtaque - oponente.pontosDeDefesa) * 2;
-    oponente.pontosDeVida -= ataqueMenosDefesa;
+    oponente.pontosDeVida -= calculadorDeDano;
 
     console.log(
       `Vida do(a) ${oponente.nome} depois do ataque: ${oponente.pontosDeVida}`
@@ -41,25 +41,55 @@ class Thief extends Character {
 }
 
 class Mage extends Character {
-  constructor(nome, pontosDeVida, pontosDeAtaque, pontosDeDefesa) {
+  constructor(
+    nome,
+    pontosDeVida,
+    pontosDeAtaque,
+    pontosDeDefesa,
+    pontosDeMagia
+  ) {
     super(nome, pontosDeVida, pontosDeAtaque, pontosDeDefesa);
+    this.pontosDeMagia = pontosDeMagia;
+  }
+
+  atacar(oponente) {
+    console.log(
+      `Vida do(a) ${oponente.nome} antes do ataque: ${oponente.pontosDeVida}`
+    );
+
+    const calculadorDeDano =
+      this.pontosDeAtaque + this.pontosDeMagia - oponente.pontosDeDefesa;
+    oponente.pontosDeVida -= calculadorDeDano;
+
+    console.log(
+      `Vida do(a) ${oponente.nome} depois do ataque: ${oponente.pontosDeVida}`
+    );
+  }
+
+  curar(aliado) {
+    console.log(
+      `Vida do(a) ${aliado.nome} antes da cura: ${aliado.pontosDeVida}`
+    );
+
+    aliado.pontosDeVida += this.pontosDeMagia * 2;
+
+    console.log(
+      `Vida do(a) ${aliado.nome} depois da cura: ${aliado.pontosDeVida}`
+    );
   }
 }
 
 class Warrior extends Character {}
 
-// const mage = new Mage(nome, pontosDeVida...)
-// const warrior = new Warrior(nome, pontosDeVida...)
-// mage.atacar(warrior)
-// warrior.atacar(mage)
-
-const character = new Character("Nastorberto", 1000, 100, 1000);
+const character = new Character("Nastorberto", 1000, 100, 100);
 const thief = new Thief("Mandovacurbe", 1000, 100, 100);
 const maguinha = new Mage("xandausclecia", 1000, 100, 60, 140);
 
-console.log(maguinha);
-console.log(character);
-console.log(thief);
+//console.log(maguinha);
+//console.log(character);
+//console.log(thief);
 
-character.atacar(maguinha);
-thief.atacar(maguinha);
+//character.atacar(maguinha);
+//thief.atacar(maguinha);
+//maguinha.atacar(character);
+//maguinha.curar(character);
