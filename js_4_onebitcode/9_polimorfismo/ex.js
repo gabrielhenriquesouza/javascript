@@ -79,17 +79,62 @@ class Mage extends Character {
   }
 }
 
-class Warrior extends Character {}
+class Warrior extends Character {
+  constructor(
+    nome,
+    pontosDeVida,
+    pontosDeAtaque,
+    pontosDeDefesa,
+    pontosDeEscudo,
+    posicao
+  ) {
+    super(nome, pontosDeVida, pontosDeAtaque, pontosDeDefesa);
+    this.pontosDeEscudo = pontosDeEscudo;
+    this.posicao = posicao;
+  }
+
+  atacar(oponente) {
+    if (this.posicao == true) {
+      console.log(
+        `Vida do(a) ${oponente.nome} antes do ataque: ${oponente.pontosDeVida}`
+      );
+
+      const calculadorDeDano = this.pontosDeAtaque - oponente.pontosDeDefesa;
+      oponente.pontosDeVida -= calculadorDeDano;
+
+      console.log(
+        `Vida do(a) ${oponente.nome} depois do ataque: ${oponente.pontosDeVida}`
+      );
+    } else {
+      console.log(
+        `O ${this.nome} não pode atacar enquanto estiver em posição de defesa.`
+      );
+    }
+  }
+
+  mudarPosicao() {
+    if (this.posicao == true) {
+      this.posicao = false;
+    } else {
+      this.posicao = true;
+    }
+  }
+}
 
 const character = new Character("Nastorberto", 1000, 100, 100);
 const thief = new Thief("Mandovacurbe", 1000, 100, 100);
 const maguinha = new Mage("xandausclecia", 1000, 100, 60, 140);
+const warrior = new Warrior("Bandosclaudinei", 2000, 200, 80, 20, false);
 
-//console.log(maguinha);
-//console.log(character);
-//console.log(thief);
+console.log(maguinha);
+console.log(character);
+console.log(thief);
+console.log(warrior);
 
-//character.atacar(maguinha);
-//thief.atacar(maguinha);
-//maguinha.atacar(character);
-//maguinha.curar(character);
+character.atacar(maguinha);
+thief.atacar(maguinha);
+maguinha.atacar(character);
+maguinha.curar(character);
+warrior.atacar(maguinha);
+warrior.mudarPosicao();
+warrior.atacar(maguinha);
