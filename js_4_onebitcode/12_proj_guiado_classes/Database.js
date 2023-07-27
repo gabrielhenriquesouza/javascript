@@ -57,7 +57,7 @@ module.exports = class Database {
     poster?.removeFromStock(quantity);
   }
 
-  sabeUser(user) {
+  saveUser(user) {
     const userExists = this.#storage.users.find((u) => u.email === user.email);
     if (!userExists) {
       this.#storage.users.push(user);
