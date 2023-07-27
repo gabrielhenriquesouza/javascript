@@ -3,6 +3,7 @@ const Author = require("./entities/Author");
 const User = require("./entities/User");
 const Book = require("./entities/Book");
 const Poster = require("./entities/Poster");
+const Order = require("./entities/Order");
 
 module.exports = class App {
   static #database = new Database();
@@ -21,7 +22,7 @@ module.exports = class App {
     App.#database.saveAuthor(author);
   }
 
-  getAuthor() {
+  getAuthors() {
     return App.#database.find("authors");
   }
 
@@ -52,21 +53,40 @@ module.exports = class App {
     App.#database.addBooksToStock(bookName, quantity);
   }
 
-  createPoster(description, price, inStock) {
-    const poster = new Poster(
-      title,
-      synopsis,
-      genre,
-      pages,
-      author,
-      description,
-      price,
-      inStock
-    );
+  getBooks() {
+    return App.#database.find("books");
+  }
+
+  createPoster(name, description, height, width, price, inStock) {
+    const poster = new Poster(name, description, height, width, price, inStock);
     App.#database.savePoster(poster);
   }
 
   addPoster(posterName, quantity) {
     App.#database.addPostersToStock(posterName, quantity);
+  }
+
+  getPosters() {
+    return App.#database.find("posters");
+  }
+
+  createOrder(items, user) {
+    const order = new Order(items, user);
+    App.#database.saveOrder(order);
+    order.data.items.forEach(({ product, quantity }) => {
+      if (product instanceof Book) {
+        App.#database.removeBooksFromStock(product.name, quantity);
+      } else if (product instanceof Poster) {
+        App.#database.removePostersFromStock(product.name, quantity);
+      }
+    });
+  }
+
+  getOrders() {
+    return App.#database.find("orders");
+  }
+
+  showDatabase() {
+    App.#database.showStorage();
   }
 };

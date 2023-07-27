@@ -1,10 +1,10 @@
 module.exports = class Database {
   #storage = {
-    authors: {},
-    books: {},
-    posters: {},
-    orders: {},
-    users: {},
+    authors: [],
+    books: [],
+    posters: [],
+    orders: [],
+    users: [],
   };
 
   find(key) {
@@ -21,9 +21,7 @@ module.exports = class Database {
 
   saveBook(book) {
     const bookExists = this.findBookByName(book.name);
-    if (!bookExists) {
-      this.#storage.books.push(book);
-    }
+    if (!bookExists) [this.#storage.books.push(book)];
   }
 
   addBooksToStock(bookName, quantity) {
@@ -33,7 +31,7 @@ module.exports = class Database {
 
   removeBooksFromStock(bookName, quantity) {
     const book = this.findBookByName(bookName);
-    book?.removeBooksFromStock(quantity);
+    book?.removeFromStock(quantity);
   }
 
   findPosterByName(posterName) {
@@ -42,9 +40,7 @@ module.exports = class Database {
 
   savePoster(poster) {
     const posterExists = this.findPosterByName(poster.name);
-    if (!posterExists) {
-      this.#storage.posters.push(poster);
-    }
+    if (!posterExists) [this.#storage.posters.push(poster)];
   }
 
   addPostersToStock(posterName, quantity) {
