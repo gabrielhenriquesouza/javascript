@@ -5,13 +5,9 @@ class Loan {
     return Loan.#taxaDeJuros;
   }
 
-  novaTaxaDeJuros(valor) {
+  static set novaTaxaDeJuros(valor) {
     if (typeof valor === "number" && valor >= 0) {
-      Loan.#taxaDeJuros = valor
+      Loan.#taxaDeJuros = valor;
     }
   }
 }
-const loan = new Loan();
-console.log(`TAXA: ${Loan.mostrarTaxaDeJuros}`);
-loan.novaTaxaDeJuros(30);
-console.log(`TAXA: ${Loan.mostrarTaxaDeJuros}`);
