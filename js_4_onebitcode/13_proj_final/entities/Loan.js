@@ -1,19 +1,17 @@
-module.exports = class Loan {
-  static #taxaDeJuros;
-
-  constructor(s) {
-    this.s = s;
-  }
+class Loan {
+  static #taxaDeJuros = 10;
 
   static get mostrarTaxaDeJuros() {
-    return this.#taxaDeJuros;
+    return Loan.#taxaDeJuros;
   }
 
-  static set definirNovaTaxaDeJuros(porcentagem) {
-    this.#taxaDeJuros = porcentagem;
+  novaTaxaDeJuros(valor) {
+    if (typeof valor === "number" && valor >= 0) {
+      Loan.#taxaDeJuros = valor
+    }
   }
-};
-
-const loan = new Loan(1);
-loan.definirNovaTaxaDeJuros(10);
-loan.mostrarTaxaDeJuros();
+}
+const loan = new Loan();
+console.log(`TAXA: ${Loan.mostrarTaxaDeJuros}`);
+loan.novaTaxaDeJuros(30);
+console.log(`TAXA: ${Loan.mostrarTaxaDeJuros}`);
