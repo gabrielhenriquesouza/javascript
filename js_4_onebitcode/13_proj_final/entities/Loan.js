@@ -1,7 +1,7 @@
 // importar class installment
-// module.exports
+//module.expots
 
-class Loan {
+module.exports = class Loan {
   static #taxaDeJuros;
 
   constructor(valorDoEmprestimo, dataDeCriacao, numeroDeParcelas) {
@@ -21,8 +21,17 @@ class Loan {
     }
   }
 
-  calcularParcelas() {}
-}
+  calcularParcelas() {
+    let parcelas = this.valorDoEmprestimo / this.numeroDeParcelas;
 
-const emprestimo = new Loan(1000, "23/08/2023", 10);
-console.log(emprestimo.calcularParcelas());
+    for (let indice = 1; indice <= this.numeroDeParcelas; indice++) {
+      this.parcelasDoEmprestimo.push(
+        `${indice}° parcela no valor de R$${parcelas} | Empréstimo criado: ${this.numeroDeParcelas}x de R$${parcelas}`
+      );
+    }
+  }
+
+  mostrarParcelas() {
+    return this.parcelasDoEmprestimo;
+  }
+};
