@@ -1,5 +1,15 @@
+// importar class installment
+// module.exports
+
 class Loan {
-  static #taxaDeJuros = 10;
+  static #taxaDeJuros;
+
+  constructor(valorDoEmprestimo, dataDeCriacao, numeroDeParcelas) {
+    this.valorDoEmprestimo = valorDoEmprestimo;
+    this.dataDeCriacao = dataDeCriacao;
+    this.numeroDeParcelas = numeroDeParcelas;
+    this.parcelasDoEmprestimo = [];
+  }
 
   static get mostrarTaxaDeJuros() {
     return Loan.#taxaDeJuros;
@@ -10,4 +20,9 @@ class Loan {
       Loan.#taxaDeJuros = valor;
     }
   }
+
+  calcularParcelas() {}
 }
+
+const emprestimo = new Loan(1000, "23/08/2023", 10);
+console.log(emprestimo.calcularParcelas());
