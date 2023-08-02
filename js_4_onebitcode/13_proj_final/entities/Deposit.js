@@ -1,10 +1,7 @@
-const Account = require("./Account");
-
-module.exports = class Deposit extends Account {
+module.exports = class Deposit {
   constructor(valor, dataDeCriacao, todosDepositos) {
-    super(todosDepositos);
     this.valor = valor;
     this.dataDeCriacao = dataDeCriacao;
-    this.todosDepositos = [];
+    this.todosDepositos = todosDepositos;
   }
 };
