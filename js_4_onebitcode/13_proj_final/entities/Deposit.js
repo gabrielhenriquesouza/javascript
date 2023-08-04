@@ -1,7 +1,6 @@
 module.exports = class Deposit {
-  constructor(valor, dataDeCriacao, todosDepositos) {
+  constructor(valor, dataDeCriacao) {
     this.valor = valor;
     this.dataDeCriacao = dataDeCriacao;
-    this.todosDepositos = todosDepositos;
   }
 };
