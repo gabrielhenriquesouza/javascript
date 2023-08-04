@@ -34,17 +34,25 @@ class Account {
   transferencia(userRemetente, userDestinatario, valor) {
     if (userRemetente === this.donoDaConta && this.#saldo >= valor) {
       this.#saldo -= valor;
-      userDestinatario.#saldo += valor;
+      userDestinatario.aumentarSaldo(valor);
       this.todasTranferencias.push(
         `-${valor} transferido para ${userDestinatario}`
       );
     } else if (userRemetente !== this.donoDaConta) {
       this.#saldo += valor;
-      userDestinatario.#saldo -= valor;
+      userDestinatario.diminuirSaldo(valor);
       this.todasTranferencias.push(
         `+${valor} transferido de ${userDestinatario}`
       );
     }
+  }
+
+  aumentarSaldo(valor) {
+    this.#saldo += valor;
+  }
+
+  diminuirSaldo(valor) {
+    this.#saldo -= valor;
   }
 
   mostrarSaldo() {
@@ -65,9 +73,6 @@ contaGabriel.emprestimo(200, "20/06/23", 7);
 
 contaLucas.deposito(1000, "20/05/22");
 contaLucas.emprestimo(100, "20/06/23", 7);
-contaGabriel.transferencia(
-  contaGabriel.donoDaConta,
-  contaLucas.donoDaConta,
-  100
-);
+contaGabriel.transferencia("Gabriel", contaLucas.donoDaConta, 100); // <-- ERRO
 contaGabriel.mostrarSaldo();
+contaLucas.mostrarSaldo();
