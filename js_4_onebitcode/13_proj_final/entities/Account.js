@@ -4,11 +4,11 @@ const Loan = require("./Loan.js");
 class Account {
   #saldo = 0;
 
-  constructor(donoDaConta) {
+  constructor(email) {
     this.todosDepositos = [];
     this.todosEmprestimos = [];
     this.todasTranferencias = [];
-    this.donoDaConta = donoDaConta;
+    this.email = email;
   }
 
   deposito(valor, dataDeCriacao) {
@@ -32,17 +32,16 @@ class Account {
   }
 
   transferencia(userRemetente, userDestinatario, valor) {
-    if (userRemetente === this.donoDaConta && this.#saldo >= valor) {
+    //posso usar email
+    if (userRemetente === this.email && this.#saldo >= valor) {
       this.#saldo -= valor;
-      userDestinatario.aumentarSaldo(valor);
       this.todasTranferencias.push(
         `-${valor} transferido para ${userDestinatario}`
       );
-    } else if (userRemetente !== this.donoDaConta) {
+    } else if (userRemetente !== this.email) {
       this.#saldo += valor;
-      userDestinatario.diminuirSaldo(valor);
       this.todasTranferencias.push(
-        `+${valor} transferido de ${userDestinatario}`
+        `+${valor} transferido para ${userDestinatario}`
       );
     }
   }
@@ -64,15 +63,3 @@ class Account {
     );
   }
 }
-
-const contaGabriel = new Account("Gabriel");
-const contaLucas = new Account("Lucas");
-
-contaGabriel.deposito(500, "20/05/22");
-contaGabriel.emprestimo(200, "20/06/23", 7);
-
-contaLucas.deposito(1000, "20/05/22");
-contaLucas.emprestimo(100, "20/06/23", 7);
-contaGabriel.transferencia("Gabriel", contaLucas.donoDaConta, 100); // <-- ERRO
-contaGabriel.mostrarSaldo();
-contaLucas.mostrarSaldo();
