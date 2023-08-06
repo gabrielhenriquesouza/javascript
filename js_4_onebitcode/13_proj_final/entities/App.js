@@ -1,17 +1,22 @@
 class App {
   #listaDeUsuarios = ["br@gmail", "hue@gmail", "123@gmail"];
 
-  static criarUsuario(email) {
-    if (email) {
+  criarUsuario(email) {
+    if (this.#listaDeUsuarios.find((usuario) => usuario.email === email)) {
+      console.log(`O email ${email} já está em uso.`);
+      return;
+    } else {
+      console.log("dsfs");
     }
   }
 
-   pegarListaDeUsuarios() { // <-- transformar em static
-    let cloneArray = this.#listaDeUsuarios.slice();
-    return cloneArray.length;
+  static criarUsuario(email) {
+    if (this.usuarios.some((usuario) => usuario.email === email)) {
+      console.log(`O email ${email} já está em uso.`);
+      return;
+    }
   }
 }
 
-
 const instacia = new App();
-console.log(instacia.pegarListaDeUsuarios());
+console.log(instacia.criarUsuario("br@gmail"));
