@@ -11,14 +11,15 @@ class Account {
     this.email = email;
   }
 
-  deposito(valor, dataDeCriacao) {
-    if (
-      typeof valor === "number" &&
-      valor > 0 &&
-      typeof dataDeCriacao === "string"
-    ) {
+  deposito(valor) {
+    var dia = dataOriginal.getDate();
+    var mes = dataOriginal.getMonth() + 1; // Lembre-se que os meses são indexados de 0 a 11
+    var ano = dataOriginal.getFullYear();
+    console.log(dataAtual);
+
+    if (typeof valor === "number" && valor > 0) {
       this.#saldo += valor;
-      const deposito = new Deposit(valor, dataDeCriacao);
+      const deposito = new Deposit(valor);
       this.todosDepositos.push(deposito);
     }
   }
@@ -63,3 +64,6 @@ class Account {
     );
   }
 }
+
+const conta = new Account();
+conta.deposito(100);
