@@ -1,7 +1,7 @@
 const Deposit = require("./Deposit.js");
 const Loan = require("./Loan.js");
 
-class Account {
+module.exports = class Account {
   #saldo = 0;
 
   constructor(email) {
@@ -11,15 +11,27 @@ class Account {
     this.email = email;
   }
 
-  deposito(valor) {
+  dataDeCriacao() {
+    let dataOriginal = new Date();
     var dia = dataOriginal.getDate();
-    var mes = dataOriginal.getMonth() + 1; // Lembre-se que os meses são indexados de 0 a 11
+    var mes = dataOriginal.getMonth() + 1;
     var ano = dataOriginal.getFullYear();
-    console.log(dataAtual);
+    return (
+      (dia < 10 ? "0" : "") +
+      dia +
+      "/" +
+      (mes < 10 ? "0" : "") +
+      mes +
+      "/" +
+      ano
+    );
+  }
 
+  deposito(valor) {
+    let dataDeCriacao = this.dataDeCriacao();
     if (typeof valor === "number" && valor > 0) {
       this.#saldo += valor;
-      const deposito = new Deposit(valor);
+      const deposito = new Deposit(valor, dataDeCriacao);
       this.todosDepositos.push(deposito);
     }
   }
@@ -63,7 +75,4 @@ class Account {
       this.todasTranferencias
     );
   }
-}
-
-const conta = new Account();
-conta.deposito(100);
+};
