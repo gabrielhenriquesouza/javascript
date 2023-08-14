@@ -1,7 +1,6 @@
-class User {
-  constructor(nomeCompleto, email, conta) {
+module.exports = class User {
+  constructor(email, nomeCompleto) {
     this.nomeCompleto = nomeCompleto;
     this.email = email;
-    this.conta = conta;
   }
-}
+};

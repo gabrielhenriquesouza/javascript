@@ -1,14 +1,15 @@
 const Account = require("./Account");
 const User = require("./User");
 
-class App extends Account {
-  static #usuarios = ["duze@gmail"];
+module.exports = class App extends Account {
+  static #usuarios = [];
 
   static criarUsuario(email, nomeCompleto) {
     if (App.#usuarios.some((usuario) => usuario === email)) {
       console.log(`O email ${email} já está em uso.`);
     } else {
-      const usuario = new User(nomeCompleto, email); // <--- ERROR
+      const usuario = new User(email, nomeCompleto);
+      const conta = new Account(email);
       App.#usuarios.push(email);
       console.log(`O email ${email} foi cadastrado com sucesso!`);
     }
@@ -27,21 +28,13 @@ class App extends Account {
   static deposito(email, valor) {
     if (this.encontrarUsuario(email) === true) {
       console.log("encontrado");
+      Account.efetuarDeposito(valor);
     } else {
       console.log("não encontrado");
     }
   }
-}
 
-console.log(App.criarUsuario("123@gmail", "Gabriel"));
-console.log(App.criarUsuario("zezindogas@gmail", "Zezao"));
-
-App.deposito("zezindogas@gmail", 100);
-/*
-App.deposit("isaac@email.com", 100)
-
-App.transfer("isaac@email.com", "lucas@email.com", 20)
-
-App.changeLoanFee(10)
-App.takeLoan("juliana@email.com", 2000, 24)
- */
+  static mostrarUsuarios() {
+    console.table(this.#usuarios);
+  }
+};

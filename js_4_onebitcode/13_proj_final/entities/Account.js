@@ -27,7 +27,7 @@ module.exports = class Account {
     );
   }
 
-  deposito(valor) {
+  efetuarDeposito(valor) {
     let dataDeCriacao = this.dataDeCriacao();
     if (typeof valor === "number" && valor > 0) {
       this.#saldo += valor;
