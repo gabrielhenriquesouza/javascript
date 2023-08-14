@@ -1,6 +1,6 @@
 module.exports = class Deposit {
-  constructor(valor, dataDeCriacao) {
+  constructor(valor) {
     this.valor = valor;
-    this.dataDeCriacao = dataDeCriacao;
+    this.dataDeCriacao = new Date();
   }
 };

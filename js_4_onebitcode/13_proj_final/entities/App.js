@@ -1,5 +1,6 @@
 const Account = require("./Account");
 const User = require("./User");
+const Deposit = require("./Deposit");
 
 module.exports = class App extends Account {
   static #usuarios = [];
@@ -28,7 +29,7 @@ module.exports = class App extends Account {
   static deposito(email, valor) {
     if (this.encontrarUsuario(email) === true) {
       console.log("encontrado");
-      Account.efetuarDeposito(valor);
+      const deposito = new Deposit(valor);
     } else {
       console.log("não encontrado");
     }

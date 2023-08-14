@@ -1,7 +1,7 @@
 module.exports = class installment {
-  constructor(valorDaParcela, numeroDaParcela, situacao) {
+  constructor(valorDaParcela, numero) {
     this.valorDaParcela = valorDaParcela;
-    this.numeroDaParcela = numeroDaParcela;
-    this.situacao = situacao;
+    this.numero = numero;
+    this.situacao = "pendente";
   }
 };
