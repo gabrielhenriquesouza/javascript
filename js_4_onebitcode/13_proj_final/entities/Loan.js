@@ -1,37 +1,25 @@
-// importar class installment
-//module.expots
+const Installment = require("./Installment");
 
 module.exports = class Loan {
-  static #taxaDeJuros;
+  static #fee = 1.05;
 
-  constructor(valorDoEmprestimo, dataDeCriacao, numeroDeParcelas) {
-    this.valorDoEmprestimo = valorDoEmprestimo;
-    this.dataDeCriacao = dataDeCriacao;
-    this.numeroDeParcelas = numeroDeParcelas;
-    this.parcelasDoEmprestimo = [];
-  }
-
-  static get mostrarTaxaDeJuros() {
-    return Loan.#taxaDeJuros;
-  }
-
-  static set novaTaxaDeJuros(valor) {
-    if (typeof valor === "number" && valor >= 0) {
-      Loan.#taxaDeJuros = valor;
-    }
-  }
-
-  calcularParcelas() {
-    let parcelas = this.valorDoEmprestimo / this.numeroDeParcelas;
-
-    for (let indice = 1; indice <= this.numeroDeParcelas; indice++) {
-      this.parcelasDoEmprestimo.push(
-        `${indice}° parcela no valor de R$${parcelas} | Empréstimo criado: ${this.numeroDeParcelas}x de R$${parcelas}`
+  constructor(value, installments) {
+    this.value = value;
+    this.installments = [];
+    for (let i = 1; i <= installments; i++) {
+      this.installments.push(
+        new Installment((value * Loan.#fee) / installments),
+        i
       );
     }
+    this.createdAt = new Date();
   }
 
-  mostrarParcelas() {
-    return this.parcelasDoEmprestimo;
+  static get fee() {
+    return Loan.#fee;
+  }
+
+  static set fee(newFeePercentage) {
+    Loan.#fee = 1 + newFeePercentage / 100;
   }
 };

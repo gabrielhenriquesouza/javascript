@@ -1,7 +1,7 @@
-module.exports = class installment {
-  constructor(valorDaParcela, numero) {
-    this.valorDaParcela = valorDaParcela;
-    this.numero = numero;
-    this.situacao = "pendente";
+module.exports = class Installment {
+  constructor(value, number) {
+    this.value = value;
+    this.number = number;
+    this.status = "pending";
   }
 };
