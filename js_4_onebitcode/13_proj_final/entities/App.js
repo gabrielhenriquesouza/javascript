@@ -1,41 +1,39 @@
 const Account = require("./Account");
 const User = require("./User");
 const Deposit = require("./Deposit");
+const Transfer = require("./Transfer");
 
 module.exports = class App extends Account {
-  static #usuarios = [];
+  static #users = [];
 
-  static criarUsuario(email, nomeCompleto) {
-    if (App.#usuarios.some((usuario) => usuario === email)) {
-      console.log(`O email ${email} já está em uso.`);
-    } else {
-      const usuario = new User(email, nomeCompleto);
-      const conta = new Account(email);
-      App.#usuarios.push(email);
-      console.log(`O email ${email} foi cadastrado com sucesso!`);
+  static findUser(email) {
+    const user = this.#users.find((user) => user.email === email);
+    return user ?? null;
+  }
+
+  static createUser(email, fullname) {
+    const userExists = App.findUser(email);
+    if (!userExists) {
+      this.#users.push(new User(email, fullname));
     }
   }
 
-  static encontrarUsuario(email) {
-    if (App.#usuarios.some((emailUsuario) => emailUsuario === email)) {
-      console.log(`Usuário ${email} encontrado.`);
-      return true;
-    } else {
-      console.log(`Usuário ${email} não encontrado`);
-      return false;
+  static deposit(email, value) {
+    const user = App.findUser(email);
+    if (user) {
+      const newDeposit = new Deposit(value);
+      user.account.addDeposit(newDeposit);
     }
   }
 
-  static deposito(email, valor) {
-    if (this.encontrarUsuario(email) === true) {
-      console.log("encontrado");
-      const deposito = new Deposit(valor);
-    } else {
-      console.log("não encontrado");
-    }
-  }
+  static transfer(fromUserEmail, toUserEmail, value) {
+    const fromUser = App.findUser(fromUserEmail);
+    const toUser = App.findUser(toUserEmail);
 
-  static mostrarUsuarios() {
-    console.table(this.#usuarios);
+    if (fromUser && toUser) {
+      const newTransfer = new Transfer(fromUser, toUser, value);
+      fromUser.account.addTransfer(newTransfer);
+      toUser.account.addTransfer(newTransfer);
+    }
   }
 };
