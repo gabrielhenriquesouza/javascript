@@ -1,9 +1,9 @@
-const Account = require("./Account");
 const User = require("./User");
 const Deposit = require("./Deposit");
 const Transfer = require("./Transfer");
+const Loan = require("./Loan");
 
-module.exports = class App extends Account {
+module.exports = class App {
   static #users = [];
 
   static findUser(email) {
@@ -35,5 +35,17 @@ module.exports = class App extends Account {
       fromUser.account.addTransfer(newTransfer);
       toUser.account.addTransfer(newTransfer);
     }
+  }
+
+  static loan(email, value, numberOfInstallments) {
+    const user = App.findUser(email);
+    if (user) {
+      const newLoan = new Loan(value, numberOfInstallments);
+      user.account.addLoan(newLoan);
+    }
+  }
+
+  static changeLoanFee(newFeePercentage) {
+    Loan.fee = newFeePercentage;
   }
 };
