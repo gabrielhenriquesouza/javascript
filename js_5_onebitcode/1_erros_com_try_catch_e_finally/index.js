@@ -5,6 +5,8 @@ function sum(a, b) {
   if (isNaN(firstNumber) || isNaN(secondNumber)) {
     throw new Error("argumentos devem possuir dois números!");
   }
+
+  return firstNumber + secondNumber;
 }
 
 try {
