@@ -5,7 +5,7 @@
 
 body {
   background-color: #212121;
-  color: white;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 main {
@@ -17,24 +17,36 @@ main {
   justify-content: center;
 }
 
-.container {
-  height: 450px;
+.form-container {
+  background-color: rgb(49, 49, 49);
   width: 450px;
   border-radius: 20px;
-  background-color: rgb(159, 159, 194);
 }
 
 .form {
-  padding: 40px 30px 0px 30px;
-  background-color: blueviolet;
+  color: white;
+  padding: 35px 27px 0px 27px;
 }
 
 .form h1 {
-  font-size: 28px;
+  font-size: 25px;
+  margin-bottom: 40px;
+}
+
+.inputs label {
+  font-size: 18px;
 }
 
 .inputs input {
+  border-radius: 7px;
   width: 380px;
-  padding: 6px;
-  margin: 0px 0px 30px 0px;
+  padding: 8px;
+  margin: 5px 0px 20px 0px;
+}
+
+#registrar {
+  background-color: rgb(104, 231, 231);
+  width: 400px;
+  margin: 10px 0px 30px 0px;
+  padding: 10px;
 }
